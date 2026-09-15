@@ -1,0 +1,42 @@
+/* Prompts to send to the coding assistant: every quoted block in the guides. */
+.vp-doc blockquote.prompt {
+  display: flow-root;
+  padding: 12px 16px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 0 8px 8px 0;
+  background-color: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc blockquote.prompt > p + p {
+  margin-top: 12px;
+}
+
+.prompt-copy {
+  float: right;
+  margin: 0 0 4px 12px;
+  padding: 0 10px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.prompt-copy:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+.prompt-copy:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+@media print {
+  .prompt-copy {
+    display: none;
+  }
+}
