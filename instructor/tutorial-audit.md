@@ -55,7 +55,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 ## What Changed Since the First Review
 
 **Structure**
-- **No VS Code guide.** Both install guides start by creating a Projects folder in the home folder.
+- **No VS Code guide.** The Codex guide starts by creating a Projects folder in the home folder. The Claude Code guide installs and signs in first, then creates the folder at Step 6, because installing an extension needs no folder open.
 - **Two install guides.** Students choose "Installing Claude Code in VS Code" or "Installing Codex in VS Code." The sequence guide explains the choice, including the Codex student credits.
 - **Neutral titles.** Three shared guides were renamed so they don't mention Claude:
   - "Managing Vercel Projects with Your Coding Assistant"
@@ -120,7 +120,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 
 ## Remaining Minor Items
 
-- **Copilot parity:** the Claude Code guide now carries hiding Copilot as a tip; the Codex guide still has it as Step 2. Decide whether to make the Codex guide match, which would renumber its steps.
+- **Install-guide parity:** the Claude Code guide has been reordered so it installs the agent first and sets up the Projects folder as Step 6, and hiding Copilot is now a tip rather than Step 2. The Codex guide still opens with the Projects folder and keeps Copilot as Step 2. Decide whether to bring the Codex guide into line, which would renumber its steps.
 - **Checking the Homebrew command:** the Git and GitHub guide asks Mac students to check the command against brew.sh, which is hard for this audience. Consider putting the exact command in your class materials.
 - **The `.vercel` folder:** the Vercel guide says to leave it in place. Add a check that it's listed in `.gitignore`.
 - **Superpowers and branches:** Superpowers can remove code written before its tests. Recommend a branch there, as the homework does.
@@ -181,7 +181,7 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Guide | Status | What's left |
 |---|---|---|
 | Sequence | Ready | — |
-| Claude Code | Ready, needs testing | Folder dialog and permission wording. Trimmed to the setup path: hiding Copilot moved to Tips, the terminal dropped from the vocabulary box, the onboarding-checklist detour cut. |
+| Claude Code | Ready, needs testing | Folder dialog and permission wording. Reordered to install first and open the Projects folder at Step 6. Trimmed to the setup path: hiding Copilot moved to Tips, the terminal dropped from the vocabulary box, the onboarding-checklist detour cut. |
 | Codex | New, needs testing | Most interface details are from documentation |
 | Git and GitHub | Ready, needs testing | Homebrew is the hardest moment for Mac users |
 | Node.js | Ready, needs testing | Confirm installs on both systems and both assistants |
