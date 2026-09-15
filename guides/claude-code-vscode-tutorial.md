@@ -27,7 +27,7 @@ You don't need to know how to program to follow this guide.
 
 ## Before You Start
 
-This guide assumes VS Code is installed and open. You don't need a project or a folder open to install Claude Code, so Step 6 sets up a folder for your projects once Claude is working.
+This guide assumes VS Code is installed and open. You don't need a project or a folder open to install Claude Code. The next guide sets up a folder for your projects.
 
 You need:
 
@@ -120,28 +120,6 @@ Claude asks before running commands. You don't need to understand every command,
 
 ---
 
-## Step 6: Give Claude a Folder to Work In
-
-Claude works on the files in whichever folder VS Code has open. Now that Claude is running, give it one.
-
-Keep all your projects in a single folder. Put it in your home folder rather than Documents or Desktop, which are often synced by iCloud Drive or OneDrive. Syncing can interfere with your projects.
-
-1. In VS Code, choose **File → Open Folder…**
-2. Go to your home folder.
-    - **Mac:** press `Cmd + Shift + H`. It's the folder with a house icon and your name.
-    - **Windows:** it's `C:\Users\` followed by your name.
-3. Click **New Folder**, name it `Projects`, and confirm.
-4. Select the `Projects` folder and click **Open** (on Windows, **Select Folder**).
-5. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**. Claude Code doesn't work in Restricted Mode.
-
-Already have a folder for your projects? Open that one instead.
-
-VS Code reloads when it opens a folder. You stay signed in.
-
-Claude can make folders and bring projects into them once it's working, and the next guide has it copy your project from GitHub into this one. Choosing which folder VS Code has open is the part Claude can't do for you, so it's always **File → Open Folder…**
-
----
-
 ## Checkpoint
 
 Before moving on, check that Claude Code is working.
@@ -149,9 +127,9 @@ Before moving on, check that Claude Code is working.
 1. Start a new session: click the spark icon in the left-hand bar, then **New session**.
 2. Send:
 
-> Say hello, and tell me the name of the folder you're working in.
+> Say hello, and tell me in one sentence what you can help me with.
 
-**You should see:** a short reply that names the folder open in VS Code, such as your Projects folder.
+**You should see:** a short reply in the Claude Code panel. That is all this guide sets out to do: Claude installed, signed in, and answering.
 
 **If not:** see Troubleshooting below.
 
@@ -182,4 +160,4 @@ This is normal. The extension doesn't install the terminal version, and you don'
 
 ## Next
 
-When this guide's checkpoint works, continue with **Setting Up Git and GitHub CLI**, where Claude connects your computer to GitHub and brings your project onto your computer.
+When this guide's checkpoint works, continue with **Setting Up Git and GitHub CLI**, where you make a folder for your projects, and Claude connects your computer to GitHub and brings your project into it.

@@ -35,7 +35,7 @@ This guide assumes:
 - VS Code is installed, up to date, and open. To update it, go to **Code → Check for Updates** on a Mac or **Help → Check for Updates** on Windows.
 - You have a **ChatGPT account**. Codex is included with ChatGPT plans, including the free plan, which has lower limits.
 
-You don't need a project or a folder open to install Codex, so Step 6 sets up a folder for your projects once Codex is working.
+You don't need a project or a folder open to install Codex. The next guide sets up a folder for your projects.
 
 ---
 
@@ -112,28 +112,6 @@ If a change goes wrong, you can ask Codex to go back to that save point.
 
 ---
 
-## Step 6: Give Codex a Folder to Work In
-
-Codex works on the files in whichever folder VS Code has open. Now that Codex is running, give it one.
-
-Keep all your projects in a single folder. Put it in your home folder rather than Documents or Desktop, which are often synced by iCloud Drive or OneDrive. Syncing can interfere with your projects.
-
-1. In VS Code, choose **File → Open Folder…**
-2. Go to your home folder.
-    - **Mac:** press `Cmd + Shift + H`. It's the folder with a house icon and your name.
-    - **Windows:** it's `C:\Users\` followed by your name.
-3. Click **New Folder**, name it `Projects`, and confirm.
-4. Select the `Projects` folder and click **Open** (on Windows, **Select Folder**).
-5. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**. Codex doesn't work in Restricted Mode.
-
-Already have a folder for your projects? Open that one instead.
-
-VS Code reloads when it opens a folder. You stay signed in.
-
-Codex can make folders and bring projects into them once it's working, and the next guide has it copy your project from GitHub into this one. Choosing which folder VS Code has open is the part Codex can't do for you, so it's always **File → Open Folder…**
-
----
-
 ## Checkpoint
 
 Before moving on, check that Codex is working.
@@ -141,9 +119,9 @@ Before moving on, check that Codex is working.
 1. Start a new chat: click the new chat button at the top of the Codex panel.
 2. Send:
 
-> Say hello, and tell me the name of the folder you're working in.
+> Say hello, and tell me in one sentence what you can help me with.
 
-**You should see:** a short reply that names the folder open in VS Code, such as your Projects folder.
+**You should see:** a short reply in the Codex panel. That is all this guide sets out to do: Codex installed, signed in, and answering.
 
 **If not:** see Troubleshooting below.
 
@@ -178,4 +156,4 @@ This is normal. The extension doesn't install the terminal version, and you don'
 
 ## Next
 
-When this guide's checkpoint works, continue with **Setting Up Git and GitHub CLI**, where Codex connects your computer to GitHub and brings your project onto your computer.
+When this guide's checkpoint works, continue with **Setting Up Git and GitHub CLI**, where you make a folder for your projects, and Codex connects your computer to GitHub and brings your project into it.
