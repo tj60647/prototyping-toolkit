@@ -53,8 +53,8 @@ Follow the guides in this order, from top to bottom. Each one assumes you've fin
 
 | Guide | Full title | What it sets up |
 |---|---|---|
-| **Claude Code** or **Codex** | *Installing Claude Code in VS Code* or *Installing Codex in VS Code* | A Projects folder, and your coding assistant signed in and ready to help. Do only one. |
-| **Git and GitHub** | *Setting Up Git and GitHub CLI* | Git and GitHub CLI, so your assistant can save your work to GitHub, and a copy of your GitHub project on your computer. |
+| **Claude Code** or **Codex** | *Installing Claude Code in VS Code* or *Installing Codex in VS Code* | Your coding assistant, installed and signed in and ready to help. Do only one. |
+| **Git and GitHub** | *Setting Up Git and GitHub CLI* | A folder for your projects, then Git and GitHub CLI, so your assistant can save your work to GitHub, and a copy of your GitHub project on your computer. |
 | **Node.js** | *Installing Node.js* | Node.js, which many web tools need. |
 | **Vercel** | *Managing Vercel Projects with Your Coding Assistant* | The Vercel tools, so your assistant can publish through GitHub and check your builds. |
 | **API Key** | *Using Your API Key on Your Computer* | A copy of your Gemini API key on your computer, so your prototype runs there. |
@@ -82,7 +82,7 @@ Each guide ends with a **Checkpoint** section. Don't move on until it works. Sta
 
 | After this guide | How to check | You should see |
 |---|---|---|
-| **Claude Code** or **Codex** | Send: *"Say hello, and tell me the name of the folder you're working in."* | A short reply naming your Projects folder. |
+| **Claude Code** or **Codex** | Send: *"Say hello, and tell me in one sentence what you can help me with."* | A short reply in your assistant's panel. |
 | **Git and GitHub** | Open your project folder. Send: *"What is this project? Explain it in plain language in a few sentences. Then confirm which GitHub account I'm signed in with, and which GitHub repository this folder is connected to."* | A description of your project, your GitHub username, and your repository's name. |
 | **Node.js** | Send: *"Check that Node.js, npm, and npx all work. Report their version numbers."* | Three version numbers. |
 | **Vercel** | Send: *"Show the status of this Vercel project: its name, the latest deployment, whether it worked, and when it happened. Don't show any environment variable values. Then tell me how you'll publish my changes."* | Your latest deployment and whether it worked, and that your assistant will publish by pushing to GitHub. |

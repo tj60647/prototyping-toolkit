@@ -22,13 +22,12 @@ You don't need to know how to program to follow this guide.
 - **Permission request:** Claude asking before it changes a file or runs a command.
 - **Command:** an instruction for your computer, usually typed in a terminal. Claude can run commands for you.
 - **Command Palette:** a search box at the top of VS Code for finding any command by name. Press `Cmd + Shift + P` on a Mac or `Ctrl + Shift + P` on Windows, type part of the command's name, choose it from the list, and press Enter.
-- **Terminal:** a panel at the bottom of VS Code where you type commands. To open it, choose **Terminal → New Terminal** from the menu bar. On a Mac, the menu bar is at the top of your screen; on Windows, it's at the top of the VS Code window.
 
 ---
 
 ## Before You Start
 
-This guide assumes VS Code is installed and open. Claude Code works on the files in whichever folder is open, so Step 1 sets up a folder for your projects.
+This guide assumes VS Code is installed and open. You don't need a project or a folder open to install Claude Code. The next guide sets up a folder for your projects.
 
 You need:
 
@@ -37,35 +36,7 @@ You need:
 
 ---
 
-## Step 1: Open Your Projects Folder
-
-Keep all your projects in one folder. Put it in your home folder rather than Documents or Desktop, which are often synced by iCloud Drive or OneDrive. Syncing can interfere with your projects.
-
-1. In VS Code, choose **File → Open Folder…**
-2. Go to your home folder.
-    - **Mac:** press `Cmd + Shift + H`. It's the folder with a house icon and your name.
-    - **Windows:** it's `C:\Users\` followed by your name.
-3. Click **New Folder**, name it `Projects`, and confirm.
-4. Select the `Projects` folder and click **Open** (on Windows, **Select Folder**).
-5. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**.
-
-Already have a folder for your projects? Open that one instead.
-
----
-
-## Step 2: Hide VS Code's Built-In AI
-
-VS Code comes with its own AI assistant, GitHub Copilot. Its icons and buttons sit right next to Claude's, which makes it easy to click the wrong one. This setup uses Claude only, so hide Copilot:
-
-1. Open VS Code settings: press `Cmd + ,` on a Mac or `Ctrl + ,` on Windows.
-2. In the search box at the top, type `@id:chat.disableAIFeatures`
-3. Check the box next to the setting that appears.
-
-This only hides VS Code's own AI features. It doesn't affect the Claude Code extension.
-
----
-
-## Step 3: Install the Extension
+## Step 1: Install the Extension
 
 1. Open the Extensions view. Press `Cmd + Shift + X` on a Mac or `Ctrl + Shift + X` on Windows. You can also click the four-squares icon in the left-hand bar.
 2. Search for **Claude Code**.
@@ -81,20 +52,20 @@ If nothing appears after you install it, reload VS Code:
 
 ---
 
-## Step 4: Open Claude Code
+## Step 2: Open Claude Code
 
 An orange **spark** icon (✱) marks Claude Code. The easiest way to open it is to click the orange spark in the top-right corner of the window, just below the title bar. It appears whenever a file or the Welcome tab is open.
 
 You can also open it in these ways:
 
-- Click the spark icon in the left-hand bar. This opens the Claude Code sidebar, which shows your account, how much of your plan you've used, and a **New session** button.
+- Click the spark icon in the left-hand bar. This opens the Claude Code sidebar.
 - Open the Command Palette and type **Claude Code**.
 
 **Starting a new session.** Each conversation with Claude is called a **session**. You sometimes need a fresh one, for example after changing a setting. To start one, click the spark icon in the left-hand bar, then **New session**. Keep the **Local** tab selected. **Web** is for sessions you started on claude.ai.
 
 ---
 
-## Step 5: Sign In
+## Step 3: Sign In
 
 1. Click **Sign in** in the Claude Code panel.
 2. Your browser opens. Log in to your Claude account and approve the connection.
@@ -102,13 +73,13 @@ You can also open it in these ways:
 
 To check which account you're signed in with, click the spark icon in the left-hand bar. Your email appears under **Account**.
 
-A **Learn Claude Code** checklist appears after you sign in. Click **Show me** on each item for a guided tour of the basics. If you close it, you can bring it back in VS Code settings: go to **Extensions → Claude Code** and uncheck **Hide Onboarding**.
+A **Learn Claude Code** checklist appears after you sign in. Click **Show me** on each item for a guided tour of the basics, or close it and carry on with this guide.
 
 If you later see **"Not logged in · Please run /login"**, run **Developer: Reload Window** from the Command Palette.
 
 ---
 
-## Step 6: Try It
+## Step 4: Try It
 
 Start with a prompt that doesn't change anything:
 
@@ -122,7 +93,7 @@ A few tips for when your project is open:
 
 ---
 
-## Step 7: Understand Permissions
+## Step 5: Understand Permissions
 
 When Claude wants to change a file, it shows the original and the proposed change side by side. You can **accept**, **reject**, or tell it what to do instead.
 
@@ -133,6 +104,8 @@ The mode indicator at the bottom of the prompt box controls how much Claude asks
 | **Manual** | Asks before editing files and running most commands. *Start here.* |
 | **Plan** | Describes what it intends to do and waits for your approval. |
 | **Edit automatically** | Makes edits without asking. |
+
+Stay in **Manual** for now. The *Setting Up Your Coding Assistant for Prototyping* guide later switches you to **Plan**.
 
 If an edit goes wrong, hover over an earlier message and click the **rewind** button. This puts your files back the way they were at that point.
 
@@ -154,9 +127,9 @@ Before moving on, check that Claude Code is working.
 1. Start a new session: click the spark icon in the left-hand bar, then **New session**.
 2. Send:
 
-> Say hello, and tell me the name of the folder you're working in.
+> Say hello, and tell me in one sentence what you can help me with.
 
-**You should see:** a short reply that names the folder open in VS Code, such as your Projects folder.
+**You should see:** a short reply in the Claude Code panel. That is all this guide sets out to do: Claude installed, signed in, and answering.
 
 **If not:** see Troubleshooting below.
 
@@ -180,10 +153,11 @@ This is normal. The extension doesn't install the terminal version, and you don'
 
 ## Tips
 
+- **Hide VS Code's built-in AI.** VS Code has its own AI assistant, GitHub Copilot, whose icons sit right next to Claude's. If you find yourself clicking the wrong one, hide it: open VS Code settings with `Cmd + ,` on a Mac or `Ctrl + ,` on Windows, type `@id:chat.disableAIFeatures` in the search box, and check the box next to the setting that appears. This hides VS Code's own AI features only. It doesn't affect the Claude Code extension.
 - **Check your usage.** Click the spark icon in the left-hand bar. The **Usage** section shows how much of your plan you've used and when it resets. **Session (5hr)** is a five-hour usage window, and **Weekly** covers seven days. When a bar fills up, you wait for it to reset.
 
 ---
 
 ## Next
 
-When this guide's checkpoint works, continue with **Setting Up Git and GitHub CLI**, where Claude connects your computer to GitHub and brings your project onto your computer.
+When this guide's checkpoint works, continue with **Setting Up Git and GitHub CLI**, where you make a folder for your projects, and Claude connects your computer to GitHub and brings your project into it.

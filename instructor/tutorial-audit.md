@@ -46,7 +46,9 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 | Save points before the homework | Add them | The Vercel guide now tells students to commit before big changes. The Codex path teaches it from the start. |
 | Incomplete "Before You Start" lists | Review and add | Git and GitHub, Vercel, and API Key now list everything their steps and checkpoints need. |
 | Usage limits in class | Accept | No change to the guides. See "Suggestions for Teaching It." |
-| VS Code's built-in AI (Copilot) | Hide it | Both install guides now have a step that turns on `chat.disableAIFeatures`, so students don't mix up Copilot with their assistant. |
+| VS Code's built-in AI (Copilot) | Hide it, but not as a step | Nothing in the setup depends on it, and as a step it asked students to hide a button they hadn't seen yet, next to an assistant they hadn't installed yet. Both install guides now carry it as a tip after the checkpoint, phrased as "if you find yourself clicking the wrong one." |
+| Projects folder in the install guides | Move it to Git and GitHub | Installing an extension needs no folder open and signing in is account-level, so the folder was a false prerequisite in front of the whole guide. Keeping it at the end of the install guide still left students opening Projects, then replacing it with the project folder one guide later, with a trust prompt each time. It is now Step 1 of Git and GitHub, next to the clone that needs it. The install guides end when the assistant answers. |
+| Cloning: agent or VS Code's **Clone Repository** | Keep the agent | VS Code's clone would clone and open the folder in one flow, but it uses VS Code's own GitHub credentials, so a student could clone successfully with `gh` half-configured and not find out until the Vercel guide. The agent clone is the end-to-end test of what Steps 3-6 set up, and picking a repo from VS Code's list would mean a third GitHub sign-in. No change to the guides. |
 | Codex | Add a Codex path | New "Installing Codex in VS Code" guide, plus "Using Codex" notes in the shared guides. |
 | Instructions file | Use `AGENTS.md` | Instructions live in `AGENTS.md`. `CLAUDE.md` contains one line, `@AGENTS.md`, with a short explanation for students. |
 
@@ -55,7 +57,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 ## What Changed Since the First Review
 
 **Structure**
-- **No VS Code guide.** Both install guides start by creating a Projects folder in the home folder.
+- **No VS Code guide.** Both install guides cover only the assistant: install, open, sign in, try it, permissions. The Projects folder is Step 1 of Git and GitHub.
 - **Two install guides.** Students choose "Installing Claude Code in VS Code" or "Installing Codex in VS Code." The sequence guide explains the choice, including the Codex student credits.
 - **Neutral titles.** Three shared guides were renamed so they don't mention Claude:
   - "Managing Vercel Projects with Your Coding Assistant"
@@ -89,16 +91,15 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 
 **Only the first guide differs.** Codex students follow "Installing Codex in VS Code" instead of the Claude Code guide, then use the same guides as everyone else.
 
-**Codex install guide contents.**
-- Projects folder
-- Hiding Copilot
-- Claiming student credits
-- Installing and opening the extension (right sidebar, or **Open Codex Sidebar** from the Command Palette)
-- Signing in with ChatGPT
+**Codex install guide contents,** in order:
+- Installing the extension
+- Opening it (right sidebar, or **Open Codex Sidebar** from the Command Palette) and signing in with ChatGPT
 - Starting a new chat
-- Permission modes
-- Save points
+- Claiming student credits
+- Trying it
+- Permission modes and save points
 - Checkpoint and troubleshooting
+- Tips, including hiding Copilot
 
 **Shared guides.**
 - **Top note:** each opens with an italic note telling Codex students to read "Claude" as "Codex," and how to start a new chat.
@@ -120,7 +121,6 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 
 ## Remaining Minor Items
 
-- **Manual versus Plan:** the Claude Code guide says to start in Manual mode, and the prototyping guide later switches to Plan. A one-line heads-up in the Claude Code guide would help.
 - **Checking the Homebrew command:** the Git and GitHub guide asks Mac students to check the command against brew.sh, which is hard for this audience. Consider putting the exact command in your class materials.
 - **The `.vercel` folder:** the Vercel guide says to leave it in place. Add a check that it's listed in `.gitignore`.
 - **Superpowers and branches:** Superpowers can remove code written before its tests. Recommend a branch there, as the homework does.
@@ -136,9 +136,10 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 
 | Guide | What to check |
 |---|---|
-| Install guides | The **New Folder** button and home-folder shortcut in the Open Folder dialog |
-| Install guides | That `@id:chat.disableAIFeatures` hides Copilot without affecting Claude Code or Codex |
+| Git and GitHub | The **New Folder** button and home-folder shortcut in the Open Folder dialog, and that the assistant stays signed in when VS Code reloads to open the folder |
+| Install guides (now a tip in both) | That `@id:chat.disableAIFeatures` hides Copilot without affecting Claude Code or Codex |
 | Git and GitHub | The exact questions `gh auth login` asks with the flags given |
+| Install guides | That the checkpoint prompt reads sensibly with no folder open, and that the assistant answers it |
 | Vercel | The exact `vercel link` questions |
 | API Key | Whether `vercel env pull` downloads the Gemini key, or Vercel hides its value |
 | Playwright | The name of the folder Playwright saves screenshots in |
@@ -181,9 +182,9 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Guide | Status | What's left |
 |---|---|---|
 | Sequence | Ready | — |
-| Claude Code | Ready, needs testing | Folder dialog and permission wording |
-| Codex | New, needs testing | Most interface details are from documentation |
-| Git and GitHub | Ready, needs testing | Homebrew is the hardest moment for Mac users |
+| Claude Code | Ready, needs testing | Permission wording. Now covers only the assistant: the Projects folder moved to Git and GitHub, hiding Copilot moved to Tips, the terminal dropped from the vocabulary box, the onboarding-checklist detour cut. |
+| Codex | New, needs testing | Most interface details are from documentation. Matches the Claude Code guide: install first, Copilot in Tips, student credits after sign-in, no Projects folder step. |
+| Git and GitHub | Ready, needs testing | Homebrew is the hardest moment for Mac users. Now opens by making the Projects folder, so its steps renumbered to 1-7. |
 | Node.js | Ready, needs testing | Confirm installs on both systems and both assistants |
 | Vercel | Ready, needs testing | Codex plugin install; `.vercel` check |
 | API Key | Ready, needs testing | Confirm the key can be downloaded from Vercel |
