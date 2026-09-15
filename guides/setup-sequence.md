@@ -54,7 +54,7 @@ Follow the guides in this order, from top to bottom. Each one assumes you've fin
 | Guide | Full title | What it sets up |
 |---|---|---|
 | **Claude Code** or **Codex** | *Installing Claude Code in VS Code* or *Installing Codex in VS Code* | Your coding assistant, installed and signed in and ready to help. Do only one. |
-| **Git and GitHub** | *Setting Up Git and GitHub CLI* | A Projects folder, then Git and GitHub CLI, so your assistant can save your work to GitHub, and a copy of your GitHub project on your computer. |
+| **Git and GitHub** | *Setting Up Git and GitHub CLI* | A folder for your projects, then Git and GitHub CLI, so your assistant can save your work to GitHub, and a copy of your GitHub project on your computer. |
 | **Node.js** | *Installing Node.js* | Node.js, which many web tools need. |
 | **Vercel** | *Managing Vercel Projects with Your Coding Assistant* | The Vercel tools, so your assistant can publish through GitHub and check your builds. |
 | **API Key** | *Using Your API Key on Your Computer* | A copy of your Gemini API key on your computer, so your prototype runs there. |

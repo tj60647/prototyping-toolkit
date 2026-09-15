@@ -67,7 +67,7 @@ Put it in your home folder rather than Documents or Desktop, which are often syn
 4. Select the `Projects` folder and click **Open** (on Windows, **Select Folder**).
 5. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**. Claude doesn't work in Restricted Mode.
 
-Already have a folder for your projects? Open that one instead.
+Already have a folder for your projects? Open that one instead. Whichever folder you opened, the rest of these guides call it your **Projects folder**, whatever its name really is.
 
 VS Code reloads when it opens a folder. You stay signed in. Claude can make folders and copy projects into them, but choosing which folder VS Code has open is the part it can't do for you, so it's always **File → Open Folder…**
 
