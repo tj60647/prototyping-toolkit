@@ -46,7 +46,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 | Save points before the homework | Add them | The Vercel guide now tells students to commit before big changes. The Codex path teaches it from the start. |
 | Incomplete "Before You Start" lists | Review and add | Git and GitHub, Vercel, and API Key now list everything their steps and checkpoints need. |
 | Usage limits in class | Accept | No change to the guides. See "Suggestions for Teaching It." |
-| VS Code's built-in AI (Copilot) | Hide it | Both install guides now have a step that turns on `chat.disableAIFeatures`, so students don't mix up Copilot with their assistant. |
+| VS Code's built-in AI (Copilot) | Hide it, but not as a step | Nothing in the setup depends on it, and as a step it asked students to hide a button they hadn't seen yet, next to an assistant they hadn't installed yet. In the Claude Code guide it is now a tip after the checkpoint, phrased as "if you find yourself clicking the wrong one." The Codex guide still has it as Step 2. |
 | Codex | Add a Codex path | New "Installing Codex in VS Code" guide, plus "Using Codex" notes in the shared guides. |
 | Instructions file | Use `AGENTS.md` | Instructions live in `AGENTS.md`. `CLAUDE.md` contains one line, `@AGENTS.md`, with a short explanation for students. |
 
@@ -120,7 +120,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 
 ## Remaining Minor Items
 
-- **Manual versus Plan:** the Claude Code guide says to start in Manual mode, and the prototyping guide later switches to Plan. A one-line heads-up in the Claude Code guide would help.
+- **Copilot parity:** the Claude Code guide now carries hiding Copilot as a tip; the Codex guide still has it as Step 2. Decide whether to make the Codex guide match, which would renumber its steps.
 - **Checking the Homebrew command:** the Git and GitHub guide asks Mac students to check the command against brew.sh, which is hard for this audience. Consider putting the exact command in your class materials.
 - **The `.vercel` folder:** the Vercel guide says to leave it in place. Add a check that it's listed in `.gitignore`.
 - **Superpowers and branches:** Superpowers can remove code written before its tests. Recommend a branch there, as the homework does.
@@ -137,7 +137,7 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Guide | What to check |
 |---|---|
 | Install guides | The **New Folder** button and home-folder shortcut in the Open Folder dialog |
-| Install guides | That `@id:chat.disableAIFeatures` hides Copilot without affecting Claude Code or Codex |
+| Install guides (tip in Claude Code, Step 2 in Codex) | That `@id:chat.disableAIFeatures` hides Copilot without affecting Claude Code or Codex |
 | Git and GitHub | The exact questions `gh auth login` asks with the flags given |
 | Vercel | The exact `vercel link` questions |
 | API Key | Whether `vercel env pull` downloads the Gemini key, or Vercel hides its value |
@@ -181,7 +181,7 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Guide | Status | What's left |
 |---|---|---|
 | Sequence | Ready | — |
-| Claude Code | Ready, needs testing | Folder dialog and permission wording |
+| Claude Code | Ready, needs testing | Folder dialog and permission wording. Trimmed to the setup path: hiding Copilot moved to Tips, the terminal dropped from the vocabulary box, the onboarding-checklist detour cut. |
 | Codex | New, needs testing | Most interface details are from documentation |
 | Git and GitHub | Ready, needs testing | Homebrew is the hardest moment for Mac users |
 | Node.js | Ready, needs testing | Confirm installs on both systems and both assistants |
