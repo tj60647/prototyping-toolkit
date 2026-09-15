@@ -35,33 +35,29 @@ This guide assumes:
 - VS Code is installed, up to date, and open. To update it, go to **Code → Check for Updates** on a Mac or **Help → Check for Updates** on Windows.
 - You have a **ChatGPT account**. Codex is included with ChatGPT plans, including the free plan, which has lower limits.
 
----
-
-## Step 1: Open Your Projects Folder
-
-Keep all your projects in one folder. Put it in your home folder rather than Documents or Desktop, which are often synced by iCloud Drive or OneDrive. Syncing can interfere with your projects.
-
-1. In VS Code, choose **File → Open Folder…**
-2. Go to your home folder.
-    - **Mac:** press `Cmd + Shift + H`. It's the folder with a house icon and your name.
-    - **Windows:** it's `C:\Users\` followed by your name.
-3. Click **New Folder**, name it `Projects`, and confirm.
-4. Select the `Projects` folder and click **Open** (on Windows, **Select Folder**).
-5. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**.
-
-Already have a folder for your projects? Open that one instead.
+You don't need a project or a folder open to install Codex, so Step 6 sets up a folder for your projects once Codex is working.
 
 ---
 
-## Step 2: Hide VS Code's Built-In AI
+## Step 1: Install the Extension
 
-VS Code comes with its own AI assistant, GitHub Copilot. Its icons and buttons sit near Codex's, which makes it easy to click the wrong one. This setup uses Codex only, so hide Copilot:
+1. Open the Extensions view. Press `Cmd + Shift + X` on a Mac or `Ctrl + Shift + X` on Windows. You can also click the four-squares icon in the left-hand bar.
+2. Search for **Codex**.
+3. Choose **Codex – OpenAI's coding agent**, published by **OpenAI**.
+4. Click **Install**.
 
-1. Open VS Code settings: press `Cmd + ,` on a Mac or `Ctrl + ,` on Windows.
-2. In the search box at the top, type `@id:chat.disableAIFeatures`
-3. Check the box next to the setting that appears.
+You only do this once. The extension is then available in every VS Code window and project, and each chat works on the folder that's open.
 
-This only hides VS Code's own AI features. It doesn't affect the Codex extension.
+---
+
+## Step 2: Open Codex and Sign In
+
+1. Look for the Codex icon in the sidebar on the **right** side of the window, and click it. If you don't see it, open the Command Palette, type **Open Codex Sidebar**, and press Enter.
+2. Choose to sign in with your **ChatGPT account**.
+3. Your browser opens. Log in to ChatGPT and approve the connection.
+4. Go back to VS Code. You should now see a prompt box in the Codex panel.
+
+**Starting a new chat.** You sometimes need a fresh chat, for example after changing a setting. Click the new chat button at the top of the Codex panel, or press `Cmd + N` on a Mac or `Ctrl + N` on Windows while the Codex panel is selected.
 
 ---
 
@@ -77,29 +73,7 @@ The credits are added to your ChatGPT account automatically. Skip this step if i
 
 ---
 
-## Step 4: Install the Extension
-
-1. Open the Extensions view. Press `Cmd + Shift + X` on a Mac or `Ctrl + Shift + X` on Windows. You can also click the four-squares icon in the left-hand bar.
-2. Search for **Codex**.
-3. Choose **Codex – OpenAI's coding agent**, published by **OpenAI**.
-4. Click **Install**.
-
-You only do this once. The extension is then available in every VS Code window and project, and each chat works on the folder that's open.
-
----
-
-## Step 5: Open Codex and Sign In
-
-1. Look for the Codex icon in the sidebar on the **right** side of the window, and click it. If you don't see it, open the Command Palette, type **Open Codex Sidebar**, and press Enter.
-2. Choose to sign in with your **ChatGPT account**.
-3. Your browser opens. Log in to ChatGPT and approve the connection.
-4. Go back to VS Code. You should now see a prompt box in the Codex panel.
-
-**Starting a new chat.** You sometimes need a fresh chat, for example after changing a setting. Click the new chat button at the top of the Codex panel, or press `Cmd + N` on a Mac or `Ctrl + N` on Windows while the Codex panel is selected.
-
----
-
-## Step 6: Try It
+## Step 4: Try It
 
 Start with a prompt that doesn't change anything:
 
@@ -107,7 +81,7 @@ Start with a prompt that doesn't change anything:
 
 ---
 
-## Step 7: Understand Permissions
+## Step 5: Understand Permissions
 
 Below the prompt box is a **permission mode** control. It has three choices:
 
@@ -135,6 +109,28 @@ Because Codex doesn't ask before changing your files, save a starting point befo
 > Commit my current work with a clear message.
 
 If a change goes wrong, you can ask Codex to go back to that save point.
+
+---
+
+## Step 6: Give Codex a Folder to Work In
+
+Codex works on the files in whichever folder VS Code has open. Now that Codex is running, give it one.
+
+Keep all your projects in a single folder. Put it in your home folder rather than Documents or Desktop, which are often synced by iCloud Drive or OneDrive. Syncing can interfere with your projects.
+
+1. In VS Code, choose **File → Open Folder…**
+2. Go to your home folder.
+    - **Mac:** press `Cmd + Shift + H`. It's the folder with a house icon and your name.
+    - **Windows:** it's `C:\Users\` followed by your name.
+3. Click **New Folder**, name it `Projects`, and confirm.
+4. Select the `Projects` folder and click **Open** (on Windows, **Select Folder**).
+5. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**. Codex doesn't work in Restricted Mode.
+
+Already have a folder for your projects? Open that one instead.
+
+VS Code reloads when it opens a folder. You stay signed in.
+
+Codex can make folders and bring projects into them once it's working, and the next guide has it copy your project from GitHub into this one. Choosing which folder VS Code has open is the part Codex can't do for you, so it's always **File → Open Folder…**
 
 ---
 
@@ -174,6 +170,7 @@ This is normal. The extension doesn't install the terminal version, and you don'
 
 ## Tips
 
+- **Hide VS Code's built-in AI.** VS Code has its own AI assistant, GitHub Copilot, whose icons sit near Codex's. If you find yourself clicking the wrong one, hide it: open VS Code settings with `Cmd + ,` on a Mac or `Ctrl + ,` on Windows, type `@id:chat.disableAIFeatures` in the search box, and check the box next to the setting that appears. This hides VS Code's own AI features only. It doesn't affect the Codex extension.
 - **Check your usage.** Type `/status` in the prompt box to see your account and usage. If you claimed student credits, your balance appears on your ChatGPT usage page.
 - **Privacy.** OpenAI may use your Codex chats to improve its models unless you turn this off in ChatGPT's **Data controls** settings.
 

@@ -46,7 +46,8 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 | Save points before the homework | Add them | The Vercel guide now tells students to commit before big changes. The Codex path teaches it from the start. |
 | Incomplete "Before You Start" lists | Review and add | Git and GitHub, Vercel, and API Key now list everything their steps and checkpoints need. |
 | Usage limits in class | Accept | No change to the guides. See "Suggestions for Teaching It." |
-| VS Code's built-in AI (Copilot) | Hide it, but not as a step | Nothing in the setup depends on it, and as a step it asked students to hide a button they hadn't seen yet, next to an assistant they hadn't installed yet. In the Claude Code guide it is now a tip after the checkpoint, phrased as "if you find yourself clicking the wrong one." The Codex guide still has it as Step 2. |
+| VS Code's built-in AI (Copilot) | Hide it, but not as a step | Nothing in the setup depends on it, and as a step it asked students to hide a button they hadn't seen yet, next to an assistant they hadn't installed yet. Both install guides now carry it as a tip after the checkpoint, phrased as "if you find yourself clicking the wrong one." |
+| Projects folder before installing | Move it after | Installing an extension needs no folder open and signing in is account-level, so the folder was a false prerequisite in front of the whole guide. Both install guides now run install, open, sign in, try it, permissions, folder, with the checkpoint testing the folder straight away. |
 | Codex | Add a Codex path | New "Installing Codex in VS Code" guide, plus "Using Codex" notes in the shared guides. |
 | Instructions file | Use `AGENTS.md` | Instructions live in `AGENTS.md`. `CLAUDE.md` contains one line, `@AGENTS.md`, with a short explanation for students. |
 
@@ -55,7 +56,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 ## What Changed Since the First Review
 
 **Structure**
-- **No VS Code guide.** The Codex guide starts by creating a Projects folder in the home folder. The Claude Code guide installs and signs in first, then creates the folder at Step 6, because installing an extension needs no folder open.
+- **No VS Code guide.** Both install guides get the assistant installed and signed in first, then create a Projects folder in the home folder at Step 6.
 - **Two install guides.** Students choose "Installing Claude Code in VS Code" or "Installing Codex in VS Code." The sequence guide explains the choice, including the Codex student credits.
 - **Neutral titles.** Three shared guides were renamed so they don't mention Claude:
   - "Managing Vercel Projects with Your Coding Assistant"
@@ -89,16 +90,16 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 
 **Only the first guide differs.** Codex students follow "Installing Codex in VS Code" instead of the Claude Code guide, then use the same guides as everyone else.
 
-**Codex install guide contents.**
-- Projects folder
-- Hiding Copilot
-- Claiming student credits
-- Installing and opening the extension (right sidebar, or **Open Codex Sidebar** from the Command Palette)
-- Signing in with ChatGPT
+**Codex install guide contents,** in order:
+- Installing the extension
+- Opening it (right sidebar, or **Open Codex Sidebar** from the Command Palette) and signing in with ChatGPT
 - Starting a new chat
-- Permission modes
-- Save points
+- Claiming student credits
+- Trying it
+- Permission modes and save points
+- Projects folder
 - Checkpoint and troubleshooting
+- Tips, including hiding Copilot
 
 **Shared guides.**
 - **Top note:** each opens with an italic note telling Codex students to read "Claude" as "Codex," and how to start a new chat.
@@ -120,7 +121,6 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 
 ## Remaining Minor Items
 
-- **Install-guide parity:** the Claude Code guide has been reordered so it installs the agent first and sets up the Projects folder as Step 6, and hiding Copilot is now a tip rather than Step 2. The Codex guide still opens with the Projects folder and keeps Copilot as Step 2. Decide whether to bring the Codex guide into line, which would renumber its steps.
 - **Checking the Homebrew command:** the Git and GitHub guide asks Mac students to check the command against brew.sh, which is hard for this audience. Consider putting the exact command in your class materials.
 - **The `.vercel` folder:** the Vercel guide says to leave it in place. Add a check that it's listed in `.gitignore`.
 - **Superpowers and branches:** Superpowers can remove code written before its tests. Recommend a branch there, as the homework does.
@@ -136,8 +136,8 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 
 | Guide | What to check |
 |---|---|
-| Install guides | The **New Folder** button and home-folder shortcut in the Open Folder dialog |
-| Install guides (tip in Claude Code, Step 2 in Codex) | That `@id:chat.disableAIFeatures` hides Copilot without affecting Claude Code or Codex |
+| Install guides | The **New Folder** button and home-folder shortcut in the Open Folder dialog, and that the assistant stays signed in when VS Code reloads to open the folder |
+| Install guides (now a tip in both) | That `@id:chat.disableAIFeatures` hides Copilot without affecting Claude Code or Codex |
 | Git and GitHub | The exact questions `gh auth login` asks with the flags given |
 | Vercel | The exact `vercel link` questions |
 | API Key | Whether `vercel env pull` downloads the Gemini key, or Vercel hides its value |
@@ -182,7 +182,7 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 |---|---|---|
 | Sequence | Ready | — |
 | Claude Code | Ready, needs testing | Folder dialog and permission wording. Reordered to install first and open the Projects folder at Step 6. Trimmed to the setup path: hiding Copilot moved to Tips, the terminal dropped from the vocabulary box, the onboarding-checklist detour cut. |
-| Codex | New, needs testing | Most interface details are from documentation |
+| Codex | New, needs testing | Most interface details are from documentation. Reordered to match the Claude Code guide: install first, Projects folder at Step 6, Copilot in Tips, student credits after sign-in. |
 | Git and GitHub | Ready, needs testing | Homebrew is the hardest moment for Mac users |
 | Node.js | Ready, needs testing | Confirm installs on both systems and both assistants |
 | Vercel | Ready, needs testing | Codex plugin install; `.vercel` check |
