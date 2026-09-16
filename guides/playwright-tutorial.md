@@ -70,7 +70,7 @@ Pick any page you've already published, such as your prototype's Vercel link, an
 
 Claude asks permission before each browser action. Read what it wants to do, then allow it.
 
-**Not sure whether to allow something?** Ask Claude to explain it in plain language first. Deny anything that would delete files, use `sudo`, or change things outside your project folder.
+**Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
 A separate browser window opens. A bar at the top says it's being controlled by automated software. That's Claude. You can watch, but avoid clicking in the window while Claude works.
 

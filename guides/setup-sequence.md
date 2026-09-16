@@ -1,5 +1,7 @@
 # Setting Up Your Prototyping Toolkit
 
+**Start with the [TLDR: Set Up and Start Prototyping](/tldr).** Follow the short steps and let your agent help. Use the detailed guides below whenever you need more explanation.
+
 *The order to follow the setup guides in. Accurate as of September 2026.*
 
 ---
@@ -68,10 +70,10 @@ Follow the guides in this order, from top to bottom. Each one assumes you've fin
 ## How the Guides Work
 
 - **Your assistant does most of the work.** From the moment it's installed, it runs most commands for you. Claude asks before each one. Codex runs routine commands in your project without asking, so Codex users save a starting point before each task.
-- **You'll use the terminal a few times,** to sign in to GitHub and Vercel, and to link your project to Vercel. Those steps ask questions and wait for your answers, so you do them yourself. On a Mac, you may also need it once to install Homebrew, which asks for your password.
+- **You'll rarely need the terminal.** Your assistant starts the GitHub and Vercel sign-ins, and you approve them in your browser. On a Mac, you may need the terminal once to install Homebrew, which asks for your password.
 - **Restarting VS Code fixes a lot.** VS Code only notices newly installed programs after you quit it completely and open it again. Closing a window isn't always enough. On a Mac, press `Cmd + Q`. On Windows, close every VS Code window or choose **File → Exit**.
 - **Start a new session when a guide asks you to.** In Claude Code, click the spark icon in the left-hand bar, then **New session**. In Codex, click the new chat button at the top of the Codex panel.
-- **Check before you allow.** If your assistant asks to run a command you're unsure about, ask for a plain-language explanation first. Deny anything that would delete files, use `sudo`, or change things outside your project folder.
+- **Check before you allow.** If your assistant asks to run a command you're unsure about, ask for a plain-language explanation first.
 - **Each guide ends with "Next,"** naming the guide that comes after it.
 
 ---
@@ -112,7 +114,6 @@ Each guide ends with a **Checkpoint** section. Don't move on until it works. Sta
 - **Explorer panel:** the list of your project's files and folders on the left side of VS Code. To open it, press `Cmd + Shift + E` on a Mac or `Ctrl + Shift + E` on Windows, or click the top icon in the left-hand bar.
 - **Extension:** an add-on that gives VS Code new features. Claude Code and Codex are extensions.
 - **`.gitignore`:** a list of files Git never saves or sends to GitHub.
-- **Link:** connect a folder on your computer to a project on Vercel.
 - **Local address:** a web address, such as `http://localhost:5173`, that only works on your own computer.
 - **Merge:** bring a branch's changes into your main version.
 - **`npm` and `npx`:** commands that come with Node.js. `npm` installs packages; `npx` runs a tool without installing it permanently.

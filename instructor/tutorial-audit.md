@@ -27,7 +27,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 **Strengths.**
 
 - **Consistent shape.** Every guide follows the same pattern: what you're setting up, words you'll see, what you need, steps, a checkpoint, troubleshooting, tips, and what comes next.
-- **The assistant does the work.** Once it's installed, the coding assistant does the technical work and students approve it. The terminal is only for signing in and linking, plus a password step on some Macs.
+- **The assistant does the work.** Once it's installed, the coding assistant does the technical work and students approve it. The assistant also starts the GitHub and Vercel sign-ins, which students approve in the browser, so the terminal is only for the Homebrew password step on some Macs.
 - **Safety is built in.** Secrets stay out of the chat, publishing only happens by pushing to GitHub, and students test only their own pages. Every guide explains how to decide whether to allow a command, and students learn to save a starting point before big changes.
 - **Two assistants, one set of guides.** Claude Code and Codex students share every guide except the first. One instructions file, `AGENTS.md`, works for both.
 
@@ -49,6 +49,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 | VS Code's built-in AI (Copilot) | Hide it, but not as a step | Nothing in the setup depends on it, and as a step it asked students to hide a button they hadn't seen yet, next to an assistant they hadn't installed yet. Both install guides now carry it as a tip after the checkpoint, phrased as "if you find yourself clicking the wrong one." |
 | Projects folder in the install guides | Move it to Git and GitHub | Installing an extension needs no folder open and signing in is account-level, so the folder was a false prerequisite in front of the whole guide. Keeping it at the end of the install guide still left students opening Projects, then replacing it with the project folder one guide later, with a trust prompt each time. It is now Step 1 of Git and GitHub, next to the clone that needs it. The install guides end when the assistant answers. |
 | Cloning: agent or VS Code's **Clone Repository** | Keep the agent | VS Code's clone would clone and open the folder in one flow, but it uses VS Code's own GitHub credentials, so a student could clone successfully with `gh` half-configured and not find out until the Vercel guide. The agent clone is the end-to-end test of what Steps 3-6 set up, and picking a repo from VS Code's list would mean a third GitHub sign-in. No change to the guides. |
+| Terminal sign-in and `vercel link` | Drop both | Tested 2026-09-16: `gh auth login --web` and `vercel login` both print a code or address and wait when run without a terminal, so the assistant runs them and students approve in the browser. `gh` then skips Git credential setup, so the prompt adds `gh auth setup-git`. Vercel CLI commands take a project name, so the folder is never linked; the name is saved in `AGENTS.md`. |
 | Codex | Add a Codex path | New "Installing Codex in VS Code" guide, plus "Using Codex" notes in the shared guides. |
 | Instructions file | Use `AGENTS.md` | Instructions live in `AGENTS.md`. `CLAUDE.md` contains one line, `@AGENTS.md`, with a short explanation for students. |
 
@@ -138,9 +139,9 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 |---|---|
 | Git and GitHub | The **New Folder** button and home-folder shortcut in the Open Folder dialog, and that the assistant stays signed in when VS Code reloads to open the folder |
 | Install guides (now a tip in both) | That `@id:chat.disableAIFeatures` hides Copilot without affecting Claude Code or Codex |
-| Git and GitHub | The exact questions `gh auth login` asks with the flags given |
+| Git and GitHub | That the assistant relays the `gh auth login` code and address, and that `gh auth setup-git` lets the first push work |
 | Install guides | That the checkpoint prompt reads sensibly with no folder open, and that the assistant answers it |
-| Vercel | The exact `vercel link` questions |
+| Vercel | That the assistant relays the `vercel login` address, and uses the project name instead of linking |
 | API Key | Whether `vercel env pull` downloads the Gemini key, or Vercel hides its value |
 | Playwright | The name of the folder Playwright saves screenshots in |
 | Homework | That SkillUI runs through `npx` on both systems, where it writes files, and that its own `CLAUDE.md` stays inside its folder |
@@ -186,7 +187,7 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Codex | New, needs testing | Most interface details are from documentation. Matches the Claude Code guide: install first, Copilot in Tips, student credits after sign-in, no Projects folder step. |
 | Git and GitHub | Ready, needs testing | Homebrew is the hardest moment for Mac users. Now opens by making the Projects folder, so its steps renumbered to 1-7. |
 | Node.js | Ready, needs testing | Confirm installs on both systems and both assistants |
-| Vercel | Ready, needs testing | Codex plugin install; `.vercel` check |
+| Vercel | Ready, needs testing | Codex plugin install; whether the plugin's **status** command works without a linked folder |
 | API Key | Ready, needs testing | Confirm the key can be downloaded from Vercel |
 | Playwright | Ready, needs testing | Codex settings path |
 | Prototyping Assistant | Ready, needs testing | Codex plan-first behavior; no Troubleshooting section |
@@ -220,7 +221,7 @@ Students who arrive without accounts will stall at the first or second guide.
 - **Check usage before Homework Option C.** Claude students use the **Usage** section in the sidebar; Codex students type `/status`.
 - **Codex student credits** extend usage past the plan's limits.
 
-**Pacing.** The install guide and the Git and GitHub guide vary the most between Mac and Windows, and include the Homebrew password step. Give them their own session, with a TA ready for Homebrew. The rest go faster once the assistant is doing the work. The Vercel guide has two sign-in steps in the terminal.
+**Pacing.** The install guide and the Git and GitHub guide vary the most between Mac and Windows, and include the Homebrew password step. Give them their own session, with a TA ready for Homebrew. The rest go faster once the assistant is doing the work. Sign-in codes expire (GitHub's after about 15 minutes), so students should approve them straight away.
 
 **Grouping by system.** Within each assistant group, seat Mac and Windows users separately for the first two guides.
 

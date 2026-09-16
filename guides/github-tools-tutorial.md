@@ -15,7 +15,7 @@ Two tools let Claude save your work and connect it to your GitHub account:
 
 With both installed, you can ask Claude to save your changes, create a GitHub repository, or publish updates, all in plain language. At the end of this guide, Claude brings a copy of your GitHub project onto your computer.
 
-Claude does most of the setup for you. You'll use the terminal once, to sign in to GitHub.
+Claude does the setup for you. To sign in, you approve a one-time code in your browser. The only time you might type in the terminal is to install Homebrew on a Mac.
 
 ---
 
@@ -43,7 +43,7 @@ This guide assumes:
 
 ## Using the Terminal
 
-A few things to know before you type in the terminal:
+You only need this if your Mac needs Homebrew (Step 3). A few things to know before you type in the terminal:
 
 - **Paste a command** with `Cmd + V` on a Mac or `Ctrl + V` on Windows, then press Enter to run it.
 - **You can't click to move the cursor.** Use the arrow keys instead.
@@ -81,7 +81,7 @@ Ask Claude:
 
 Claude will ask permission to run a few short commands. Read each one, then allow it.
 
-**Not sure whether to allow something?** Ask Claude to explain it in plain language first. Deny anything that would delete files, use `sudo`, or change things outside your project folder.
+**Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
 **Using Codex?** Codex runs routine commands without asking, but it asks before using the internet or changing things outside your project folder. Installing programs does both, so expect Codex to ask during Step 3.
 
@@ -141,20 +141,18 @@ VS Code and Claude only notice newly installed programs after VS Code restarts.
 
 ## Step 5: Sign In to GitHub
 
-This is the one step you do in the terminal yourself, because it asks you questions and waits for you along the way.
+Claude starts the sign-in, and you finish it in your browser. Send:
 
-1. Open the terminal: choose **Terminal → New Terminal** from the menu. On a Mac, the menu is at the top of your screen.
-2. Paste this and press Enter:
+> Sign me in to GitHub CLI with gh auth login --hostname github.com --git-protocol https --web. Show me the one-time code and the web address as soon as they appear, and wait while I approve it. Then run gh auth setup-git so Git uses this sign-in too.
 
-```
-gh auth login --hostname github.com --git-protocol https --web
-```
+Then:
 
-3. If asked **"Authenticate Git with your GitHub credentials?"**, choose **Yes** and press Enter.
-4. The terminal shows a **one-time code**. Copy it or write it down.
-5. Press Enter. Your browser opens a GitHub page.
-6. Sign in to GitHub if asked, enter the code, and approve the request.
-7. Go back to VS Code. The terminal should say you're logged in.
+1. Copy the **one-time code** Claude shows you.
+2. Open the web address Claude gives you, usually **https://github.com/login/device**.
+3. Sign in to GitHub if asked, enter the code, and approve the request.
+4. Go back to VS Code and tell Claude you're done.
+
+**Do this straight away.** The code expires after about 15 minutes. If it does, ask Claude to start the sign-in again for a new code.
 
 ---
 
@@ -162,7 +160,7 @@ gh auth login --hostname github.com --git-protocol https --web
 
 Git labels every saved version with your name and email. Claude can set these up from your GitHub account. Send:
 
-> Check that I'm signed in to GitHub. Then, if my Git name and email aren't set, set them from my GitHub account. Use my GitHub no-reply email address so my personal email stays private.
+> Check that I'm signed in to GitHub and that Git uses GitHub CLI to sign in. Then, if my Git name and email aren't set, set them from my GitHub account. Use my GitHub no-reply email address so my personal email stays private.
 
 Allow the commands when Claude asks. Then try:
 
@@ -221,7 +219,7 @@ Ask Claude: *"winget isn't available. Tell me where to download the regular inst
 Ask Claude: *"Homebrew is installed but the brew command isn't found. Complete Homebrew's setup steps."* Then restart VS Code.
 
 **The one-time code expired.**
-Run the `gh auth login` command again to get a new code.
+Ask Claude: *"The code expired. Start the GitHub sign-in again."* Then enter the new code straight away.
 
 **Claude can't find my repository.**
 Ask Claude to list your repositories and pick the right one. If it isn't listed, make sure you signed in to the GitHub account that owns it.

@@ -72,7 +72,7 @@ Claude asks before running commands. Before you click allow:
 
 - **Read Claude's explanation.** If there isn't one, ask: *"Explain that command in plain language first."*
 - **Allow it** if it matches what you asked for.
-- **Deny it and ask why** if it would delete files, uses `sudo`, changes things outside your project folder, or deploys with Vercel CLI.
+- **Deny it and ask why** if it doesn't match what you asked for, or if it deploys with Vercel CLI.
 
 ---
 

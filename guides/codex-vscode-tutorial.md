@@ -99,7 +99,7 @@ When Codex does ask, check before you allow:
 
 - **Read Codex's explanation.** If there isn't one, ask: *"Explain that in plain language first."*
 - **Allow it** if it matches what you asked for.
-- **Deny it and ask why** if it would delete files, uses `sudo`, or changes things outside your project folder.
+- **Deny it and ask why** if it doesn't match what you asked for.
 - **When in doubt, deny.** Codex will explain or suggest another way.
 
 ### Save points

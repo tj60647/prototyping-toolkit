@@ -115,7 +115,7 @@ Claude asks before running commands. You don't need to understand every command,
 
 - **Read Claude's explanation.** If there isn't one, ask: *"Explain that in plain language first."*
 - **Allow it** if it matches what you asked for.
-- **Deny it and ask why** if it would delete files, uses `sudo`, or changes things outside your project folder.
+- **Deny it and ask why** if it doesn't match what you asked for.
 - **When in doubt, deny.** Claude will explain or suggest another way.
 
 ---

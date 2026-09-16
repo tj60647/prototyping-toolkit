@@ -29,11 +29,9 @@ Publishing works the way it does now: your project on GitHub is already connecte
 - **Build:** the step where Vercel turns your project's files into a working website. A build can succeed or fail.
 - **Commit:** save a snapshot of your project's files, with a short message about what changed.
 - **Push:** send your commits to GitHub. For your project, pushing is how you publish.
-- **Link:** connect a folder on your computer to a project on Vercel.
 - **Environment variable:** a setting kept outside your code, such as an API key.
 - **`AGENTS.md`:** a file of standing instructions that coding assistants read at the start of every session.
 - **`CLAUDE.md`:** Claude Code's instructions file. Yours contains one line, `@AGENTS.md`, so Claude reads `AGENTS.md` too.
-- **Terminal:** a panel at the bottom of VS Code where you type commands. To open it, choose **Terminal → New Terminal** from the menu bar. On a Mac, the menu bar is at the top of your screen; on Windows, it's at the top of the VS Code window.
 
 ---
 
@@ -56,7 +54,7 @@ Send:
 
 Claude asks permission before each command. Read what it wants to run, then allow it.
 
-**Not sure whether to allow something?** Ask Claude to explain it in plain language first. Deny anything that would delete files, use `sudo`, or change things outside your project folder.
+**Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
 When Claude is done:
 
@@ -71,56 +69,25 @@ When Claude is done:
 
 ---
 
-## Using the Terminal
-
-A few things to know before you type in the terminal:
-
-- **Paste a command** with `Cmd + V` on a Mac or `Ctrl + V` on Windows, then press Enter to run it.
-- **You can't click to move the cursor.** Use the arrow keys instead.
-- **When a command asks a question,** use the arrow keys to pick an answer and press Enter.
-- **A command is finished** when the terminal shows a new, empty line ready for typing.
-- **To stop a command that seems stuck,** press `Ctrl + C`. This is the same on a Mac.
-
----
-
 ## Step 2: Sign In to Vercel
 
-You do this step and the next one in the terminal yourself, because they ask questions and wait for your answers.
+Claude starts the sign-in, and you finish it in your browser. Send:
 
-Open the terminal: choose **Terminal → New Terminal** from the menu. On a Mac, the menu is at the top of your screen. Then type this and press Enter:
+> Sign me in to Vercel CLI with vercel login. Show me the web address as soon as it appears, and wait while I approve it. Then list my Vercel projects and tell me which one this folder deploys to. Don't link this folder to Vercel.
 
-```
-vercel login
-```
+Then:
 
-Follow the prompts. Your browser opens a Vercel page where you confirm the sign-in. When the terminal says you're logged in, go back to VS Code.
+1. Open the web address Claude gives you.
+2. Sign in to Vercel if asked, and approve the request.
+3. Go back to VS Code and tell Claude you're done.
 
----
+**Do this straight away.** The sign-in address only works for a few minutes. If it stops working, ask Claude to start the sign-in again.
 
-## Step 3: Link This Project
-
-Linking tells Vercel CLI which of your Vercel projects this folder belongs to. You do this once per project.
-
-In the terminal, type this and press Enter:
-
-```
-vercel link
-```
-
-It asks a few questions. Use the arrow keys to choose and press Enter:
-
-| Question | Answer |
-|---|---|
-| Set up this folder? | **Yes** |
-| Which scope (account or team)? | The one your project is in |
-| Link to an existing project? | **Yes** |
-| Which project? | The project you already deploy |
-
-Linking adds a small `.vercel` folder to your project. Leave it there.
+Write down the name of your Vercel project. You'll use it in Step 5.
 
 ---
 
-## Step 4: Install the Vercel Plugin
+## Step 3: Install the Vercel Plugin
 
 1. In the Claude Code prompt box, type `/plugins` and press Enter. The **Manage plugins** window opens.
 2. On the **Plugins** tab, search for **vercel**.
@@ -134,11 +101,11 @@ The plugin only switches on its automatic Vercel guidance in projects it recogni
 
 ---
 
-## Step 5: Check That It Works
+## Step 4: Check That It Works
 
 Start a new session (click the spark icon in the left-hand bar, then **New session**). Type `/` in the prompt box and look for commands from the Vercel plugin, such as **status**, **deploy**, and **env**. Their names may start with `vercel:` or `vercel-plugin:`.
 
-Choose the **status** command and send it. Claude reports your project's recent deployments, environment variables (names only), and domains.
+Choose the **status** command and send it. Claude reports your project's recent deployments, environment variables (names only), and domains. If Claude asks which project, give it the name from Step 2.
 
 The plugin also has a **deploy** command. You won't use it. The next step explains why.
 
@@ -146,13 +113,13 @@ The plugin also has a **deploy** command. You won't use it. The next step explai
 
 ---
 
-## Step 6: Keep Publishing Through GitHub
+## Step 5: Keep Publishing Through GitHub
 
 Your site updates whenever you push to GitHub. That keeps one simple rule: what's on GitHub is what's live. Deploying from VS Code would skip GitHub and break that rule.
 
-Tell Claude about this once, so it remembers in every session. Send:
+Tell Claude about this once, so it remembers in every session. Replace `[your Vercel project name]` with the name from Step 2, then send:
 
-> Add this rule to the AGENTS.md file in this project, and create the file if it doesn't exist: "Never deploy with Vercel CLI or the Vercel plugin's deploy command. To publish, commit the changes and push them to GitHub. Vercel deploys automatically from GitHub." Then make sure a CLAUDE.md file exists in the top level of this project and contains the line @AGENTS.md.
+> Add this rule to the AGENTS.md file in this project, and create the file if it doesn't exist: "Never deploy with Vercel CLI or the Vercel plugin's deploy command. To publish, commit the changes and push them to GitHub. Vercel deploys automatically from GitHub. This folder's Vercel project is [your Vercel project name]. Don't link this folder with vercel link; name the project in each Vercel CLI command instead." Then make sure a CLAUDE.md file exists in the top level of this project and contains the line @AGENTS.md.
 
 **About `AGENTS.md` and `CLAUDE.md`.** `AGENTS.md` is a shared instructions file that many coding assistants read, including Codex. Claude Code reads a file called `CLAUDE.md` instead. Your `CLAUDE.md` only needs one line, `@AGENTS.md`, which tells Claude to read `AGENTS.md` as well. That way your instructions live in one place and work with either assistant.
 
@@ -164,7 +131,7 @@ When you're ready to publish a change, send:
 
 ---
 
-## Step 7: Use It Day to Day
+## Step 6: Use It Day to Day
 
 Here are some prompts to try:
 
@@ -179,9 +146,9 @@ Here are some prompts to try:
 
 When you need to add an API key, don't paste the key into Claude. Instead, ask:
 
-> I need to add my API key to Vercel as an environment variable. Tell me the variable name my code expects and the exact command to run. Don't run it.
+> I need to add my API key to Vercel as an environment variable. Tell me the variable name my code expects and how to add it in the Vercel dashboard.
 
-Then run that command yourself in the terminal, or add the variable in the Vercel dashboard. Either way, the key never enters the chat.
+Then add the variable yourself in the Vercel dashboard, following Claude's steps. That way, the key never enters the chat.
 
 If Claude ever downloads your environment variables to a file such as `.env.local`, ask:
 
@@ -213,20 +180,17 @@ Before moving on, check that Claude can see your Vercel project and knows how to
 **"vercel" is not found or not recognized.**
 Quit VS Code completely and open it again. If that doesn't work, ask Claude: *"Vercel CLI was installed but the vercel command isn't found. Fix it."* Then restart VS Code again.
 
-**Windows: "running scripts is disabled on this system."**
-Switch the terminal to Command Prompt: click the small arrow next to the **+** button in the terminal panel, choose **Command Prompt**, and run the command again.
+**Claude can't find your Vercel project.**
+Ask: *"List my Vercel projects, including the ones in my teams."* Pick the one your site uses. If it isn't listed, check that you signed in to the Vercel account that owns it.
 
-**Claude says the project isn't linked.**
-Run `vercel link` in the terminal (Step 3), then try again.
-
-**It linked to the wrong project.**
-Ask Claude: *"Remove this folder's Vercel link so I can link it again."* Then repeat Step 3.
+**The sign-in address stopped working.**
+Ask Claude: *"Start the Vercel sign-in again."* Then open the new address straight away.
 
 **The Vercel commands don't appear.**
 Make sure you restarted Claude Code and started a new session. Then type `/plugins` and check that the Vercel plugin's toggle is on.
 
 **Claude wants to deploy with Vercel CLI.**
-Deny the request and say: *"Don't deploy. Commit and push to GitHub instead."* Then check that the rule from Step 6 is in `AGENTS.md`, and that `CLAUDE.md` contains `@AGENTS.md`.
+Deny the request and say: *"Don't deploy. Commit and push to GitHub instead."* Then check that the rule from Step 5 is in `AGENTS.md`, and that `CLAUDE.md` contains `@AGENTS.md`.
 
 **Something else went wrong.**
 Copy the error message, paste it to Claude, and ask: *"Explain this error in plain language and tell me how to fix it."*
@@ -236,7 +200,7 @@ Copy the error message, paste it to Claude, and ask: *"Explain this error in pla
 ## Tips
 
 - **Give the build time.** Vercel needs a moment to build your site after you push. If Claude says the build is still running, ask again shortly.
-- **You only link once per project.** Sign-in and the plugin work across all your projects.
+- **You only sign in once.** Sign-in and the plugin work across all your projects.
 - **Usage data.** The plugin sends Vercel a daily usage ping and the names of its skills when they're used. It doesn't send your prompts, files, or project names. To turn this off, ask Claude how to set `VERCEL_PLUGIN_TELEMETRY` to `off` on your computer.
 
 ---

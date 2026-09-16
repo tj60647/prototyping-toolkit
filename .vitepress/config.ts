@@ -12,6 +12,7 @@ const sidebar: DefaultTheme.SidebarItem[] = [
   {
     items: [
       item(''),
+      item('tldr'),
       { text: 'Claude Code or Codex', items: [item('claude-code'), item('codex')] },
       item('git-and-github'),
       item('nodejs'),
