@@ -43,7 +43,7 @@ This guide assumes:
 
 ## Using the Terminal
 
-You only need this if your Mac needs Homebrew (Step 3). A few things to know before you type in the terminal:
+You only need this if your Mac needs Homebrew (see Step 3). A few things to know before you type in the terminal:
 
 - **Paste a command** with `Cmd + V` on a Mac or `Ctrl + V` on Windows, then press Enter to run it.
 - **You can't click to move the cursor.** Use the arrow keys instead.
@@ -73,35 +73,41 @@ VS Code reloads when it opens a folder. You stay signed in. Claude can make fold
 
 ---
 
-## Step 2: Check What You Already Have
+## Step 2: Ask for Your GitHub Projects
 
-Ask Claude:
+Start with what you want, and let Claude find out what's missing. Send:
 
-> Check whether Git and GitHub CLI (gh) are installed on this computer. On a Mac, also check for Homebrew. Just report what you find. Don't install anything.
+> Show me my projects on GitHub.
 
-Claude will ask permission to run a few short commands. Read each one, then allow it.
+Claude will ask permission to run a few short commands. Read each one, then allow it. **Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
-**Not sure whether to allow something?** Ask Claude to explain it in plain language first.
-
-**Using Codex?** Codex runs routine commands without asking, but it asks before using the internet or changing things outside your project folder. Installing programs does both, so expect Codex to ask during Step 3.
-
-If Git and GitHub CLI are both installed, skip to Step 5.
+If Claude lists your projects, everything is already set up. Skip to Step 4.
 
 ---
 
-## Step 3: Have Claude Install What's Missing
+## Step 3: Set Up What's Missing
 
-Send:
+If Claude couldn't list your projects, send:
 
-> Install whatever is missing from Git and GitHub CLI. On Windows, use winget. On a Mac, use Homebrew for GitHub CLI. Before each command, explain in plain language what it does. Tell me whenever you need me to do something.
+> Install what you need to connect to GitHub. Then sign me in with GitHub CLI: show me the one-time code and web address, and wait while I approve it. Then set up Git to use this sign-in, and set my Git name and GitHub no-reply email if they aren't set.
 
-Claude asks permission before each command. Read what it wants to run, then allow it.
+Claude installs **Git** and **GitHub CLI** if they're missing, then starts the sign-in. Git labels every saved version with a name and email; the no-reply address keeps your personal email private.
 
-Along the way, you may need to help:
+**Using Codex?** Codex runs routine commands without asking, but it asks before using the internet or changing things outside your project folder. Installing programs does both, so expect Codex to ask here.
+
+### While Claude installs
+
+You may need to help:
 
 - **Windows:** if Windows asks whether to allow an app to make changes to your computer, click **Yes**.
 - **Mac, installing Git:** if a window offers to install "command line developer tools," click **Install**. Wait for it to finish, then tell Claude.
-- **Mac, no Homebrew:** Homebrew is a free tool for installing software on a Mac, and GitHub CLI needs it. Installing it asks for your computer password, which Claude can't type for you. See below.
+- **Mac, no Homebrew:** Homebrew is a free tool for installing software on a Mac, and GitHub CLI may need it. Installing it asks for your computer password, which Claude can't type for you. See below.
+
+**If Claude can't find a program it just installed,** quit VS Code completely and open it again. VS Code only notices new programs after a restart.
+
+1. **Mac:** press `Cmd + Q`. **Windows:** close every VS Code window, or choose **File → Exit**.
+2. Open VS Code again. If it doesn't reopen your folder, choose **File → Open Recent** and pick it.
+3. Start a new session (click the spark icon in the left-hand bar, then **New session**; in Codex, click the new chat button) and send the prompt above again.
 
 ### Mac only: installing Homebrew yourself
 
@@ -118,76 +124,42 @@ Then:
 5. Press Enter again if it asks you to continue, then wait for it to finish.
 6. Go back to Claude and send:
 
-> Homebrew has finished installing. Complete its setup steps, then install GitHub CLI.
+> Homebrew has finished installing. Complete its setup steps, then carry on connecting me to GitHub.
 
----
+### Signing in
 
-## Step 4: Restart VS Code
+When Claude shows you a **one-time code** and a web address, usually **https://github.com/login/device**:
 
-VS Code and Claude only notice newly installed programs after VS Code restarts.
-
-1. Quit VS Code completely. Closing a window isn't always enough, because VS Code can keep running in the background.
-    - **Mac:** press `Cmd + Q`, or choose **Code → Quit Visual Studio Code** from the menu bar.
-    - **Windows:** close every VS Code window, or choose **File → Exit**.
-2. Open VS Code again. It usually reopens the folder you had open. If it doesn't, choose **File → Open Recent** and pick your folder.
-3. Start a new session: click the spark icon in the left-hand bar, then **New session**.
-4. Send:
-
-> Check that git and gh both work now.
-
-**Using Codex?** Start a new chat instead: click the new chat button at the top of the Codex panel.
-
----
-
-## Step 5: Sign In to GitHub
-
-Claude starts the sign-in, and you finish it in your browser. Send:
-
-> Sign me in to GitHub CLI with gh auth login --hostname github.com --git-protocol https --web. Show me the one-time code and the web address as soon as they appear, and wait while I approve it. Then run gh auth setup-git so Git uses this sign-in too.
-
-Then:
-
-1. Copy the **one-time code** Claude shows you.
-2. Open the web address Claude gives you, usually **https://github.com/login/device**.
-3. Sign in to GitHub if asked, enter the code, and approve the request.
-4. Go back to VS Code and tell Claude you're done.
+1. Copy the code.
+2. Open the address, sign in to GitHub if asked, enter the code, and approve the request.
+3. Go back to VS Code and tell Claude you're done.
 
 **Do this straight away.** The code expires after about 15 minutes. If it does, ask Claude to start the sign-in again for a new code.
 
----
+When Claude has finished, ask again:
 
-## Step 6: Finish Setup with Claude
-
-Git labels every saved version with your name and email. Claude can set these up from your GitHub account. Send:
-
-> Check that I'm signed in to GitHub and that Git uses GitHub CLI to sign in. Then, if my Git name and email aren't set, set them from my GitHub account. Use my GitHub no-reply email address so my personal email stays private.
-
-Allow the commands when Claude asks. Then try:
-
-> List my GitHub repositories.
-
-If Claude shows your repositories, everything is working.
+> Show me my projects on GitHub.
 
 ---
 
-## Step 7: Bring Your Project onto Your Computer
+## Step 4: Open One Project on Your Computer
 
-Making a copy of a GitHub project on your computer is called **cloning**. Claude can do it for you. Send:
+Making a copy of a GitHub project on your computer is called **cloning**. Replace `[project name]` with a name from your GitHub list, then send:
 
-> Clone my GitHub repository called [your project name] into this folder. If you're not sure which one I mean, list my repositories and ask me.
+> Copy my GitHub project called [project name] into this folder. If it's already here, use that copy. Tell me which folder to open in VS Code.
 
-Allow the commands when Claude asks. Claude creates a new folder for the project inside your Projects folder.
+Allow the commands when Claude asks. Claude puts the project in its own folder inside your Projects folder.
 
 Then open your project in VS Code:
 
 1. Choose **File → Open Folder…**
-2. Open your Projects folder, select the new project folder, and click **Open** (on Windows, **Select Folder**).
+2. Open your Projects folder, select the project folder Claude named, and click **Open** (on Windows, **Select Folder**).
 3. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**. It's your own project.
 4. VS Code reloads. Your project's files appear in the Explorer panel, the list of files on the left. If you don't see it, press `Cmd + Shift + E` on a Mac or `Ctrl + Shift + E` on Windows.
 
 From now on, open this folder whenever you work on your project. Then do the checkpoint below.
 
-**Using Codex?** Codex changes files without asking first, so make save points a habit starting now. Before each task, send: *"Commit my current work with a clear message."*
+**Using Codex?** Codex changes files without asking first, so make save points a habit starting now. Before each task, send: *"Save the current version so we can go back to it."*
 
 ---
 
@@ -210,7 +182,7 @@ Before moving on, check that your project, Git, and GitHub are all connected.
 ## Troubleshooting
 
 **Claude says a program isn't found right after installing it.**
-Restart VS Code (Step 4) and start a new session. If that doesn't work, restart your computer.
+Quit VS Code completely, open it again, and start a new session (see Step 3). If that doesn't work, restart your computer.
 
 **Windows: Claude says winget isn't available.**
 Ask Claude: *"winget isn't available. Tell me where to download the regular installers for Git and GitHub CLI."* Download and open each one, and accept the defaults.

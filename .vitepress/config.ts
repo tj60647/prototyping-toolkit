@@ -21,7 +21,7 @@ const sidebar: DefaultTheme.SidebarItem[] = [
       item('playwright'),
       item('prototyping-assistant'),
       item('superpowers', 'Superpowers (optional)'),
-      item('homework'),
+      item('put-it-to-work'),
     ],
   },
 ]

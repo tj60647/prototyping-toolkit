@@ -1,6 +1,6 @@
 # Prototyping Toolkit
 
-Setup guides for prototyping with a coding assistant, GitHub, and Vercel. They take a student from installing Claude Code or Codex in VS Code through to a homework assignment that uses the whole setup.
+Setup guides for prototyping with a coding assistant, GitHub, and Vercel. They take a student from installing Claude Code or Codex in VS Code through to a first project that uses the whole setup.
 
 **Live site:** https://prototyping-toolkit.vercel.app
 

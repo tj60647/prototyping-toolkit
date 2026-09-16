@@ -157,4 +157,4 @@ Stop it and ask for a summary. Then describe a smaller goal, or turn Superpowers
 
 ## Next
 
-When this guide's checkpoint works, continue with **Homework: Put Your Setup to Work**.
+When this guide's checkpoint works, continue with **Put Your Setup to Work**.

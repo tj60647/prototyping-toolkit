@@ -100,8 +100,8 @@ export const guides: Guide[] = [
     name: 'Prototyping Assistant',
     title: 'Setting Up Your Coding Assistant for Prototyping',
     prev: 'playwright',
-    // Superpowers is optional, so the main path goes straight to Homework.
-    next: 'homework',
+    // Superpowers is optional, so the main path goes straight to Put It to Work.
+    next: 'put-it-to-work',
   },
   {
     file: 'superpowers-tutorial.md',
@@ -109,13 +109,13 @@ export const guides: Guide[] = [
     name: 'Superpowers',
     title: 'Installing Superpowers for Claude Code',
     prev: 'prototyping-assistant',
-    next: 'homework',
+    next: 'put-it-to-work',
   },
   {
-    file: 'homework-tutorial.md',
-    slug: 'homework',
-    name: 'Homework',
-    title: 'Homework: Put Your Setup to Work',
+    file: 'put-it-to-work-tutorial.md',
+    slug: 'put-it-to-work',
+    name: 'Put It to Work',
+    title: 'Put Your Setup to Work',
     prev: 'prototyping-assistant',
     next: null,
   },
