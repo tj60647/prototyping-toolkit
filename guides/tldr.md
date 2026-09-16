@@ -4,7 +4,7 @@ Do one step at a time. Send the messages in the boxes to your **agent**: the AI 
 
 This assumes your project is already on GitHub and Vercel already updates its website automatically when you save changes to GitHub.
 
-1. **Set up a folder for your projects.** In Finder (Mac) or File Explorer (Windows), create a folder called `local_repository`. If you already have a folder for your projects, use that one.
+1. **Set up a folder for your projects.** In Finder (Mac) or File Explorer (Windows), create a folder called `Projects` in your home folder. Avoid Documents and Desktop, which iCloud Drive or OneDrive may sync. If you already have a folder for your projects, use that one.
 
 2. **Open your projects folder in VS Code.** Open VS Code, then use **File → Open Folder…** to open the folder from step 1. If VS Code asks whether you trust the authors, click **Yes, I trust the authors**. Your agent won't work otherwise.
 
