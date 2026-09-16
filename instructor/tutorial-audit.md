@@ -50,6 +50,8 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 | Projects folder in the install guides | Move it to Git and GitHub | Installing an extension needs no folder open and signing in is account-level, so the folder was a false prerequisite in front of the whole guide. Keeping it at the end of the install guide still left students opening Projects, then replacing it with the project folder one guide later, with a trust prompt each time. It is now Step 1 of Git and GitHub, next to the clone that needs it. The install guides end when the assistant answers. |
 | Cloning: agent or VS Code's **Clone Repository** | Keep the agent | VS Code's clone would clone and open the folder in one flow, but it uses VS Code's own GitHub credentials, so a student could clone successfully with `gh` half-configured and not find out until the Vercel guide. The agent clone is the end-to-end test of what Steps 3-6 set up, and picking a repo from VS Code's list would mean a third GitHub sign-in. No change to the guides. |
 | Terminal sign-in and `vercel link` | Drop both | Tested 2026-09-16: `gh auth login --web` and `vercel login` both print a code or address and wait when run without a terminal, so the assistant runs them and students approve in the browser. `gh` then skips Git credential setup, so the prompt adds `gh auth setup-git`. Vercel CLI commands take a project name, so the folder is never linked; the name is saved in `AGENTS.md`. |
+| Vercel plugin | Drop it | Everything the guides ask for works with Vercel CLI alone, and the plugin's main addition was a **deploy** command the guides had to forbid. |
+| Prompt style in the detailed guides | Match the TLDR | Each guide now starts by asking for the outcome ("Show me my projects on GitHub", "Run my project", a Playwright UI audit) and only sets up what's missing when that fails. |
 | Codex | Add a Codex path | New "Installing Codex in VS Code" guide, plus "Using Codex" notes in the shared guides. |
 | Instructions file | Use `AGENTS.md` | Instructions live in `AGENTS.md`. `CLAUDE.md` contains one line, `@AGENTS.md`, with a short explanation for students. |
 
@@ -110,7 +112,6 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 |---|---|
 | Git and GitHub | Codex asks before using the internet during installs. Save points start here. |
 | Node.js | Codex asks before downloading anything. |
-| Vercel | The plugin installs with `npx plugins add vercel/vercel-plugin`. The `/` menu check is skipped; the checkpoint covers it. |
 | Playwright | Codex adds the Playwright MCP server to its own settings instead of using a plugin screen. |
 | Prototyping Assistant | No Plan mode setting. `AGENTS.md` asks for a plan first. Keep **Ask for approval**. |
 | Put It to Work | Use `/status` for usage. Save points replace the rewind button. |
@@ -156,7 +157,6 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Git and GitHub | Whether Claude can run `winget` installs and start Apple's developer tools installer |
 | Node.js, Vercel | Whether Claude can install Node.js and Vercel CLI as described |
 | Vercel, Playwright, Superpowers | The `/plugins` window: tab names, install-location choices, restart banner, and publishers |
-| Vercel | Whether the plugin's commands start with `vercel:` or `vercel-plugin:` |
 | Prototyping Assistant | The exact label and value of the **Initial Permission Mode** setting |
 | Prototyping Assistant | That `CLAUDE.md` with `@AGENTS.md` loads the instructions (the checkpoint shows this) |
 
@@ -171,7 +171,6 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Codex | The student credits page and verification steps |
 | Codex | Windows sandbox setup on first use |
 | Git and GitHub, Node.js | Whether Codex can run `winget` and Homebrew installs, and when it asks |
-| Vercel | Whether `npx plugins add vercel/vercel-plugin` installs the plugin for the Codex extension |
 | Playwright | Whether Codex can add the Playwright MCP server to its settings, and whether the extension picks it up after a restart |
 | Prototyping Assistant | Whether Codex follows "describe your plan and wait for my approval" reliably, or whether the extension now has a plan mode |
 | Put It to Work | Whether the design system prompt works as well with Codex |
@@ -187,7 +186,7 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Codex | New, needs testing | Most interface details are from documentation. Matches the Claude Code guide: install first, Copilot in Tips, student credits after sign-in, no Projects folder step. |
 | Git and GitHub | Ready, needs testing | Homebrew is the hardest moment for Mac users. Now opens by making the Projects folder, so its steps renumbered to 1-7. |
 | Node.js | Ready, needs testing | Confirm installs on both systems and both assistants |
-| Vercel | Ready, needs testing | Codex plugin install; whether the plugin's **status** command works without a linked folder |
+| Vercel | Ready, needs testing | Sign-in relayed by Codex |
 | API Key | Ready, needs testing | Confirm the key can be downloaded from Vercel |
 | Playwright | Ready, needs testing | Codex settings path |
 | Prototyping Assistant | Ready, needs testing | Codex plan-first behavior; no Troubleshooting section |

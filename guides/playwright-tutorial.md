@@ -33,70 +33,47 @@ This guide assumes:
 
 - VS Code is open with your project folder open.
 - The Claude Code extension is installed and you are signed in.
-- Node.js is installed.
-- Your prototype is published on Vercel, and you have its link.
+- Your project runs on your computer. If it doesn't yet, see **Using Your API Key on Your Computer**.
 - Google Chrome is installed. Playwright uses it by default.
-- To test your prototype on your computer (Step 4), your API key is set up on your computer in a file called `.env.local`.
 
 ---
 
-## Step 1: Install the Playwright Plugin
+## Step 1: Ask for a UI Audit
+
+Start with what you want: a check of how your app looks and how easy it is to use. Send:
+
+> Use Playwright to audit my app on computer and phone screens. Show me what's confusing, hard to read, or difficult to use, with screenshots. Suggest the three most useful improvements. Don't change anything yet.
+
+Claude uses the copy of your app running on your computer, and starts it if it isn't running. Claude asks permission before each browser action. Read what it wants to do, then allow it. **Not sure whether to allow something?** Ask Claude to explain it in plain language first.
+
+A separate browser window opens. A bar at the top says it's being controlled by automated software. That's Claude. You can watch, but avoid clicking in the window while Claude works.
+
+If Claude says it doesn't have Playwright, go to Step 2. Otherwise, read the audit and skip to Step 3.
+
+---
+
+## Step 2: Install Playwright If It's Missing
 
 1. In the Claude Code prompt box, type `/plugins` and press Enter. The **Manage plugins** window opens.
 2. On the **Plugins** tab, search for **playwright**.
 3. Choose the plugin from Microsoft and click **Install**.
 4. When asked where to install it, choose **Install for you**, so it works in all your projects.
 5. A banner asks you to restart Claude Code. Click it.
+6. Start a new session (click the spark icon in the left-hand bar, then **New session**) and send the Step 1 prompt again.
 
-**Using Codex?** Skip the numbered steps above. Instead, send: *"Add the Playwright MCP server to my Codex settings, using the command npx @playwright/mcp@latest. Tell me which file you changed."* Codex asks before changing a settings file outside your project; allow it. Then quit VS Code completely and open it again.
-
----
-
-## Step 2: Check That It Works
-
-Start a new session (click the spark icon in the left-hand bar, then **New session**) and send:
-
-> Do you have Playwright browser tools available? Answer in one sentence.
-
-Claude should say yes. If it doesn't, see Troubleshooting below.
+**Using Codex?** Skip the numbered steps above. Instead, send: *"Add the Playwright MCP server to my Codex settings, using the command npx @playwright/mcp@latest. Tell me which file you changed."* Codex asks before changing a settings file outside your project; allow it. Then quit VS Code completely, open it again, start a new chat, and send the Step 1 prompt again.
 
 ---
 
-## Step 3: Try It on a Live Page
+## Step 3: Build It into How You Work
 
-Pick any page you've already published, such as your prototype's Vercel link, and send:
-
-> Use Playwright to open [paste your link here]. Take a screenshot and describe what you see in two or three sentences.
-
-Claude asks permission before each browser action. Read what it wants to do, then allow it.
-
-**Not sure whether to allow something?** Ask Claude to explain it in plain language first.
-
-A separate browser window opens. A bar at the top says it's being controlled by automated software. That's Claude. You can watch, but avoid clicking in the window while Claude works.
-
----
-
-## Step 4: Test Your Prototype on Your Computer
-
-To test changes before publishing them, your prototype needs to run on your computer first. If it uses an AI API key, that key needs to be in your project's `.env.local` file. Claude can set up the rest. Send:
-
-> Start this project on my computer so I can test it. If it needs setup first, do that and explain each step in plain language. Tell me the local address when it's running.
-
-Claude may run a few commands. Allow each one when it asks. When it gives you an address such as `http://localhost:5173`, send:
-
-> Use Playwright to open that address. Click through the main features, take screenshots, and tell me about anything that looks broken or any errors on the page.
-
----
-
-## Step 5: Build It into How You Work
-
-Here are some checks to try:
+The audit's suggestions are a starting point. Pick one, ask Claude to plan it, and check the result the same way. Here are some other checks to try:
 
 | To check this | Send this |
 |---|---|
 | A visitor's journey | *"Use Playwright to go through these steps as a first-time visitor: [list the steps]. Screenshot each step and tell me where it gets confusing or breaks."* |
-| Phone size | *"Use Playwright to view the home page at phone size (390 by 844 pixels). Screenshot it and tell me what doesn't fit."* |
-| Hidden errors | *"Open the page with Playwright and report any errors in the browser console, in plain language."* |
+| Your live site | *"Use Playwright to open [your Vercel link]. Take a screenshot and describe what you see."* |
+| Hidden errors | *"Open my app with Playwright and report any errors in the browser console, in plain language."* |
 | A change you just made | *"Take a screenshot before and after your change so I can compare them."* |
 
 ---

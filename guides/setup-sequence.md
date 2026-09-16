@@ -61,9 +61,9 @@ Follow the guides in this order, from top to bottom. Each one assumes you've fin
 | **Claude Code** or **Codex** | *Installing Claude Code in VS Code* or *Installing Codex in VS Code* | Your coding assistant, installed and signed in and ready to help. Do only one. |
 | **Git and GitHub** | *Setting Up Git and GitHub CLI* | A folder for your projects, then Git and GitHub CLI, so your assistant can save your work to GitHub, and a copy of your GitHub project on your computer. |
 | **Node.js** | *Installing Node.js* | Node.js, which many web tools need. |
-| **Vercel** | *Managing Vercel Projects with Your Coding Assistant* | The Vercel tools, so your assistant can publish through GitHub and check your builds. |
+| **Vercel** | *Managing Vercel Projects with Your Coding Assistant* | Vercel CLI, so your assistant can check your builds, plus a rule that it publishes only through GitHub. |
 | **API Key** | *Using Your API Key on Your Computer* | A copy of your Gemini API key on your computer, so your prototype runs there. |
-| **Playwright** | *Testing Your Prototype in a Browser with Playwright* | A browser your assistant can use to try out your prototype. |
+| **Playwright** | *Testing Your Prototype in a Browser with Playwright* | A browser your assistant can use to try out your prototype, starting with an audit of how it looks and works. |
 | **Prototyping Assistant** | *Setting Up Your Coding Assistant for Prototyping* | A plan-first setup and an `AGENTS.md` instructions file, so your assistant explores ideas with you. |
 | **Superpowers** | *Installing Superpowers for Claude Code* | *Optional, for advanced users of Claude Code.* A stricter, step-by-step way of working. |
 | **Put It to Work** | *Put Your Setup to Work* | Everything together: your assistant writes a README, draws a system diagram, or restyles your app, you publish it, and you reflect on how the workflow went. |
@@ -95,7 +95,7 @@ Each guide ends with a **Checkpoint** section. Don't move on until it works. Sta
 | **Playwright** | Send: *"Use Playwright to open [your Vercel link]. Take a screenshot and describe the page in two or three sentences."* | A browser window on your site, and a description that matches it. |
 | **Prototyping Assistant** | Check that the mode indicator under the prompt box says **Plan** (Codex: **Ask for approval**). Send: *"What instructions are you following in this project?"* | The right mode, and a reply describing your `AGENTS.md` instructions. |
 | **Superpowers** | Send: *"Which Superpowers skills do you have? Just list their names."* | Skills such as brainstorming, writing plans, and test-driven development. |
-| **Put It to Work** | Send: *"Did the Vercel build for my latest push work? Give me the link where I can see the result."* | Your finished work on GitHub or on your site. |
+| **Put It to Work** | Send: *"Did Vercel's update work? Give me a link to the result."* | Your finished work on GitHub or on your site. |
 
 ---
 

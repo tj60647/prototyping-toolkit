@@ -63,7 +63,7 @@ Before changing anything, save where you are, so you can always get back to it.
 1. Start a new session: click the spark icon in the left-hand bar, then **New session**.
 2. Send:
 
-> Before we change anything, check whether I have unsaved changes. If I do, commit them with a clear message and push them to GitHub. Tell me what you did in plain language.
+> Save the current version so we can go back to it.
 
 Allow the commands when Claude asks.
 
@@ -90,7 +90,7 @@ Then:
 1. **Review the plan** and approve it.
 2. **Read the result.** Open `README.md` in the Explorer panel. To see it formatted, press `Cmd + Shift + V` on a Mac or `Ctrl + Shift + V` on Windows.
 3. **Check the facts.** Claude may guess about things it can't see in the code. Fix anything wrong by telling Claude, for example: *"The app is for first-year students, not teachers. Update the README."*
-4. **Publish it:** send *"Commit the README and push it to GitHub."*
+4. **Publish it:** send *"Save my changes to GitHub. Check that Vercel's update worked and give me a link to the result."*
 5. **Look at it on GitHub.** Open your repository's page in the browser. The README appears below the list of files.
 
 ---
@@ -105,7 +105,7 @@ Then:
 
 1. **Review the plan** and approve it.
 2. **Read the walkthrough.** Open `docs/system-diagram.md` in the Explorer panel. VS Code may show the diagram as text rather than a picture. That's normal.
-3. **Publish it:** send *"Commit the system diagram and push it to GitHub."*
+3. **Publish it:** send *"Save my changes to GitHub. Check that Vercel's update worked and give me a link to the result."*
 4. **Look at it on GitHub.** Open your repository in the browser, then the `docs` folder, then `system-diagram.md`. GitHub draws the diagram automatically.
 5. **Test it on a person.** Show it to someone who hasn't seen your project and ask them to explain it back to you. Where they get confused, ask Claude to simplify that part, then publish again.
 
@@ -178,10 +178,9 @@ To fix something, describe it plainly: *"The buttons on the results page don't m
 
 #### C5. Publish
 
-1. Send: *"Commit these changes with a clear message and push the branch to GitHub."*
-2. Vercel builds a **preview link** for the branch. Send: *"Did the Vercel build for this branch work? Give me the preview link."*
-3. Open the preview link and check it one more time.
-4. When you're happy, send: *"Merge the design-system-update branch into main and push it to GitHub."* Your live site updates.
+1. Send: *"Save my changes to GitHub on this branch. Check that Vercel's preview worked and give me the preview link."* Vercel builds a **preview link** for the branch.
+2. Open the preview link and check it one more time.
+3. When you're happy, send: *"Merge the design-system-update branch into main and push it to GitHub."* Your live site updates.
 
 **Skipped the branch?** Your changes go live as soon as you push, so do C4 carefully before publishing.
 
@@ -193,7 +192,7 @@ Before you call it done, check that your work is published.
 
 1. Send:
 
-> Did the Vercel build for my latest push work? Give me the link where I can see the result.
+> Did Vercel's update work? Give me a link to the result.
 
 2. Open the link, or your repository's page on GitHub for Options A and B.
 

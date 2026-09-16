@@ -121,21 +121,21 @@ If Claude skips the questions or offers only one idea, say so. That feedback is 
 
 ---
 
-## Step 5: Know When to Switch Modes
+## Step 5: Know Your Settings
 
-Plan mode is best for anything new or uncertain. For tiny, obvious fixes, such as changing a word or a color, planning can feel slow.
+Three settings at the bottom of the prompt box change how your assistant works:
 
-Click the mode indicator at the bottom of the prompt box to switch:
+| Setting | What it changes | Claude Code | Codex |
+|---|---|---|---|
+| **Permission mode** | How much it asks before acting | Click the mode. Use **Plan**: it describes a plan and waits for your OK. **Manual** asks before each edit. Avoid **Edit automatically** and **Auto** for now. | Click the permissions menu. Use **Ask for approval**. Avoid **Full access**. |
+| **Model** | Which AI model answers | Click the model name, or type `/model`. | Click the model menu. |
+| **Effort** | How long it thinks first. Higher is slower and uses more of your plan. | In the mode menu, or type `/effort`. | In the model menu. |
 
-| Mode | When to use it |
-|---|---|
-| **Plan** | New ideas, bigger changes, anything you're unsure about. *Your default.* |
-| **Manual** | Small, clear tweaks. Claude still asks before editing each file. |
-| **Edit automatically** | Avoid this for now. Claude changes files without asking. |
+Leave the model and effort as they are unless a task is hard.
 
-New sessions always start back in Plan mode.
+**When to switch modes.** Plan mode is best for anything new or uncertain. For tiny, obvious fixes, such as changing a word or a color, planning can feel slow, so switch to **Manual** for that change. New sessions always start back in Plan mode.
 
-**Using Codex?** Codex's modes are different. Keep **Ask for approval**, and avoid **Full access**. Your `AGENTS.md` instructions take the place of Plan mode.
+**Using Codex?** Codex has no Plan mode. Your `AGENTS.md` instructions take its place.
 
 ---
 

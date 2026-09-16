@@ -50,7 +50,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    Then tell your agent how you publish. Replace `[Vercel project name]` with that name:
 
-   > Add this rule to this project's AGENTS.md, creating the file if it doesn't exist: "Never deploy with Vercel CLI or the Vercel plugin's deploy command. To publish, commit and push to GitHub. This folder's Vercel project is [Vercel project name]. Don't link this folder with vercel link; name the project in each Vercel CLI command instead." Then make sure CLAUDE.md exists and contains the line @AGENTS.md.
+   > Add this rule to this project's AGENTS.md, creating the file if it doesn't exist: "Never deploy with Vercel CLI. To publish, commit and push to GitHub. This folder's Vercel project is [Vercel project name]. Don't link this folder with vercel link; name the project in each Vercel CLI command instead." Then make sure CLAUDE.md exists and contains the line @AGENTS.md.
 
    [Vercel help](/vercel)
 

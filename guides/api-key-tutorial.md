@@ -43,25 +43,29 @@ This guide assumes:
 
 ---
 
-## Step 1: Copy the Key from Vercel
+## Step 1: Run Your Project
 
-Claude can copy the key from Vercel into your project without showing it. Replace `[your Vercel project name]` with your project's name, then send:
+Start with what you want. Send:
 
-> Download this project's environment variables from my Vercel project, [your Vercel project name], into .env.local using Vercel CLI. Name the project in the command instead of linking this folder. If they're only set for production, download those. Don't show me any values. Then make sure .env.local is listed in .gitignore so it never goes to GitHub.
+> Run my project on this computer and give me a link to open it.
 
-Allow the commands when Claude asks.
+Claude may install what the project needs first. Allow the commands when it asks. **Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
-**Not sure whether to allow something?** Ask Claude to explain it in plain language first.
+Open the link and try a feature that uses AI. If it responds, your key is already in place. Skip to the Checkpoint.
+
+If the app won't run at all, ask Claude to explain and fix the problem.
 
 ---
 
-## Step 2: Check It Works
+## Step 2: Copy the Key from Vercel
 
-Send:
+If Claude says an API key is missing, or the AI features don't respond, Claude can copy the key from Vercel into your project without showing it. Replace `[Vercel project name]` with your project's name, then send:
 
-> Start my app on my computer and give me the local address.
+> Copy my API key into .env.local from my Vercel project, [Vercel project name]. Name the project in the command instead of linking this folder. If the key isn't in the Development settings, use Production. Don't show me any values, and keep .env.local out of GitHub.
 
-Open that address in your browser and try a feature that uses AI. If it responds, your key is working.
+Then ask Claude to restart the app, and try the AI feature again. The app only reads `.env.local` when it starts.
+
+If the key comes back empty, Vercel is hiding it. See "The key downloaded empty" under Troubleshooting.
 
 When you're done, you can ask Claude: *"Stop the app."*
 
@@ -96,7 +100,7 @@ Vercel sometimes hides key values so they can't be downloaded. Copy the key from
 Ask Claude to stop the app and start it again. The app only reads `.env.local` when it starts.
 
 **Claude can't find your Vercel project.**
-Ask: *"List my Vercel projects, including the ones in my teams."* Then send the Step 1 prompt again with the right name.
+Ask: *"List my Vercel projects, including the ones in my teams."* Then send the Step 2 prompt again with the right name.
 
 **I think my key was shared by accident.**
 If the key ended up on GitHub or in a message, tell your instructor. You'll need a new key, and the old one should be deleted in Google AI Studio.
@@ -106,7 +110,7 @@ If the key ended up on GitHub or in a message, tell your instructor. You'll need
 ## Tips
 
 - **You only do this once per project**, unless your key changes.
-- **If your key changes,** update it in Vercel first, then repeat Step 1.
+- **If your key changes,** update it in Vercel first, then repeat Step 2.
 
 ---
 
