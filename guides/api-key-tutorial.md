@@ -29,7 +29,6 @@ Settings stored like this, outside your code, are called **environment variables
 - **`.gitignore`:** a list of files Git never saves or sends to GitHub.
 - **Local address:** a web address, such as `http://localhost:5173`, that only works on your own computer.
 - **Explorer panel:** the list of your project's files and folders on the left side of VS Code. To open it, press `Cmd + Shift + E` on a Mac or `Ctrl + Shift + E` on Windows, or click the top icon in the left-hand bar.
-- **Terminal:** a panel at the bottom of VS Code where you type commands. To open it, choose **Terminal → New Terminal** from the menu bar. On a Mac, the menu bar is at the top of your screen; on Windows, it's at the top of the VS Code window.
 
 ---
 
@@ -39,20 +38,20 @@ This guide assumes:
 
 - VS Code is open with your project folder open.
 - The Claude Code extension is installed and you are signed in.
-- Vercel CLI is installed, you're signed in to Vercel, and this project is linked to your Vercel project.
+- Vercel CLI is installed, you're signed in to Vercel, and you know the name of your Vercel project.
 - Your Vercel project already has your Gemini API key. It does if the AI features on your live site work.
 
 ---
 
 ## Step 1: Copy the Key from Vercel
 
-Claude can copy the key from Vercel into your project without showing it. Send:
+Claude can copy the key from Vercel into your project without showing it. Replace `[your Vercel project name]` with your project's name, then send:
 
-> Download this project's environment variables from Vercel into .env.local using Vercel CLI. If they're only set for production, download those. Don't show me any values. Then make sure .env.local is listed in .gitignore so it never goes to GitHub.
+> Download this project's environment variables from my Vercel project, [your Vercel project name], into .env.local using Vercel CLI. Name the project in the command instead of linking this folder. If they're only set for production, download those. Don't show me any values. Then make sure .env.local is listed in .gitignore so it never goes to GitHub.
 
 Allow the commands when Claude asks.
 
-**Not sure whether to allow something?** Ask Claude to explain it in plain language first. Deny anything that would delete files, use `sudo`, or change things outside your project folder.
+**Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
 ---
 
@@ -96,8 +95,8 @@ Vercel sometimes hides key values so they can't be downloaded. Copy the key from
 **The app says the key is missing.**
 Ask Claude to stop the app and start it again. The app only reads `.env.local` when it starts.
 
-**Claude says the project isn't linked to Vercel.**
-Open the terminal (**Terminal → New Terminal**), run `vercel link`, and choose the project you already deploy.
+**Claude can't find your Vercel project.**
+Ask: *"List my Vercel projects, including the ones in my teams."* Then send the Step 1 prompt again with the right name.
 
 **I think my key was shared by accident.**
 If the key ended up on GitHub or in a message, tell your instructor. You'll need a new key, and the old one should be deleted in Google AI Studio.

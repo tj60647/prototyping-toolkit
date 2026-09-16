@@ -30,6 +30,14 @@ export const guides: Guide[] = [
     next: null,
   },
   {
+    file: 'tldr.md',
+    slug: 'tldr',
+    name: 'TLDR',
+    title: 'TLDR: Set Up and Start Prototyping',
+    prev: '',
+    next: null,
+  },
+  {
     file: 'claude-code-vscode-tutorial.md',
     slug: 'claude-code',
     name: 'Claude Code',

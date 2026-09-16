@@ -45,7 +45,7 @@ Send:
 
 Claude will ask permission to run a few short commands. Read each one, then allow it.
 
-**Not sure whether to allow something?** Ask Claude to explain it in plain language first. Deny anything that would delete files, use `sudo`, or change things outside your project folder.
+**Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
 If Claude reports a version number, Node.js is already installed. Skip to the Checkpoint.
 
@@ -108,7 +108,7 @@ Before moving on, check that Claude can use Node.js.
 Make sure you quit VS Code completely (Step 3) and started a new session. If that doesn't work, restart your computer.
 
 **Claude reports "permission denied" or "EACCES" when installing a package.**
-Don't let Claude fix this with `sudo`. Instead, ask: *"Change npm's settings so it can install packages without an administrator password."*
+Ask: *"Change npm's settings so it can install packages without an administrator password."* If Claude asks for your computer's password instead, deny it and send that prompt again.
 
 **I'm not sure which version I have, or I have an old one.**
 Ask Claude: *"Which version of Node.js do I have, and is it an LTS version?"* To update, repeat Step 2.

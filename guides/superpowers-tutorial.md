@@ -103,7 +103,7 @@ Superpowers saves its designs and plans as files in your project, so you can rea
 
 ## Step 5: Stay in Control
 
-- **Check before you allow.** Superpowers runs many commands. If you're unsure about one, ask Claude to explain it first. Deny anything that would delete files, use `sudo`, or change things outside your project folder.
+- **Check before you allow.** Superpowers runs many commands. If you're unsure about one, ask Claude to explain it first.
 - **Check your usage.** Click the spark icon in the left-hand bar and look at the **Usage** section.
 - **Ask where it is.** If it's been working a while, ask: *"Summarize what you've done so far and what's left."*
 - **Say what you want.** You can still redirect it, for example: *"This is a prototype. Keep the plan to five tasks or fewer."*
