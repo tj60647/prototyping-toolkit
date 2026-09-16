@@ -1,8 +1,11 @@
 # Setting Up Your Prototyping Toolkit
 
-**Start with the [TLDR: Set Up and Start Prototyping](/tldr).** Follow the short steps and let your agent help. Use the detailed guides below whenever you need more explanation.
-
 *The order to follow the setup guides in. Accurate as of September 2026.*
+
+There are two ways through the setup. Both end in the same place.
+
+- **For a quick run-through, follow the [TLDR](/tldr).** It's one page of short steps, and your coding assistant does most of the work. It links to the detailed guides if you get stuck.
+- **For a deeper understanding, follow the detailed guides below, in order.** They explain what each tool is, why you need it, and how to check that it works.
 
 ---
 
@@ -51,7 +54,7 @@ The guides are written for Claude Code. If you choose Codex, the prompts work th
 
 ## The Sequence
 
-Follow the guides in this order, from top to bottom. Each one assumes you've finished the ones above it. **Superpowers** is optional; if you skip it, go straight to the **Homework**.
+Follow the guides in this order, from top to bottom. Each one assumes you've finished the ones above it. **Superpowers** is optional; if you skip it, go straight to **Put It to Work**.
 
 | Guide | Full title | What it sets up |
 |---|---|---|
@@ -63,7 +66,7 @@ Follow the guides in this order, from top to bottom. Each one assumes you've fin
 | **Playwright** | *Testing Your Prototype in a Browser with Playwright* | A browser your assistant can use to try out your prototype. |
 | **Prototyping Assistant** | *Setting Up Your Coding Assistant for Prototyping* | A plan-first setup and an `AGENTS.md` instructions file, so your assistant explores ideas with you. |
 | **Superpowers** | *Installing Superpowers for Claude Code* | *Optional, for advanced users of Claude Code.* A stricter, step-by-step way of working. |
-| **Homework** | *Homework: Put Your Setup to Work* | Everything together: your assistant writes a README, draws a system diagram, or restyles your app, and you publish it. |
+| **Put It to Work** | *Put Your Setup to Work* | Everything together: your assistant writes a README, draws a system diagram, or restyles your app, you publish it, and you reflect on how the workflow went. |
 
 ---
 
@@ -92,7 +95,7 @@ Each guide ends with a **Checkpoint** section. Don't move on until it works. Sta
 | **Playwright** | Send: *"Use Playwright to open [your Vercel link]. Take a screenshot and describe the page in two or three sentences."* | A browser window on your site, and a description that matches it. |
 | **Prototyping Assistant** | Check that the mode indicator under the prompt box says **Plan** (Codex: **Ask for approval**). Send: *"What instructions are you following in this project?"* | The right mode, and a reply describing your `AGENTS.md` instructions. |
 | **Superpowers** | Send: *"Which Superpowers skills do you have? Just list their names."* | Skills such as brainstorming, writing plans, and test-driven development. |
-| **Homework** | Send: *"Did the Vercel build for my latest push work? Give me the link where I can see the result."* | Your finished work on GitHub or on your site. |
+| **Put It to Work** | Send: *"Did the Vercel build for my latest push work? Give me the link where I can see the result."* | Your finished work on GitHub or on your site. |
 
 ---
 

@@ -14,7 +14,7 @@
 6. Playwright
 7. Prototyping Assistant
 8. Superpowers (optional, Claude Code only)
-9. Homework
+9. Put It to Work (was Homework)
 
 Students already have VS Code, so there's no VS Code guide.
 
@@ -64,7 +64,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
   - "Managing Vercel Projects with Your Coding Assistant"
   - "Testing Your Prototype in a Browser with Playwright"
   - "Setting Up Your Coding Assistant for Prototyping"
-- **New guides:** API Key (between Vercel and Playwright), and Homework (a README, a system diagram, or a design system update).
+- **New guides:** API Key (between Vercel and Playwright), and Put It to Work, formerly Homework (a README, a system diagram, or a design system update).
 - **Names, not numbers.** The sequence guide lists guides by name, with a matching checkpoint table.
 
 **Fixes**
@@ -113,7 +113,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 | Vercel | The plugin installs with `npx plugins add vercel/vercel-plugin`. The `/` menu check is skipped; the checkpoint covers it. |
 | Playwright | Codex adds the Playwright MCP server to its own settings instead of using a plugin screen. |
 | Prototyping Assistant | No Plan mode setting. `AGENTS.md` asks for a plan first. Keep **Ask for approval**. |
-| Homework | Use `/status` for usage. Save points replace the rewind button. |
+| Put It to Work | Use `/status` for usage. Save points replace the rewind button. |
 | Superpowers | Not covered for Codex; the guide points to the Superpowers instructions. |
 
 **The key teaching difference.** In its default **Ask for approval** mode, Codex edits files and runs routine commands in the project without asking. It only asks before using the internet or going outside the project. For Codex students, Git save points are the main safety net, not permission prompts.
@@ -144,8 +144,8 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Vercel | That the assistant relays the `vercel login` address, and uses the project name instead of linking |
 | API Key | Whether `vercel env pull` downloads the Gemini key, or Vercel hides its value |
 | Playwright | The name of the folder Playwright saves screenshots in |
-| Homework | That SkillUI runs through `npx` on both systems, where it writes files, and that its own `CLAUDE.md` stays inside its folder |
-| Homework | How long Option C takes, and how much usage it consumes |
+| Put It to Work | That SkillUI runs through `npx` on both systems, where it writes files, and that its own `CLAUDE.md` stays inside its folder |
+| Put It to Work | How long Option C takes, and how much usage it consumes |
 
 **Claude Code**
 
@@ -174,7 +174,7 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Vercel | Whether `npx plugins add vercel/vercel-plugin` installs the plugin for the Codex extension |
 | Playwright | Whether Codex can add the Playwright MCP server to its settings, and whether the extension picks it up after a restart |
 | Prototyping Assistant | Whether Codex follows "describe your plan and wait for my approval" reliably, or whether the extension now has a plan mode |
-| Homework | Whether the design system prompt works as well with Codex |
+| Put It to Work | Whether the design system prompt works as well with Codex |
 
 ---
 
@@ -192,7 +192,7 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Playwright | Ready, needs testing | Codex settings path |
 | Prototyping Assistant | Ready, needs testing | Codex plan-first behavior; no Troubleshooting section |
 | Superpowers | Ready (optional, Claude Code) | Recommend a branch |
-| Homework | Ready | — |
+| Put It to Work | Ready | — |
 
 ---
 
@@ -218,7 +218,7 @@ Students who arrive without accounts will stall at the first or second guide.
 
 **Usage limits.** Both assistants have usage limits.
 - **Demonstrate Playwright once** rather than having everyone run long checks at the same time.
-- **Check usage before Homework Option C.** Claude students use the **Usage** section in the sidebar; Codex students type `/status`.
+- **Check usage before Put It to Work Option C.** Claude students use the **Usage** section in the sidebar; Codex students type `/status`.
 - **Codex student credits** extend usage past the plan's limits.
 
 **Pacing.** The install guide and the Git and GitHub guide vary the most between Mac and Windows, and include the Homebrew password step. Give them their own session, with a TA ready for Homebrew. The rest go faster once the assistant is doing the work. Sign-in codes expire (GitHub's after about 15 minutes), so students should approve them straight away.

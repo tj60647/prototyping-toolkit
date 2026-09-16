@@ -1,6 +1,6 @@
-# Homework: Put Your Setup to Work
+# Put Your Setup to Work
 
-*A homework assignment for non-experts. Accurate as of September 2026.*
+*A first project for non-experts. Accurate as of September 2026.*
 
 *Using Codex instead of Claude Code? The prompts work the same way. Read "Claude" as "Codex," and follow the **Using Codex** notes where the steps differ. Where this guide says to start a new session, start a new chat instead: click the new chat button at the top of the Codex panel.*
 
@@ -8,7 +8,7 @@
 
 ## What You'll Do
 
-You've set up VS Code, Claude Code, GitHub, and Vercel. Now use them together on your own prototype.
+You've set up VS Code, Claude Code, GitHub, and Vercel. Now use them together on your own prototype, and notice how working this way feels. The task is a way to try the workflow; what you learn about the workflow matters as much as the result.
 
 **Choose one** of these three options:
 
@@ -25,12 +25,13 @@ All three follow the same pattern:
 3. Review Claude's plan, then approve it.
 4. Check the result yourself.
 5. Publish it by pushing to GitHub.
+6. Look back at how it went.
 
 ---
 
 ## Before You Start
 
-This assignment assumes:
+This guide assumes:
 
 - VS Code is open with your project folder open.
 - The Claude Code extension is installed and you are signed in.
@@ -38,7 +39,7 @@ This assignment assumes:
 - Your project is connected to Vercel, and you publish by pushing to GitHub.
 - **For Option C only:** Playwright is set up, so Claude can look at your app in a browser, and your API key is set up on your computer in `.env.local`.
 
-Claude may start in **Plan mode**, where it describes what it will do and waits for your approval. That's what you want for this assignment. Check the mode indicator at the bottom of the prompt box.
+Claude may start in **Plan mode**, where it describes what it will do and waits for your approval. That's what you want for this guide. Check the mode indicator at the bottom of the prompt box.
 
 **Using Codex?** Keep the permission mode on **Ask for approval**. Because Codex changes files without asking, Step 1's save point matters even more.
 
@@ -204,15 +205,33 @@ Before you call it done, check that your work is published.
 
 ---
 
-## What to Hand In
+## Reflect on Your Workflow
 
-Unless your instructor asks for something different:
+The setup is done once. The workflow is what you'll repeat on every idea, so take a few minutes to look at how it went.
 
-- **Option A:** the link to your GitHub repository.
-- **Option B:** the link to `docs/system-diagram.md` on GitHub.
-- **Option C:** the link to your live site or preview link, a before-and-after screenshot of one screen, and Claude's final report.
+Start by asking Claude for a record of the session:
 
-For every option, add a few sentences: What did Claude get right? What did it get wrong or guess? What did you change, and why?
+> Look back over this session. Summarize what I asked for, what you did, where you guessed, and where I corrected you.
+
+Then think about these questions. Writing a sentence or two for each makes the answers easier to use next time.
+
+- **Asking.** Did your first prompt say what you meant? What would you say differently now?
+- **Planning.** Did Claude's plan match what you wanted? What did you change before approving it?
+- **Accuracy.** What did Claude get right? Where did it guess or get something wrong, and how did you notice?
+- **Control.** When did you allow, deny, or redirect Claude? Would you give it more or less freedom next time?
+- **Checking.** How did you check the result: on your computer, with Playwright, or on GitHub or Vercel? What would you check sooner next time?
+- **Save points.** Did you need to go back to one? If you did, was it easy?
+- **Cost.** How much of your plan's allowance did the task use? Was it worth it?
+
+For Option C, a before-and-after screenshot of one screen and Claude's final report make the comparison easier.
+
+### Turn what you learned into instructions
+
+If Claude did something you don't want again, or you had to repeat yourself, add it to `AGENTS.md` so the next session starts better. For example:
+
+> Add this to AGENTS.md: "Ask me who the page is for before changing its wording."
+
+Start a new session afterward, so Claude reads the updated file.
 
 ---
 
@@ -245,4 +264,4 @@ Copy the error message, paste it to Claude, and ask: *"Explain this error in pla
 
 ## What's Next
 
-This is the last guide. You now have a complete setup for prototyping with Claude. Use the same pattern for your own ideas: save a starting point, ask, review the plan, check the result, and publish.
+This is the last guide. You now have a complete setup for prototyping with Claude. Use the same pattern for your own ideas: save a starting point, ask, review the plan, check the result, publish, and look back at how it went. Each time, add what you learn to `AGENTS.md`.

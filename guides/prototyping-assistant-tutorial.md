@@ -166,4 +166,4 @@ Before moving on, check that both changes are working.
 
 ## Next
 
-When this guide's checkpoint works, continue with **Homework: Put Your Setup to Work**. Advanced users can first try **Installing Superpowers for Claude Code**, which is optional.
+When this guide's checkpoint works, continue with **Put Your Setup to Work**. Advanced users can first try **Installing Superpowers for Claude Code**, which is optional.
