@@ -84,7 +84,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
 10. **Set up your agent for prototyping.** `AGENTS.md` holds instructions for future chats. `CLAUDE.md` tells Claude Code to read them too.
 
-    > Open https://prototyping-toolkit.vercel.app/prototyping-assistant#the-prototyping-instructions and find the code block under the heading "The prototyping instructions". Add the "This is a prototype" section from that code block to this project's AGENTS.md and make sure CLAUDE.md reads them too. Keep any instructions already there.
+    > Open https://prototypingtoolkit.aroughidea.com/prototyping-assistant#the-prototyping-instructions and find the code block under the heading "The prototyping instructions". Add the "This is a prototype" section from that code block to this project's AGENTS.md and make sure CLAUDE.md reads them too. Keep any instructions already there.
 
     Three settings at the bottom of the prompt box change how your agent works:
 
