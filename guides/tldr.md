@@ -4,7 +4,7 @@ Do one step at a time. Send the messages in the boxes to your **agent**: the AI 
 
 This assumes your project is already on GitHub and Vercel already updates its website automatically when you save changes to GitHub.
 
-## Part 1: Set Up and Start Prototyping (Start Here)
+## Part 1: Set Up and Start Prototyping
 
 Everyone does this part. Steps 1 to 13 set up your agent, GitHub and Vercel, then put them to work on your prototype.
 
