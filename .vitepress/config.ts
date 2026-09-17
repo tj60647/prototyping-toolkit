@@ -10,11 +10,13 @@ const item = (slug: string, text = guideBySlug(slug).name): DefaultTheme.Sidebar
 })
 
 const sidebar: DefaultTheme.SidebarItem[] = [
+  { items: [item(''), item('tldr')] },
   {
+    text: 'Part 1: Setup (Start Here)',
     items: [
-      item(''),
-      item('tldr'),
-      { text: 'Claude Code or Codex', items: [item('claude-code'), item('codex')] },
+      // Students install one of the two, so both are plain links.
+      item('claude-code', 'Install Claude Code'),
+      item('codex', 'Or install Codex'),
       item('git-and-github'),
       item('vercel'),
       item('run-your-project'),
