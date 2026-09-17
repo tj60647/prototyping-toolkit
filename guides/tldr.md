@@ -98,7 +98,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
     It should mention both the prototyping instructions and the publishing rule from step 7. [Full setup guide](/prototyping-assistant)
 
-11. **Optional: try Superpowers.** Skip this unless you want extra help structuring your work in Claude Code. Try it on one project first; if you like it, you can install it for all your projects later.
+11. **Optional: try Superpowers.** Skip this unless you already have experience developing software and want a disciplined software-engineering assistant in Claude Code. Superpowers suits well-developed projects better than early prototyping. If you try it, start with one project; if you like it, you can install it for all your projects later.
 
     > Help me install Superpowers for this project only, and show me how to use it.
 

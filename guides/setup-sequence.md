@@ -66,7 +66,7 @@ Follow these guides in order, from top to bottom. Each one covers the same steps
 | 8 | **Run Your Project** | *Running Your Project on Your Computer* | Your prototype running on your computer, with a copy of your API key if it needs one. |
 | 9 | **Playwright** | *Testing Your Prototype in a Browser with Playwright* | A browser your assistant can use to try out your prototype, starting with an audit of how it looks and works. |
 | 10 | **Prototyping Assistant** | *Setting Up Your Coding Assistant for Prototyping* | A plan-first setup and an `AGENTS.md` instructions file, so your assistant explores ideas with you. |
-| 11 | **Superpowers** | *Installing Superpowers for Claude Code* | *Optional, for advanced users of Claude Code.* A stricter, step-by-step way of working. |
+| 11 | **Superpowers** | *Installing Superpowers for Claude Code* | *Optional, for students with software development experience.* A disciplined, step-by-step way of working, suited to well-developed projects more than early prototypes. |
 | 12–13 | **Put It to Work** | *Put Your Setup to Work* | Everything together: your assistant writes a README, draws a system diagram, or restyles your app, you publish it, and you reflect on how the workflow went. |
 
 ### Part 2: Add a Backend

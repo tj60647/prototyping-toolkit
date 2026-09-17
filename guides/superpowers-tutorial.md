@@ -2,7 +2,7 @@
 
 *A setup guide for advanced students. Accurate as of September 2026. If something looks different, check the official page: https://github.com/obra/superpowers*
 
-*This guide covers step 11 of the [TLDR](/tldr), with more explanation. It's optional; skip it unless you want extra help structuring your work in Claude Code.*
+*This guide covers step 11 of the [TLDR](/tldr), with more explanation. It's optional; skip it unless you already have experience developing software and want a disciplined software-engineering assistant. It suits well-developed projects better than early prototyping.*
 
 *Using Codex? Superpowers also works with Codex, but it installs differently and this guide doesn't cover it. See the Codex instructions at https://github.com/obra/superpowers.*
 
