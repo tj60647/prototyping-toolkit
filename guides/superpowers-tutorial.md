@@ -55,7 +55,7 @@ Not sure about Git? Ask Claude:
 
 Send:
 
-> Install Superpowers yourself for this project only, and show me how to use it. In Claude Code, run Claude Code's own command-line tool: claude plugin install superpowers@claude-plugins-official --scope local (if claude isn't found, use the program named in the CLAUDE_CODE_EXECPATH environment variable). Then tell me exactly what to restart.
+> Install Superpowers yourself for this project only. In Claude Code, run Claude Code's own command-line tool: claude plugin install superpowers@claude-plugins-official --scope local (if claude isn't found, use the program named in the CLAUDE_CODE_EXECPATH environment variable). Then tell me exactly what to restart, and don't start any other work.
 
 Allow the install when Claude asks. Claude installs Superpowers for this project only, then tells you what to restart. Usually that's **Developer: Reload Window** from the Command Palette, followed by a new session. Then go to **Restart and check** below.
 
@@ -85,23 +85,18 @@ Superpowers changes how Claude works, so try it on one project before using it e
 
 1. Restart the way Claude told you, or click the restart banner if one appears.
 2. Start a new session: click the spark icon in the left-hand bar, then **New session**.
-3. Ask:
-
-> Which Superpowers skills do you have, and what does each one do? Keep it short.
-
-Claude should list skills such as brainstorming, writing plans, and test-driven development.
 
 ### See how to use it
 
-Pick a small feature for your project and describe it loosely:
+In the new session, send the prompt below. Claude should first list skills such as brainstorming, writing plans, and test-driven development.
 
-> I'd like visitors to be able to save their favorite items. Let's brainstorm before doing anything.
+> Which Superpowers skills do you have? In plain language, tell me when I'd use each one. Then help me try the brainstorming skill on one small idea for this project: ask me one question at a time, keep the design to about a page, and stop after the design so I can decide what to do next.
 
 As the workflow unfolds:
 
 - **Answer its questions one at a time.** They help it understand what you want.
 - **Read the design sections carefully.** This is your main chance to shape the result.
-- **Decide whether to continue.** After the design, it moves on to planning and building. You can stop after brainstorming if the design is all you wanted.
+- **Decide whether to continue.** After the design, you choose whether Superpowers plans and builds it. You can stop after brainstorming if the design is all you wanted.
 
 Superpowers saves its designs and plans as files in your project, so you can read them later.
 

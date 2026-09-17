@@ -84,7 +84,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
 10. **Set up your agent for prototyping.** `AGENTS.md` holds instructions for future chats. `CLAUDE.md` tells Claude Code to read them too.
 
-    > Read the section at https://prototyping-toolkit.vercel.app/prototyping-assistant#add-your-prototyping-instructions. Add the prototyping instructions from its copyable prompt to this project's AGENTS.md and make sure CLAUDE.md reads them too. Keep any instructions already there.
+    > Open https://prototyping-toolkit.vercel.app/prototyping-assistant#the-prototyping-instructions and find the code block under the heading "The prototyping instructions". Add the "This is a prototype" section from that code block to this project's AGENTS.md and make sure CLAUDE.md reads them too. Keep any instructions already there.
 
     Three settings at the bottom of the prompt box change how your agent works:
 
@@ -104,7 +104,11 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
 11. **Optional: try Superpowers.** Skip this unless you already have experience developing software and want a disciplined software-engineering assistant in Claude Code. Superpowers suits well-developed projects better than early prototyping. If you try it, start with one project; if you like it, you can install it for all your projects later.
 
-    > Install Superpowers yourself for this project only, and show me how to use it. In Claude Code, run Claude Code's own command-line tool: claude plugin install superpowers@claude-plugins-official --scope local (if claude isn't found, use the program named in the CLAUDE_CODE_EXECPATH environment variable). Then tell me exactly what to restart.
+    > Install Superpowers yourself for this project only. In Claude Code, run Claude Code's own command-line tool: claude plugin install superpowers@claude-plugins-official --scope local (if claude isn't found, use the program named in the CLAUDE_CODE_EXECPATH environment variable). Then tell me exactly what to restart, and don't start any other work.
+
+    After restarting, start a new chat and ask:
+
+    > Which Superpowers skills do you have? In plain language, tell me when I'd use each one. Then help me try the brainstorming skill on one small idea for this project: ask me one question at a time, keep the design to about a page, and stop after the design so I can decide what to do next.
 
     [Superpowers help](/superpowers)
 
