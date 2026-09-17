@@ -104,21 +104,39 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
     [Superpowers help](/superpowers)
 
-12. **Put your setup to work.** Choose one task: describe your project, draw how it works, or change how it looks. Use the matching prompt in [Put Your Setup to Work](/put-it-to-work). First, ask:
+12. **Put your setup to work.** Pick one small task. First, save a starting point:
 
-    > Save the current version so we can go back to it. Then help me plan this task.
+    > Save the current version so we can go back to it.
 
-    Agree on the plan, let the agent work, and check the result yourself. When you're happy:
+    Then send one of these:
+
+    - **Describe your project** in a README, the page people see first on GitHub:
+
+      > Write a README.md for this project for people who aren't technical: what it is, who it's for, a link to the live site, how to use it, and what the AI part does. Don't invent features. If you're unsure about something, ask me.
+
+    - **Draw how it works** as a simple diagram:
+
+      > Make a simple diagram of how my app and its AI work, for people who aren't technical. Save it as docs/system-diagram.md with a short plain-language explanation. If something isn't clear from the code, ask me.
+
+    - **Change how it looks** to match another website's design:
+
+      > Create a branch called design-system-update. Then restyle my app to follow the design of https://design.berkeley.edu/: study the site's colors, fonts and spacing with a design-system extraction tool, save those rules in the project, and apply them. Keep my app's content and features, and don't copy Berkeley's logos, photos or text.
+
+    Review the agent's plan, approve it, and check the result yourself. When you're happy:
 
     > Save my changes to GitHub. Check that Vercel's update worked and give me a link to the result.
 
-    Open the link and check it yourself. For a project description or diagram, look on GitHub.
+    Open the link. A README or diagram shows up on your project's GitHub page. A restyle shows up on a preview link first; when you like it, ask:
+
+    > Merge the design-system-update branch into main and push it to GitHub.
+
+    [More detail](/put-it-to-work)
 
 13. **Look back at how it went.** Ask:
 
     > Look back over this chat. Summarize what I asked for, what you did, where you guessed, and where I corrected you.
 
-    Then think about what you'd do differently next time, and add anything useful to `AGENTS.md`. [Questions to reflect on](/put-it-to-work#step-13-look-back-at-how-it-went)
+    Then ask yourself: Did the plan match what you meant? What did the agent get wrong, and how did you notice? What would you tell it next time? Ask the agent to add that last answer to `AGENTS.md`, so your next chat starts better. [More questions](/put-it-to-work#step-13-look-back-at-how-it-went)
 
 ## Part 2: Add a Backend
 
@@ -134,11 +152,7 @@ Your prototype will eventually need somewhere to keep data and files, and a way 
 
     > Install Neon's agent tools for all my projects, and sign me in to Neon: show me the web address and wait while I approve it. Then create a Neon project just for this app, and connect the app to it following Neon's instructions for this app's framework. Add the connection settings to this project on Vercel, copy them into .env.local without showing them, and keep them out of GitHub.
 
-    New to Neon? Create an account on the sign-in page, with GitHub or Google. If you want search by meaning, also ask:
-
-    > Turn on pgvector so this app can search by meaning.
-
-    [Database help](/database)
+    New to Neon? Create an account on the sign-in page, with GitHub or Google. [Database help](/database)
 
 16. **Add sign-in, and choose who can use the app.** Do this before you share an app that spends your budget.
 
