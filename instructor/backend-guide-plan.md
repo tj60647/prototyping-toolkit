@@ -29,7 +29,7 @@
 
 | File | Change | Responsibility |
 |---|---|---|
-| `.vitepress/config.ts` | Modify | Add `checkPrompts()` to the build checks; add a "Part 2: Backend" sidebar group |
+| `.vitepress/config.ts` | Modify | Add a TLDR-prompt check to `checkGuides()`; add a "Part 2: Backend" sidebar group |
 | `.vitepress/guides.ts` | Modify | Five new guide entries; `put-it-to-work` gets `next: 'protect-your-keys'` |
 | `guides/tldr.md` | Modify | "Part 1" and "Part 2" headings; steps 14–18 |
 | `guides/protect-your-keys-tutorial.md` | Create | Step 14 |
@@ -137,7 +137,7 @@ git commit -m "Build check: every TLDR prompt must appear in a detailed guide"
 - Produces:
   - TLDR headings `## Part 1: Set Up and Start Prototyping` and `## Part 2: Add a Backend`;
   - the Part 2 introduction paragraph;
-  - Put It to Work's "What's Next" linking `/protect-your-keys`.
+  - Put It to Work's "What's Next" naming **Protecting Your API Keys** (no link yet, so the build stays green).
 
 - [ ] **Step 1: General API-key wording** in `guides/run-your-project-tutorial.md`. Replace the paragraph starting "Your prototype uses Google's Gemini AI" and the one after it with:
 
