@@ -17,7 +17,7 @@ Two tools let Claude save your work and connect it to your GitHub account:
 
 With both installed, you can ask Claude to save your changes, create a GitHub repository, or publish updates, all in plain language. At the end of this guide, Claude brings a copy of your GitHub project into your Projects folder.
 
-Claude does the setup for you. To sign in, you approve a one-time code in your browser. The only time you might type in the terminal is to install Homebrew on a Mac.
+Claude does the setup for you. To sign in, you approve a one-time code in your browser.
 
 ---
 
@@ -27,7 +27,6 @@ Claude does the setup for you. To sign in, you approve a one-time code in your b
 - **Clone:** make a copy of a GitHub repository on your computer.
 - **Commit:** save a snapshot of your project's files, with a short message about what changed.
 - **Push:** send your commits to GitHub.
-- **Terminal:** a panel at the bottom of VS Code where you type commands. To open it, choose **Terminal → New Terminal** from the menu bar. On a Mac, the menu bar is at the top of your screen; on Windows, it's at the top of the VS Code window.
 - **Explorer panel:** the list of your project's files and folders on the left side of VS Code. To open it, press `Cmd + Shift + E` on a Mac or `Ctrl + Shift + E` on Windows, or click the top icon in the left-hand bar.
 
 ---
@@ -39,19 +38,7 @@ This guide assumes:
 - VS Code is open with your Projects folder open, and the Claude Code extension is installed and you are signed in.
 - You have a GitHub account, and your prototype's project is already on GitHub.
 - You can install software on your computer. Some school or work computers don't allow this. If yours doesn't, ask your IT help desk.
-- On a Mac, you know your computer's login password. You may need it to install Homebrew.
-
----
-
-## Using the Terminal
-
-You only need this if your Mac needs Homebrew (see Step 5). A few things to know before you type in the terminal:
-
-- **Paste a command** with `Cmd + V` on a Mac or `Ctrl + V` on Windows, then press Enter to run it.
-- **You can't click to move the cursor.** Use the arrow keys instead.
-- **When a command asks a question,** use the arrow keys to pick an answer and press Enter.
-- **A command is finished** when the terminal shows a new, empty line ready for typing.
-- **To stop a command that seems stuck,** press `Ctrl + C`. This is the same on a Mac.
+- On a Mac, you know your computer's login password. An installer may ask for it.
 
 ---
 
@@ -81,30 +68,13 @@ You may need to help:
 
 - **Windows:** if Windows asks whether to allow an app to make changes to your computer, click **Yes**.
 - **Mac, installing Git:** if a window offers to install "command line developer tools," click **Install**. Wait for it to finish, then tell Claude.
-- **Mac, no Homebrew:** Homebrew is a free tool for installing software on a Mac, and GitHub CLI may need it. Installing it asks for your computer password, which Claude can't type for you. See below.
+- **Mac, installer windows:** if an installer opens in its own window and asks for your password, type your Mac login password. Claude can't type it for you. If Claude says it needs something only you can do, such as typing a password in the terminal, ask: *"Is there a way to install this that doesn't need the terminal?"*
 
 **If Claude can't find a program it just installed,** quit VS Code completely and open it again. VS Code only notices new programs after a restart.
 
 1. **Mac:** press `Cmd + Q`. **Windows:** close every VS Code window, or choose **File → Exit**.
 2. Open VS Code again. If it doesn't reopen your folder, choose **File → Open Recent** and pick it.
 3. Start a new session (click the spark icon in the left-hand bar, then **New session**; in Codex, click the new chat button) and send the prompt above again.
-
-#### Mac only: installing Homebrew yourself
-
-If Claude says Homebrew is missing, send:
-
-> Give me the official Homebrew install command from brew.sh and tell me what to expect. I'll run it in the terminal myself.
-
-Then:
-
-1. Check that the command matches the one on **https://brew.sh**. It's a good habit before running any command you didn't write.
-2. Open the terminal: choose **Terminal → New Terminal** from the menu at the top of your screen.
-3. Paste the command and press Enter.
-4. When asked for your password, type your Mac login password and press Enter. **Nothing appears as you type.** That's normal.
-5. Press Enter again if it asks you to continue, then wait for it to finish.
-6. Go back to Claude and send:
-
-> Homebrew has finished installing. Complete its setup steps, then carry on connecting me to GitHub.
 
 #### Signing in
 
@@ -166,9 +136,6 @@ Quit VS Code completely, open it again, and start a new session (see Step 5). If
 
 **Windows: Claude says winget isn't available.**
 Ask Claude: *"winget isn't available. Tell me where to download the regular installers for Git and GitHub CLI."* Download and open each one, and accept the defaults.
-
-**Mac: Claude says the brew command isn't found after installing Homebrew.**
-Ask Claude: *"Homebrew is installed but the brew command isn't found. Complete Homebrew's setup steps."* Then restart VS Code.
 
 **The one-time code expired.**
 Ask Claude: *"The code expired. Start the GitHub sign-in again."* Then enter the new code straight away.

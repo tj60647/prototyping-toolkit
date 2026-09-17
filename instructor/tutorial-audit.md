@@ -52,6 +52,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 | Cloning: agent or VS Code's **Clone Repository** | Keep the agent | VS Code's clone would clone and open the folder in one flow, but it uses VS Code's own GitHub credentials, so a student could clone successfully with `gh` half-configured and not find out until the Vercel guide. The agent clone is the end-to-end test of what Steps 3-6 set up, and picking a repo from VS Code's list would mean a third GitHub sign-in. No change to the guides. |
 | Terminal sign-in and `vercel link` | Drop both | Tested 2026-09-16: `gh auth login --web` and `vercel login` both print a code or address and wait when run without a terminal, so the assistant runs them and students approve in the browser. `gh` then skips Git credential setup, so the prompt adds `gh auth setup-git`. Vercel CLI commands take a project name, so the folder is never linked; the name is saved in `AGENTS.md`. |
 | TLDR and detailed guides | The TLDR is the outline (2026-09-16) | Differences between the two routes confused students. Each detailed guide now uses the TLDR's step numbers, headings and prompts, and only adds explanation, checkpoints and troubleshooting. The folder is created in Finder or File Explorer as in the TLDR; API Key became Run Your Project (`/api-key` redirects); Node.js left the sequence. Codex also refuses to send a message until a folder is open (the extension's `missing-workspace` block), so the folder must come first. |
+| Homebrew section | Drop it (2026-09-16) | Installing Homebrew needs the admin password in a terminal, which the agent can't provide. The agent can install everything without it: Git through Apple's developer tools pop-up, GitHub CLI and Node.js through their Mac installers (password in their own window), Vercel CLI through npm. Removing it leaves no terminal steps and matches the TLDR. Untested on a Mac. |
 | Vercel plugin | Drop it | Everything the guides ask for works with Vercel CLI alone, and the plugin's main addition was a **deploy** command the guides had to forbid. |
 | Prompt style in the detailed guides | Match the TLDR | Each guide now starts by asking for the outcome ("Show me my projects on GitHub", "Run my project", a Playwright UI audit) and only sets up what's missing when that fails. |
 | Codex | Add a Codex path | New "Installing Codex in VS Code" guide, plus "Using Codex" notes in the shared guides. |
@@ -81,7 +82,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 **Additions for novices**
 - **Vocabulary:** a "Words You'll See" box in every guide, and a full glossary in the sequence guide.
 - **Permission guidance:** "Deciding whether to allow something" in both install guides, with one-line reminders elsewhere.
-- **VS Code basics in place:** the Explorer panel, Command Palette, terminal, and quitting VS Code are explained where they come up. "Using the Terminal" sections were added to the Git and GitHub and Vercel guides.
+- **VS Code basics in place:** the Explorer panel, Command Palette, terminal, and quitting VS Code are explained where they come up. The "Using the Terminal" sections were later removed, since no step uses the terminal.
 - **Save points:** the Vercel guide explains committing before big changes. For Codex students, the install guide and the Git and GitHub guide make it a habit.
 - **"Next" sections:** each guide ends by naming the guide that follows.
 
@@ -125,7 +126,6 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 
 ## Remaining Minor Items
 
-- **Checking the Homebrew command:** the Git and GitHub guide asks Mac students to check the command against brew.sh, which is hard for this audience. Consider putting the exact command in your class materials.
 - **The `.vercel` folder:** the Vercel guide says to leave it in place. Add a check that it's listed in `.gitignore`.
 - **Superpowers and branches:** Superpowers can remove code written before its tests. Recommend a branch there, as the homework does.
 - **Dates:** re-check every guide each term. The Node.js LTS version changes in late October 2026.
@@ -186,7 +186,7 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Sequence | Ready | — |
 | Claude Code | Ready, needs testing | Permission wording. Now covers only the assistant: the Projects folder is Step 1 again, hiding Copilot moved to Tips, the terminal dropped from the vocabulary box, the onboarding-checklist detour cut. |
 | Codex | New, needs testing | Most interface details are from documentation. Matches the Claude Code guide: install first, Copilot in Tips, student credits after sign-in, Projects folder as Step 1. |
-| Git and GitHub | Ready, needs testing | Homebrew is the hardest moment for Mac users. Starts from an open Projects folder; its steps are 1-3. |
+| Git and GitHub | Ready, needs testing | Mac installs without Homebrew are untested. Covers TLDR steps 5-6, starting from an open Projects folder; no terminal steps remain. |
 | Node.js (help page) | Ready, needs testing | Confirm installs on both systems and both assistants |
 | Vercel | Ready, needs testing | Sign-in relayed by Codex |
 | Run Your Project | Ready, needs testing | Confirm the key can be downloaded from Vercel |
@@ -222,7 +222,7 @@ Students who arrive without accounts will stall at the first or second guide.
 - **Check usage before Put It to Work Option C.** Claude students use the **Usage** section in the sidebar; Codex students type `/status`.
 - **Codex student credits** extend usage past the plan's limits.
 
-**Pacing.** The install guide and the Git and GitHub guide vary the most between Mac and Windows, and include the Homebrew password step. Give them their own session, with a TA ready for Homebrew. The rest go faster once the assistant is doing the work. Sign-in codes expire (GitHub's after about 15 minutes), so students should approve them straight away.
+**Pacing.** The install guide and the Git and GitHub guide vary the most between Mac and Windows,, mainly in what the installers ask for. Give them their own session, with a TA ready for Homebrew. The rest go faster once the assistant is doing the work. Sign-in codes expire (GitHub's after about 15 minutes), so students should approve them straight away.
 
 **Grouping by system.** Within each assistant group, seat Mac and Windows users separately for the first two guides.
 
