@@ -48,9 +48,9 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    Open the address and approve. **Do it straight away:** it only works for a few minutes. Then ask to see your projects again.
 
-   Note the name of the project your site uses. You'll need it in step 8. Then tell your agent how you publish. You do this once, and it applies to all your projects:
+   Then tell your agent how you publish. You do this once, and it applies to all your projects:
 
-   > Add this rule to your global instructions, the file you read in every project: ~/.claude/CLAUDE.md for Claude Code, or ~/.codex/AGENTS.md for Codex. Create the file if it doesn't exist, and keep anything already in it: "Never deploy with Vercel CLI. To publish, commit and push to GitHub. Don't link folders with vercel link. When a Vercel CLI command needs a project, use the Vercel project named after the folder's GitHub repository, or ask me which one."
+   > Add this rule to your global instructions, the file you read in every project: ~/.claude/CLAUDE.md for Claude Code, or ~/.codex/AGENTS.md for Codex. Create the file if it doesn't exist, and keep anything already in it: "Never deploy with Vercel CLI. To publish, commit and push to GitHub."
 
    [Vercel help](/vercel)
 
@@ -62,7 +62,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    If the agent says an API key is missing, or the AI features don't respond, ask:
 
-   > Copy my API key into .env.local from my Vercel project, [Vercel project name]. Name the project in the command instead of linking this folder. If the key isn't in the Development settings, use Production. Don't show me any values, and keep .env.local out of GitHub.
+   > Copy my API key into .env.local from this project's Vercel project. If the key isn't in the Development settings, use Production. Don't show me any values, and keep .env.local out of GitHub.
 
    Then try your app again. If the key comes back empty, Vercel is hiding it: copy it from Google AI Studio instead. [API key help](/run-your-project)
 

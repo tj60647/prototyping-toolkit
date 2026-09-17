@@ -78,11 +78,13 @@ When Claude has finished, ask again:
 
 Your site updates whenever you push to GitHub. That keeps one simple rule: what's on GitHub is what's live. Deploying from VS Code would skip GitHub and break that rule.
 
-Find your site's project in the list, and note its name for step 8. Then tell Claude how you publish. You do this once, and it applies to all your projects. Send:
+Check that your site's project is in the list. Then tell Claude how you publish. You do this once, and it applies to all your projects. Send:
 
-> Add this rule to your global instructions, the file you read in every project: ~/.claude/CLAUDE.md for Claude Code, or ~/.codex/AGENTS.md for Codex. Create the file if it doesn't exist, and keep anything already in it: "Never deploy with Vercel CLI. To publish, commit and push to GitHub. Don't link folders with vercel link. When a Vercel CLI command needs a project, use the Vercel project named after the folder's GitHub repository, or ask me which one."
+> Add this rule to your global instructions, the file you read in every project: ~/.claude/CLAUDE.md for Claude Code, or ~/.codex/AGENTS.md for Codex. Create the file if it doesn't exist, and keep anything already in it: "Never deploy with Vercel CLI. To publish, commit and push to GitHub."
 
-Claude writes the rule down once, in the instructions file it reads in every project, so it remembers the rule in every session. A Vercel project connected to GitHub is usually named after its repository, so Claude can find the right one without linking each folder.
+Claude writes the rule down once, in the instructions file it reads in every project, so it remembers the rule in every session.
+
+You don't need to tell Claude which Vercel project belongs to this folder. When a command needs to know, Claude works it out from your GitHub repository, and may link the folder to its Vercel project. Linking adds a small `.vercel` folder that Git ignores.
 
 **About global instructions.** Each assistant reads one instructions file in every project, as well as any in the project itself. Claude Code's is `CLAUDE.md` in the `.claude` folder in your home folder; Codex's is `AGENTS.md` in the `.codex` folder. Rules about how you work, like this one, belong there. Instructions about one project go in that project's `AGENTS.md` (TLDR step 10).
 
@@ -141,7 +143,7 @@ Ask: *"List my Vercel projects, including the ones in my teams."* Pick the one y
 Ask Claude: *"Start the Vercel sign-in again."* Then open the new address straight away.
 
 **Claude doesn't know which Vercel project to use.**
-Tell Claude the name of your Vercel project. If this keeps happening, your Vercel project probably isn't named after your GitHub repository; ask Claude to add the name to this project's `AGENTS.md`.
+Tell Claude the name of your Vercel project, from the list in Step 7.
 
 **Claude wants to deploy with Vercel CLI.**
 Deny the request and say: *"Don't deploy. Save my changes to GitHub instead."* Then ask: *"What does your global instructions file say about publishing?"* If the rule from Step 7 is missing, send the Step 7 prompt again.
