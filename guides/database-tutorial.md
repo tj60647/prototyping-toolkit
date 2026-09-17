@@ -12,7 +12,7 @@
 
 A **database** lets your app remember things between visits: notes, saved items, chat history, anything your users create.
 
-This guide uses **Neon**, which runs a kind of database called Postgres. Its free plan gives each app its own project, with room for 100 projects. A Neon database sleeps when nobody is using it and wakes up by itself on the next visit, so an app you demo once a fortnight still works.
+This guide uses **Neon**, which runs a kind of database called Postgres. Its free plan gives each app its own project, with room for 100 projects. A Neon database sleeps when nobody is using it and wakes up by itself on the next visit, so an app you only show now and then still works.
 
 Neon also has **agent tools** that let Claude create and manage your database for you. You install them once, and they work in all your projects.
 
