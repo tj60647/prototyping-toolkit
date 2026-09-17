@@ -2,7 +2,7 @@
 
 *A setup guide for non-experts. Accurate as of September 2026. If something looks different, check the official download page: https://nodejs.org/en/download*
 
-*A help page, not a TLDR step. Your agent usually installs Node.js for you when a step needs it, such as step 7 or 8 of the [TLDR](/tldr). Use this page if that doesn't work.*
+*Your agent usually installs Node.js for you when a step needs it, such as step 7 or 8 of the [TLDR](/tldr). Use this page if that doesn't work.*
 
 *Using Codex instead of Claude Code? The prompts work the same way. Read "Claude" as "Codex," and follow the **Using Codex** notes where the steps differ. Where this guide says to start a new session, start a new chat instead: click the new chat button at the top of the Codex panel.*
 

@@ -91,7 +91,7 @@ Come back to these when your idea needs a backend. Do step 14 first, then the ot
 - **Start a new session when a guide asks you to.** In Claude Code, click the spark icon in the left-hand bar, then **New session**. In Codex, click the new chat button at the top of the Codex panel.
 - **Check before you allow.** If your assistant asks to run a command you're unsure about, ask for a plain-language explanation first.
 - **Each guide ends with "Next,"** naming the guide that comes after it.
-- **Node.js is a help page, not a step.** Your assistant installs Node.js when a step needs it. If that fails, see **Installing Node.js**.
+- **Your assistant installs Node.js when a step needs it.** Node.js is a tool many web projects run on. If that install fails, see **Installing Node.js**.
 
 ---
 
