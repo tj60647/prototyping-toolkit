@@ -23,7 +23,10 @@ const sidebar: DefaultTheme.SidebarItem[] = [
       item('put-it-to-work'),
     ],
   },
-  { text: 'Part 2: Backend', items: [item('protect-your-keys'), item('database'), item('sign-in')] },
+  {
+    text: 'Part 2: Backend',
+    items: [item('protect-your-keys'), item('database'), item('sign-in'), item('file-storage'), item('limits')],
+  },
   { text: 'Help', items: [item('nodejs')] },
 ]
 

@@ -142,4 +142,16 @@ Your prototype will eventually need somewhere to keep data and files, and a way 
 
     Then add `ALLOWED_EMAILS` in your Vercel project's settings: the email addresses allowed to use the app, separated by commas. To let anyone with a Google account in, tell your agent instead. Then ask your agent to save your changes to GitHub. Test sign-in on your main Vercel address. [Sign-in help](/sign-in)
 
+17. **Store files.** Do this when your app handles uploads or images. In your Vercel project, open **Storage** and create a **Blob** store for this project. Then ask:
+
+    > Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload.
+
+    [File storage help](/file-storage)
+
+18. **Check your limits.** Do this after any of steps 15 to 17.
+
+    > Show me how much of each free plan this app uses: Neon, Vercel (including Blob), and any paid API it calls. Tell me what happens when each limit is reached, and whether any of them could charge me.
+
+    [Limits help](/limits)
+
 **Stuck?** If your agent can't find something it just installed, quit VS Code completely (`Cmd + Q` on a Mac, **File → Exit** on Windows) and open it again. Otherwise, tell your agent what happened and ask: “Help me fix this. Give me one step at a time.”

@@ -142,6 +142,22 @@ export const guides: Guide[] = [
     name: 'Sign-In',
     title: 'Adding Sign-In',
     prev: 'database',
+    next: 'file-storage',
+  },
+  {
+    file: 'file-storage-tutorial.md',
+    slug: 'file-storage',
+    name: 'File Storage',
+    title: 'Storing Files',
+    prev: 'sign-in',
+    next: 'limits',
+  },
+  {
+    file: 'limits-tutorial.md',
+    slug: 'limits',
+    name: 'Limits',
+    title: 'Checking Your Limits',
+    prev: 'file-storage',
     next: null,
   },
 ]
