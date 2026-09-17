@@ -2,9 +2,11 @@
 
 *The order to follow the setup guides in. Accurate as of September 2026.*
 
+**This toolkit sets you up to prototype with a coding assistant, Claude Code or Codex, as a collaborator.** You explore ideas together: it proposes plans and handles the technical side of building, testing, fixing and publishing, and you decide what to make and what to try next. Start by getting your assistant running, then work through the rest of the setup together, one step at a time.
+
 There are two ways through the setup. Both end in the same place.
 
-- **For a quick run-through, follow the [TLDR](/tldr).** It's one page of short steps, and your coding assistant does most of the work. It links to the detailed guides if you get stuck.
+- **For a quick run-through, follow the [TLDR](/tldr).** It's one page of short steps that you work through with your coding assistant. It links to the detailed guides if you get stuck.
 - **For a deeper understanding, follow the detailed guides below, in order.** They explain what each tool is, why you need it, and how to check that it works.
 
 ---
@@ -85,7 +87,7 @@ Come back to these when your idea needs a backend. Do step 14 first, then the ot
 
 ## How the Guides Work
 
-- **Your assistant does most of the work.** From the moment it's installed, it runs most commands for you. Claude asks before each one. Codex runs routine commands in your project without asking, so Codex users save a starting point before each task.
+- **You and your assistant work together.** From the moment it's installed, it runs most commands for you, while you review, approve and steer. Claude asks before each one. Codex runs routine commands in your project without asking, so Codex users save a starting point before each task.
 - **Your assistant sets things up.** It installs the tools and starts the GitHub and Vercel sign-ins, and you approve them in your browser. If an installer asks for your computer's password, it opens its own window for it.
 - **Restarting VS Code fixes a lot.** VS Code only notices newly installed programs after you quit it completely and open it again. Closing a window isn't always enough. On a Mac, press `Cmd + Q`. On Windows, close every VS Code window or choose **File → Exit**.
 - **Start a new session when a guide asks you to.** In Claude Code, click the spark icon in the left-hand bar, then **New session**. In Codex, click the new chat button at the top of the Codex panel.
