@@ -12,9 +12,9 @@
 
 Your prototype already runs online on Vercel. Running it on your own computer lets you try changes before you publish them, and lets Claude test them in a browser.
 
-Your prototype uses Google's Gemini AI, and Gemini needs a secret **API key** to work. Your live site on Vercel already has this key. To run your prototype on your own computer, your computer may need a copy of the key too. It goes in a file in your project called `.env.local`.
+If your prototype uses an AI service or another paid API, it needs a secret **API key** to work. Your live site on Vercel already has it. To run your prototype on your own computer, your computer may need a copy of the key too. It goes in a file in your project called `.env.local`.
 
-Settings stored like this, outside your code, are called **environment variables**. Your Gemini key is one of them, usually named `GEMINI_API_KEY`.
+Settings stored like this, outside your code, are called **environment variables**. A Gemini key, for example, is usually named `GEMINI_API_KEY`.
 
 **Keep the key secret:**
 
@@ -25,7 +25,7 @@ Settings stored like this, outside your code, are called **environment variables
 
 ## Words You'll See
 
-- **API key:** a secret code that lets your app use a service, such as Gemini.
+- **API key:** a secret code that lets your app use a paid service, such as an AI model.
 - **Environment variable:** a setting kept outside your code. Your API key is one.
 - **`.env.local`:** the file on your computer where your environment variables are kept.
 - **`.gitignore`:** a list of files Git never saves or sends to GitHub.
@@ -41,7 +41,7 @@ This guide assumes:
 - VS Code is open with your project folder open.
 - The Claude Code extension is installed and you are signed in.
 - Vercel CLI is installed, and you're signed in to Vercel.
-- Your Vercel project already has your Gemini API key. It does if the AI features on your live site work.
+- Your Vercel project already has any API keys your app needs. It does if your live site works.
 
 ---
 
@@ -89,7 +89,7 @@ Before moving on, check that your project runs and any key is protected.
 ## Troubleshooting
 
 **The key downloaded empty.**
-Vercel sometimes hides key values so they can't be downloaded. Copy the key from Google AI Studio instead:
+Vercel sometimes hides key values so they can't be downloaded. Copy the key from the service that issued it instead. For a Gemini key, for example:
 
 1. In your browser, go to **https://aistudio.google.com/apikey** and copy your key.
 2. In VS Code, open `.env.local` from the Explorer panel, the list of files on the left. Files that start with a dot are listed with the others.

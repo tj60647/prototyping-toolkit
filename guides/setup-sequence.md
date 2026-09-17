@@ -101,7 +101,7 @@ Each guide ends with a **Checkpoint** section. Don't move on until it works. Sta
 ## Words You'll See
 
 - **`AGENTS.md`:** a file of standing instructions that coding assistants read at the start of every session.
-- **API key:** a secret code that lets your app use a service, such as Gemini.
+- **API key:** a secret code that lets your app use a paid service, such as an AI model.
 - **Branch:** a separate line of work in Git, so changes don't affect your main version until you merge them.
 - **Build:** the step where Vercel turns your project's files into a working website.
 - **`CLAUDE.md`:** Claude Code's instructions file. Your project's contains one line, `@AGENTS.md`, so Claude reads `AGENTS.md` too.

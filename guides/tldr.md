@@ -4,6 +4,8 @@ Do one step at a time. Send the messages in the boxes to your **agent**: the AI 
 
 This assumes your project is already on GitHub and Vercel already updates its website automatically when you save changes to GitHub.
 
+## Part 1: Set Up and Start Prototyping
+
 1. **Set up a folder for your projects.** In Finder (Mac) or File Explorer (Windows), create a folder called `Projects` in your home folder. Avoid Documents and Desktop, which iCloud Drive or OneDrive may sync. If you already have a folder for your projects, use that one.
 
 2. **Open your projects folder in VS Code.** Open VS Code, then use **File → Open Folder…** to open the folder from step 1. If VS Code asks whether you trust the authors, click **Yes, I trust the authors**. Your agent won't work otherwise.
@@ -113,5 +115,9 @@ This assumes your project is already on GitHub and Vercel already updates its we
     > Look back over this chat. Summarize what I asked for, what you did, where you guessed, and where I corrected you.
 
     Then think about what you'd do differently next time, and add anything useful to `AGENTS.md`. [Questions to reflect on](/put-it-to-work#step-13-look-back-at-how-it-went)
+
+## Part 2: Add a Backend
+
+Your prototype will eventually need somewhere to keep data and files, and a way to stop strangers spending the budget behind its paid services. Do step 14 first. Do steps 15 to 17 when your prototype needs them, and step 18 after any of them. Everything here is free within each service's limits.
 
 **Stuck?** If your agent can't find something it just installed, quit VS Code completely (`Cmd + Q` on a Mac, **File → Exit** on Windows) and open it again. Otherwise, tell your agent what happened and ask: “Help me fix this. Give me one step at a time.”
