@@ -111,7 +111,7 @@ When Codex does ask before acting:
 
 Because Codex doesn't ask before changing your files, save a starting point before each task. Once your project is on your computer (TLDR step 6), send this before any change:
 
-> Save the current version so we can go back to it.
+> Save a checkpoint of my project with Git, so we can go back to this version if the next change goes wrong. Tell me in one sentence what you saved.
 
 If a change goes wrong, you can ask Codex to go back to that save point.
 

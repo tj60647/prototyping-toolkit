@@ -96,7 +96,7 @@ Here are some prompts to try:
 
 | To do this | Send this |
 |---|---|
-| Save a starting point before a big change | *"Save the current version so we can go back to it."* |
+| Save a starting point before a big change | *"Save a checkpoint of my project with Git, so we can go back to this version if the next change goes wrong. Tell me in one sentence what you saved."* |
 | Publish a change | *"Save my changes to GitHub. Check that Vercel's update worked and give me a link to the result."* |
 | Check the build after a push | *"Did Vercel's update work? If it failed, explain the error in plain language."* |
 | See your environment variables | *"List the environment variable names for my Vercel project. Don't show any values."* |

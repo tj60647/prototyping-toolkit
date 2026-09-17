@@ -109,7 +109,7 @@ Then open your project in VS Code:
 
 Then start a new session (click the spark icon in the left-hand bar, then **New session**). From here on, you work inside this project folder. Open it whenever you work on your project.
 
-**Using Codex?** Codex changes files without asking first, so make save points a habit starting now. Before each task, send: *"Save the current version so we can go back to it."*
+**Using Codex?** Codex changes files without asking first, so make save points a habit starting now. Before each task, send: *"Save a checkpoint of my project with Git, so we can go back to this version if the next change goes wrong. Tell me in one sentence what you saved."*
 
 ---
 

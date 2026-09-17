@@ -65,7 +65,7 @@ Choose one task from the table above: describe your project (Option A), draw how
 
 Before changing anything, save where you are, so you can always get back to it. Start a new session (click the spark icon in the left-hand bar, then **New session**), then send:
 
-> Save the current version so we can go back to it.
+> Save a checkpoint of my project with Git, so we can go back to this version if the next change goes wrong. Tell me in one sentence what you saved.
 
 Allow the commands when Claude asks. Then send the prompt for your option below. Each option has a short prompt, and a fuller one for a more thorough result. Review Claude's plan, approve it, and check the result yourself.
 
@@ -125,11 +125,11 @@ This option restyles your app to follow the design language of another website. 
 
 #### Short version
 
-Send this. It also creates the branch described in C1:
+Send this. It changes your app directly, and the change goes live when you save it to GitHub:
 
-> Create a branch called design-system-update. Then restyle my app to follow the design of https://design.berkeley.edu/: study the site's colors, fonts and spacing with a design-system extraction tool, save those rules in the project, and apply them. Keep my app's content and features, and don't copy Berkeley's logos, photos or text.
+> Restyle my app to follow the design of https://design.berkeley.edu/: study the site's colors, fonts and spacing with a design-system extraction tool, save those rules in the project, and apply them. Keep my app's content and features, and don't copy Berkeley's logos, photos or text.
 
-Then go to C3. **For a more thorough restyle,** skip this and follow C1 and C2 instead.
+Then go to C3. **For a more thorough restyle, or to try it on a branch before it goes live,** skip this and follow C1 and C2 instead.
 
 #### C1. Work on a branch (recommended)
 
