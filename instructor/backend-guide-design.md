@@ -14,6 +14,8 @@ Students' prototypes will need somewhere to keep data and files, and a way to st
   - **Neon's free plan** allows 100 projects that wake by themselves when used.
   - **Neon's own file storage** is a public beta in one region (`us-east-2`), so files go to Vercel Blob, which has a hard free cap on Vercel's free plan.
 - **One Neon project per app**, so a credential change in one app can't break another.
+- **A Neon account and Neon's agent tools, not a Vercel-managed database.** The student signs in to Neon with GitHub or Google, and the agent installs Neon's command-line tool, plugin or skills, and MCP server for all projects. The agent can then create the project, turn on sign-in and add trusted domains itself. A database created through Vercel's Marketplace can't use `neon login` (Neon: "the `neon login` command won't work since the account is Vercel-managed"), so the agent tools would need a Neon API key, and first-time Marketplace terms may need the dashboard.
+- **Google sign-in only.** It works with Neon's shared credentials and no setup; GitHub and Vercel sign-in need the student's own OAuth app.
 - **Shape:** the TLDR page gains a Part 2 with steps 14–18. Each step gets a detailed guide that follows the TLDR step for step: same numbers, headings and prompts, plus explanation, a checkpoint and troubleshooting.
 - **No assumptions about the app.** Prompts name no framework and no AI service. The agent works out what the app uses and follows the provider's official instructions for it. Examples (Gemini, Vite) appear only as examples.
 - **Who can use an app is the student's choice.** The guide shows how to restrict it, not whom to allow.
@@ -22,10 +24,11 @@ Students' prototypes will need somewhere to keep data and files, and a way to st
 
 - **Keys and the browser:** a variable set in the Vercel dashboard is available both while the site is built and to server code. Build tools can copy it into the JavaScript the browser downloads; AI Studio's Vite apps, for example, include a `define` block that does this. Three of the instructor's AI Studio apps have that block but don't use it in browser code, and their built files contain no key. The risk is latent: a later change can expose the key without warning.
 - **Neon Auth** (managed Better Auth; Neon's docs call it beta on the roadmap page and generally available elsewhere):
-  - **Setup:** enabled in the Neon dashboard. For a React app, it needs the `@neondatabase/neon-js` package and the `VITE_NEON_AUTH_URL` setting, which is a web address, not a secret.
-  - **Sign-in methods:** Google, GitHub and Vercel sign-in work with Neon's shared developer credentials. Email and password needs your own email service for verification links.
+  - **Setup:** the agent can do it from the command line: `neon neon-auth enable`, `neon neon-auth domain add`, `neon neon-auth domain allow-localhost enable`. For a React app, it needs the `@neondatabase/neon-js` package and the `VITE_NEON_AUTH_URL` setting, which is a web address, not a secret.
+  - **Sign-in methods:** "Google OAuth is enabled by default with shared credentials for development and testing." "GitHub and Vercel OAuth require custom credentials and are not available with shared credentials." Email and password needs your own email service for verification links.
+  - **Shared Google credentials:** fine for a prototype, but the consent screen is generic (Neon: it "can look generic or confusing"). Your own Google OAuth client is set up by hand in Google Cloud Console, with redirect URI `{NEON_AUTH_BASE_URL}/callback/google` and a published, verified consent screen for production. An agent can't do that part.
   - **Trusted domains:** the app's web address must be on the list, or sign-in fails with "invalid domain".
-  - **No built-in allow-list.** Server code verifies the sign-in token against `<auth URL>/.well-known/jwks.json` (EdDSA). The token carries `email` and lasts 15 minutes.
+  - **No built-in allow-list** for Google sign-in (the command-line tool can disable email-and-password sign-up, but not restrict Google). Server code verifies the sign-in token against `<auth URL>/.well-known/jwks.json` (EdDSA). The token carries `email` and lasts 15 minutes.
 - **Free plans:**
   - **Neon:** 0.5 GB per project, 100 compute-hours per project a month, 60,000 sign-in users a month.
   - **Vercel Blob on Vercel's free plan:** 1 GB of storage and 10 GB of transfer a month. It stops at the limit rather than charging.
@@ -46,10 +49,11 @@ The guide explains why a key the browser can see is usable by anyone, and gives 
 
 **For:** apps that must remember things.
 
-- **In the Vercel dashboard:** **Storage** → create a **Neon** database for this project only.
-- **Then send:**
+> Install Neon's agent tools for all my projects, and sign me in to Neon: show me the web address and wait while I approve it. Then create a Neon project just for this app, and connect the app to it following Neon's instructions for this app's framework. Add the connection settings to this project on Vercel, copy them into .env.local without showing them, and keep them out of GitHub.
 
-> Connect this app to its Neon database, following Neon's instructions for this app's framework. Copy the connection settings into .env.local without showing them, and keep them out of GitHub.
+- **Sign-in:** a student without a Neon account creates one on the sign-in page, with GitHub or Google.
+- **Restart:** after the tools install, the agent may need a new session, or VS Code a restart, to see them. The guide says so.
+- **Vercel settings:** if the agent uses `vercel env add`, the guide notes that Vercel then hides Production and Preview values for good unless `--no-sensitive` is passed. That's acceptable for a database address only the deployed app reads.
 
 - **Optional follow-up:**
 
@@ -59,10 +63,11 @@ The guide explains why a key the browser can see is usable by anyone, and gives 
 
 **For:** any app you share that spends your budget.
 
-> Add sign-in with Neon Auth using Google or GitHub accounts, following Neon's instructions for this app's framework. Add this app's Vercel web address to Neon Auth's trusted domains. Then make the server code that uses my paid API keys refuse any request unless the person is signed in and their email is in an ALLOWED_EMAILS setting on Vercel.
+> Add Google sign-in with Neon Auth, following Neon's instructions for this app's framework. Add this app's Vercel web address to Neon Auth's trusted domains. Then make the server code that uses my paid API keys refuse any request unless the person is signed in and their email is in an ALLOWED_EMAILS setting on Vercel.
 
 - **Who gets in:** the student sets `ALLOWED_EMAILS` in the Vercel dashboard, or tells the agent to allow anyone who signs in.
 - **Trusted domains:** the guide explains that preview addresses change on every deploy, so sign-in is tested on the main address.
+- **Shared credentials:** the guide says that Google sign-in works immediately using Neon's shared credentials, which is fine for a prototype, but the Google screen won't show the app's name. For a public app, the student registers their own Google sign-in app in Google Cloud Console, by hand, and the agent adds the credentials with `neon neon-auth oauth-provider update`.
 
 ### 17. Store files
 
@@ -111,9 +116,10 @@ They join `guides.ts`, the sidebar (a **Part 2: Backend** group), and the start 
 
 - Whether Vercel Blob offers private files on the free plan. If not, step 17 says files are public by address and the guide explains what that means.
 - Whether the variables Vercel sets for a Neon database can be downloaded with `vercel env pull`, or are hidden like other secret variables. This decides the fallback in step 15.
-- Whether the Vercel-created Neon project gives the student access to Neon Auth in the Neon dashboard.
+- How Neon's tools install for all projects in Claude Code and in Codex (`neon plugins --agent <agent>`, or skills plus the MCP server), and whether a restart is needed.
+- Whether the agent should put settings on Vercel with `vercel env add` or through Neon's own Vercel integration, and whether the Neon-managed integration needs dashboard steps.
 - Whether major AI providers let students set a spending cap, for step 18.
-- Whether Neon's shared Google/GitHub sign-in credentials are acceptable for student prototypes; Neon's production checklist says to replace them before launch. Decide what the guide says.
+- Whether the free plan limits shared Google sign-in in any way beyond branding.
 
 ## Testing
 
