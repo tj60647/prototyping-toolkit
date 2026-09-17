@@ -55,7 +55,7 @@ Not sure about Git? Ask Claude:
 
 Send:
 
-> Help me install Superpowers for all my projects and show me how to use it.
+> Help me install Superpowers for this project only, and show me how to use it.
 
 Installing a plugin happens in a Claude Code window that Claude can't click for you, so Claude walks you through the steps below.
 
@@ -69,15 +69,15 @@ Installing a plugin happens in a Claude Code window that Claude can't click for 
 
 ### Choose where it applies
 
-Claude Code asks where to install the plugin. Choose **Install for you**.
+Claude Code asks where to install the plugin. Choose **Install locally**, so you can try Superpowers on one project first.
 
 | Choice | What it means |
 |---|---|
-| **Install for you** | Superpowers runs in every project you open. *Recommended.* |
+| **Install for you** | Superpowers runs in every project you open. *Choose this later, once you've decided you like it.* |
 | **Install for this project** | Superpowers runs for anyone who works on this project. |
-| **Install locally** | Superpowers runs only for you, only in this project. |
+| **Install locally** | Superpowers runs only for you, only in this project. *Recommended to start.* |
 
-Installing it for you means you set it up once, like your other tools, and it doesn't add files to your project for classmates who share it. To pause it, see **Turning It Off** below.
+Superpowers changes how Claude works, so try it on one project before using it everywhere. Installing locally keeps your other projects working the way they do now, and doesn't change anything for classmates who share this project. If you like it, install it again and choose **Install for you**. To pause it, see **Turning It Off** below.
 
 ### Restart and check
 
@@ -148,7 +148,7 @@ Make sure you restarted Claude Code and started a new session. Then type `/plugi
 Ask: *"Explain what you're asking in plain language before I answer."*
 
 **It's doing much more than I wanted.**
-Stop it and ask for a summary. Then describe a smaller goal, or turn Superpowers off.
+Stop it and ask for a summary. Then describe a smaller goal, or turn Superpowers off for this project.
 
 ---
 
