@@ -42,9 +42,9 @@ This guide assumes:
 
 ## Step 9: Ask for a UI Audit
 
-This checks how your app looks and how easy it is to use. Send:
+This checks how your app looks and how easy it is to use. The **Laws of UX** are a short collection of well-known design principles, such as keeping choices few and making buttons easy to reach; naming the law behind each problem helps you understand why it matters. Send:
 
-> Use Playwright to audit my app on computer and phone screens. Show me what's confusing, hard to read, or difficult to use, with screenshots. Suggest the three most useful improvements. Don't change anything yet.
+> Use Playwright to audit my app on computer and phone screens, using the Laws of UX (https://lawsofux.com/) as your reference. Show me what's confusing, hard to read, or difficult to use, with screenshots, and name the law each problem relates to. Suggest the three most useful improvements. Don't change anything yet.
 
 Claude uses the copy of your app running on your computer, and starts it if it isn't running. Claude asks permission before each browser action. Read what it wants to do, then allow it. **Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
@@ -54,6 +54,12 @@ If Claude says it doesn't have Playwright, follow "If Playwright Isn't Available
 
 ### If Playwright Isn't Available
 
+Send:
+
+> If you don't have Playwright browser tools, help me set them up for all my projects. In Claude Code, walk me through installing Microsoft's Playwright plugin from /plugins, choosing Install for you. In Codex, add the Playwright MCP server (npx @playwright/mcp@latest) to my global Codex settings yourself. Then tell me exactly what to restart before I ask for the audit again.
+
+Claude walks you through these steps:
+
 1. In the Claude Code prompt box, type `/plugins` and press Enter. The **Manage plugins** window opens.
 2. On the **Plugins** tab, search for **playwright**.
 3. Choose the plugin from Microsoft and click **Install**.
@@ -61,7 +67,7 @@ If Claude says it doesn't have Playwright, follow "If Playwright Isn't Available
 5. A banner asks you to restart Claude Code. Click it.
 6. Start a new session (click the spark icon in the left-hand bar, then **New session**) and ask for the audit again.
 
-**Using Codex?** Skip the numbered steps above. Instead, send: *"Add the Playwright MCP server to my global Codex settings, for all my projects, using the command npx @playwright/mcp@latest. Tell me which file you changed."* Codex asks before changing a settings file outside your project; allow it. Then quit VS Code completely, open it again, start a new chat, and ask for the audit again.
+**Using Codex?** Codex adds Playwright to its settings itself instead of using these steps. It asks before changing a settings file outside your project; allow it. Then quit VS Code completely, open it again, start a new chat, and ask for the audit again.
 
 ---
 
