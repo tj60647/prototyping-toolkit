@@ -76,7 +76,7 @@ The guide explains why a key the browser can see is usable by anyone, and gives 
 - **In the Vercel dashboard:** **Storage** → create a **Blob** store for this project.
 - **Then send:**
 
-> Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload.
+> Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload, and keep the files private unless I say otherwise.
 
 ### 18. Check your limits
 

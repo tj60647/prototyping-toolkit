@@ -144,7 +144,7 @@ Your prototype will eventually need somewhere to keep data and files, and a way 
 
 17. **Store files.** Do this when your app handles uploads or images. In your Vercel project, open **Storage** and create a **Blob** store for this project. Then ask:
 
-    > Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload.
+    > Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload, and keep the files private unless I say otherwise.
 
     [File storage help](/file-storage)
 

@@ -14,7 +14,7 @@ Everything in Part 2 is free within limits. This step shows how close your app i
 
 | Service | Free limit (September 2026) | At the limit |
 |---|---|---|
-| Neon | 0.5 GB of data and 100 hours of computing per project each month; 60,000 sign-in users a month | The free plan stops; it doesn't charge |
+| Neon | 0.5 GB of data and 100 hours of computing per project each month; 60,000 sign-in users a month | When you reach the compute-hours limit, Neon suspends the project until the next billing period or until you upgrade. When you reach the storage limit, changes that would add more data fail until you free space or upgrade. Neon doesn't charge for going over ([Neon free-plan limits](https://neon.com/faqs/free-plan-limits-and-quotas)) |
 | Vercel Blob | 1 GB of storage and 10 GB of downloads a month | Blob stops working until the next month |
 | Your AI service or other paid API | Depends on the service and your plan | Gemini, OpenAI and Anthropic all let you set a monthly spending limit in your account's billing settings ([Gemini](https://ai.google.dev/gemini-api/docs/billing), [OpenAI](https://help.openai.com/en/articles/9186755-managing-your-work-in-the-api-platform-with-projects), [Anthropic](https://platform.claude.com/docs/en/api/rate-limits)). Other services vary. |
 

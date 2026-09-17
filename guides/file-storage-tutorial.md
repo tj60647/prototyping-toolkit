@@ -12,7 +12,7 @@
 
 Databases are good at text and numbers, not at files. **Vercel Blob** stores files your app handles, such as uploaded photos or generated images, in your Vercel account. On Vercel's free plan it includes 1 GB of storage and 10 GB of downloads a month, and it stops at the limit instead of charging you.
 
-Files can be private, so only your app can read them.
+The prompt below keeps your files private, so only your app can read them. If you want files anyone can open, such as images on a public page, say so instead.
 
 ---
 
@@ -36,7 +36,7 @@ Files can be private, so only your app can read them.
 2. Click **Create**, choose **Blob**, and connect it to this project.
 3. Send, replacing `[what the files are]`, for example with "photos people upload":
 
-> Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload.
+> Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload, and keep the files private unless I say otherwise.
 
 Review Claude's plan, then approve it. Save your changes to GitHub when it works on your computer.
 
@@ -47,6 +47,7 @@ Review Claude's plan, then approve it. Save your changes to GitHub when it works
 1. On your app's main Vercel address, sign in and upload a file.
 2. In the Vercel dashboard, open **Storage**, then your Blob store. The file should be listed.
 3. Sign out and try to upload. It should refuse.
+4. Copy a file's web address from the Blob store and open it in a private browser window. A private file shouldn't open.
 
 ---
 
