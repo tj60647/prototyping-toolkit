@@ -120,4 +120,10 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
 Your prototype will eventually need somewhere to keep data and files, and a way to stop strangers spending the budget behind its paid services. Do step 14 first. Do steps 15 to 17 when your prototype needs them, and step 18 after any of them. Everything here is free within each service's limits.
 
+14. **Keep your keys on the server.** A secret key the browser can see can be used by anyone.
+
+    > Check whether any secret key this app uses — for an AI service or any other paid API — could ever reach the browser. Look at how this app is built and deployed, including any build settings that copy environment variables into browser code. If a key could reach the browser, move the calls that use it to server code and remove whatever copies it. Don't show me any key values.
+
+    If the agent changed anything, ask it to run the app and check the AI features still work. [Key help](/protect-your-keys)
+
 **Stuck?** If your agent can't find something it just installed, quit VS Code completely (`Cmd + Q` on a Mac, **File → Exit** on Windows) and open it again. Otherwise, tell your agent what happened and ask: “Help me fix this. Give me one step at a time.”

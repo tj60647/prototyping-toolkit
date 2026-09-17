@@ -118,6 +118,15 @@ export const guides: Guide[] = [
     name: 'Put It to Work',
     title: 'Put Your Setup to Work',
     prev: 'prototyping-assistant',
+    next: 'protect-your-keys',
+  },
+  {
+    file: 'protect-your-keys-tutorial.md',
+    slug: 'protect-your-keys',
+    name: 'Protect Your Keys',
+    title: 'Protecting Your API Keys',
+    prev: 'put-it-to-work',
+    // Filled in as the Part 2 guides are added.
     next: null,
   },
 ]
