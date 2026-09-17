@@ -60,7 +60,11 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    > Run my project on this computer and give me a link to open it.
 
-   Open the link and try your app. If it won't run, ask the agent to explain and fix the problem. [Setup help](/nodejs)
+   Open the link and try your app. If it won't run, ask:
+
+   > My project won't run. Explain the problem in plain language, then fix it. If something needs installing, install it for all my projects. Don't show me any secret values.
+
+   If the agent can't find something it just installed, restart VS Code (see **Stuck?** below). [Setup help](/nodejs)
 
    If the agent says an API key is missing, or the AI features don't respond, ask:
 
