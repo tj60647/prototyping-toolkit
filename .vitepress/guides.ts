@@ -126,7 +126,14 @@ export const guides: Guide[] = [
     name: 'Protect Your Keys',
     title: 'Protecting Your API Keys',
     prev: 'put-it-to-work',
-    // Filled in as the Part 2 guides are added.
+    next: 'database',
+  },
+  {
+    file: 'database-tutorial.md',
+    slug: 'database',
+    name: 'Database',
+    title: 'Adding a Database',
+    prev: 'protect-your-keys',
     next: null,
   },
 ]

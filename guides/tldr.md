@@ -126,4 +126,14 @@ Your prototype will eventually need somewhere to keep data and files, and a way 
 
     If the agent changed anything, ask it to run the app and check the AI features still work. [Key help](/protect-your-keys)
 
+15. **Add a database.** Do this when your prototype needs to remember things.
+
+    > Install Neon's agent tools for all my projects, and sign me in to Neon: show me the web address and wait while I approve it. Then create a Neon project just for this app, and connect the app to it following Neon's instructions for this app's framework. Add the connection settings to this project on Vercel, copy them into .env.local without showing them, and keep them out of GitHub.
+
+    New to Neon? Create an account on the sign-in page, with GitHub or Google. If you want search by meaning, also ask:
+
+    > Turn on pgvector so this app can search by meaning.
+
+    [Database help](/database)
+
 **Stuck?** If your agent can't find something it just installed, quit VS Code completely (`Cmd + Q` on a Mac, **File → Exit** on Windows) and open it again. Otherwise, tell your agent what happened and ask: “Help me fix this. Give me one step at a time.”
