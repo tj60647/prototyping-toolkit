@@ -40,3 +40,13 @@
     display: none;
   }
 }
+
+/* Start here and TLDR sit in the sidebar's untitled first group. Show them at
+   the weight of the part headings below them. */
+.VPSidebar .VPSidebarItem.level-0:not(:has(> .item)) > .items > .VPSidebarItem.level-1 .text {
+  font-weight: 700;
+}
+
+.VPSidebar .VPSidebarItem.level-0:not(:has(> .item)) > .items > .VPSidebarItem.level-1:not(.is-active) .text {
+  color: var(--vp-c-text-1);
+}

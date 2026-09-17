@@ -2,6 +2,8 @@
 
 *The order to follow the setup guides in. Accurate as of September 2026.*
 
+**This toolkit sets you up so your coding assistant, Claude Code or Codex, does the technical work of building, testing, fixing and publishing your prototypes, while you decide what to make.** Start by getting your assistant running; then it helps you through the rest of the setup, one step at a time.
+
 There are two ways through the setup. Both end in the same place.
 
 - **For a quick run-through, follow the [TLDR](/tldr).** It's one page of short steps, and your coding assistant does most of the work. It links to the detailed guides if you get stuck.

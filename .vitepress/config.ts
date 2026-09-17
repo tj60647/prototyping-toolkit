@@ -10,9 +10,11 @@ const item = (slug: string, text = guideBySlug(slug).name): DefaultTheme.Sidebar
 })
 
 const sidebar: DefaultTheme.SidebarItem[] = [
-  { items: [item(''), item('tldr')] },
+  // Top-level links show at the same weight as the part headings.
+  item(''),
+  item('tldr'),
   {
-    text: 'Part 1: Setup',
+    text: 'Part 1: Set Up and Start Prototyping',
     items: [
       // Students install one of the two, so both are plain links.
       item('claude-code', 'Install Claude Code'),
@@ -27,7 +29,7 @@ const sidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: 'Part 2: Backend (Optional)',
+    text: 'Part 2: Add a Backend (Optional)',
     items: [item('protect-your-keys'), item('database'), item('sign-in'), item('file-storage'), item('limits')],
   },
   { text: 'Help', items: [item('nodejs')] },

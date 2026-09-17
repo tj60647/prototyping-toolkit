@@ -1,5 +1,7 @@
 # TLDR: Quick Start
 
+This toolkit sets you up so your coding assistant, Claude Code or Codex, does the technical work of building, testing, fixing and publishing your prototypes, while you decide what to make. Start by getting your assistant running; then it helps you through the rest of the setup, one step at a time.
+
 Do one step at a time. Send the messages in the boxes to your **agent**: the AI helper you'll install in VS Code. The help links are there if you get stuck.
 
 This assumes your project is already on GitHub and Vercel already updates its website automatically when you save changes to GitHub.
