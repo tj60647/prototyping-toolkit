@@ -134,6 +134,14 @@ export const guides: Guide[] = [
     name: 'Database',
     title: 'Adding a Database',
     prev: 'protect-your-keys',
+    next: 'sign-in',
+  },
+  {
+    file: 'sign-in-tutorial.md',
+    slug: 'sign-in',
+    name: 'Sign-In',
+    title: 'Adding Sign-In',
+    prev: 'database',
     next: null,
   },
 ]
