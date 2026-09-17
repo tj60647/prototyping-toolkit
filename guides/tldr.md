@@ -142,9 +142,11 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
     Then ask yourself: Did the plan match what you meant? What did the agent get wrong, and how did you notice? What would you tell it next time? Ask the agent to add that last answer to `AGENTS.md`, so your next chat starts better. [More questions](/put-it-to-work#step-13-look-back-at-how-it-went)
 
-## Part 2: Add a Backend
+**You've finished the setup.** Keep exploring your prototype the same way: one small change at a time, with a save point before each. Part 2 is optional, so there's no need to continue unless your idea calls for it.
 
-Your prototype will eventually need somewhere to keep data and files, and a way to stop strangers spending the budget behind its paid services. Do step 14 first. Do steps 15 to 17 when your prototype needs them, and step 18 after any of them. Everything here is free within each service's limits.
+## Part 2: Add a Backend (Advanced, Optional)
+
+Come back to this part when your idea needs a backend: somewhere to keep data or files, or a way to control who can use an app that spends your budget. Do step 14 first. Do steps 15 to 17 when your prototype needs them, and step 18 after any of them. Everything here is free within each service's limits.
 
 14. **Keep your keys on the server.** A secret key the browser can see can be used by anyone.
 
@@ -184,5 +186,7 @@ Your prototype will eventually need somewhere to keep data and files, and a way 
     > Show me how much of each free plan this app uses: Neon, Vercel (including Blob), and any paid API it calls. Tell me what happens when each limit is reached, and whether any of them could charge me.
 
     [Limits help](/limits)
+
+**Before you rely on it.** Try your app's main flow yourself, then ask someone else to try it without your help. If you start relying on the app or sharing it more widely, give testing, who has access, costs, and how many people it can handle more attention.
 
 **Stuck?** If your agent can't find something it just installed, quit VS Code completely (`Cmd + Q` on a Mac, **File → Exit** on Windows) and open it again. Otherwise, tell your agent what happened and ask: “Help me fix this. Give me one step at a time.”
