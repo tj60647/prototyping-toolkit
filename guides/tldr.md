@@ -78,9 +78,9 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    If the agent says it doesn't have Playwright, ask:
 
-   > If you don't have Playwright browser tools, help me set them up for all my projects. In Claude Code, walk me through installing Microsoft's Playwright plugin from /plugins, choosing Install for you. In Codex, add the Playwright MCP server (npx @playwright/mcp@latest) to my global Codex settings yourself. Then tell me exactly what to restart before I ask for the audit again.
+   > If you don't have Playwright browser tools, install them yourself for all my projects. In Claude Code, run Claude Code's own command-line tool: claude plugin install playwright@claude-plugins-official --scope user (if claude isn't found, use the program named in the CLAUDE_CODE_EXECPATH environment variable). In Codex, add the Playwright MCP server (npx @playwright/mcp@latest) to my global Codex settings. Then tell me exactly what to restart before I ask for the audit again.
 
-   Follow its steps, restart, then ask for the audit again. [Playwright help](/playwright)
+   Allow the install when the agent asks, restart as it tells you, then ask for the audit again. [Playwright help](/playwright)
 
 10. **Set up your agent for prototyping.** `AGENTS.md` holds instructions for future chats. `CLAUDE.md` tells Claude Code to read them too.
 
@@ -104,7 +104,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
 11. **Optional: try Superpowers.** Skip this unless you already have experience developing software and want a disciplined software-engineering assistant in Claude Code. Superpowers suits well-developed projects better than early prototyping. If you try it, start with one project; if you like it, you can install it for all your projects later.
 
-    > Help me install Superpowers for this project only, and show me how to use it.
+    > Install Superpowers yourself for this project only, and show me how to use it. In Claude Code, run Claude Code's own command-line tool: claude plugin install superpowers@claude-plugins-official --scope local (if claude isn't found, use the program named in the CLAUDE_CODE_EXECPATH environment variable). Then tell me exactly what to restart.
 
     [Superpowers help](/superpowers)
 

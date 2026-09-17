@@ -55,9 +55,11 @@ Not sure about Git? Ask Claude:
 
 Send:
 
-> Help me install Superpowers for this project only, and show me how to use it.
+> Install Superpowers yourself for this project only, and show me how to use it. In Claude Code, run Claude Code's own command-line tool: claude plugin install superpowers@claude-plugins-official --scope local (if claude isn't found, use the program named in the CLAUDE_CODE_EXECPATH environment variable). Then tell me exactly what to restart.
 
-Installing a plugin happens in a Claude Code window that Claude can't click for you, so Claude walks you through the steps below.
+Allow the install when Claude asks. Claude installs Superpowers for this project only, then tells you what to restart. Usually that's **Developer: Reload Window** from the Command Palette, followed by a new session. Then go to **Restart and check** below.
+
+**If Claude can't install it,** install it yourself with the next two steps.
 
 ### Find Superpowers
 
@@ -77,11 +79,11 @@ Claude Code asks where to install the plugin. Choose **Install locally**, so you
 | **Install for this project** | Superpowers runs for anyone who works on this project. |
 | **Install locally** | Superpowers runs only for you, only in this project. *Recommended to start.* |
 
-Superpowers changes how Claude works, so try it on one project before using it everywhere. Installing locally keeps your other projects working the way they do now, and doesn't change anything for classmates who share this project. If you like it, install it again and choose **Install for you**. To pause it, see **Turning It Off** below.
+Superpowers changes how Claude works, so try it on one project before using it everywhere. Installing locally keeps your other projects working the way they do now, and doesn't change anything for classmates who share this project. If you like it, ask Claude to install it for all your projects instead. To pause it, see **Turning It Off** below.
 
 ### Restart and check
 
-1. A banner asks you to restart Claude Code. Click it.
+1. Restart the way Claude told you, or click the restart banner if one appears.
 2. Start a new session: click the spark icon in the left-hand bar, then **New session**.
 3. Ask:
 

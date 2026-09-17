@@ -56,9 +56,11 @@ If Claude says it doesn't have Playwright, follow "If Playwright Isn't Available
 
 Send:
 
-> If you don't have Playwright browser tools, help me set them up for all my projects. In Claude Code, walk me through installing Microsoft's Playwright plugin from /plugins, choosing Install for you. In Codex, add the Playwright MCP server (npx @playwright/mcp@latest) to my global Codex settings yourself. Then tell me exactly what to restart before I ask for the audit again.
+> If you don't have Playwright browser tools, install them yourself for all my projects. In Claude Code, run Claude Code's own command-line tool: claude plugin install playwright@claude-plugins-official --scope user (if claude isn't found, use the program named in the CLAUDE_CODE_EXECPATH environment variable). In Codex, add the Playwright MCP server (npx @playwright/mcp@latest) to my global Codex settings. Then tell me exactly what to restart before I ask for the audit again.
 
-Claude walks you through these steps:
+Allow the install when Claude asks. Claude installs Microsoft's Playwright plugin for all your projects, then tells you what to restart. Usually that's **Developer: Reload Window** from the Command Palette, followed by a new session. Then ask for the audit again.
+
+**If Claude can't install it,** install it yourself:
 
 1. In the Claude Code prompt box, type `/plugins` and press Enter. The **Manage plugins** window opens.
 2. On the **Plugins** tab, search for **playwright**.
@@ -67,7 +69,7 @@ Claude walks you through these steps:
 5. A banner asks you to restart Claude Code. Click it.
 6. Start a new session (click the spark icon in the left-hand bar, then **New session**) and ask for the audit again.
 
-**Using Codex?** Codex adds Playwright to its settings itself instead of using these steps. It asks before changing a settings file outside your project; allow it. Then quit VS Code completely, open it again, start a new chat, and ask for the audit again.
+**Using Codex?** Codex adds Playwright to its global settings itself; the plugin steps above are for Claude Code only. It asks before changing a settings file outside your project; allow it. Then quit VS Code completely, open it again, start a new chat, and ask for the audit again.
 
 ---
 
