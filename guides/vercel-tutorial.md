@@ -84,7 +84,7 @@ Check that your site's project is in the list. Then tell Claude how you publish.
 
 Claude writes the rule down once, in the instructions file it reads in every project, so it remembers the rule in every session.
 
-You don't need to tell Claude which Vercel project belongs to this folder. When a command needs to know, Claude works it out from your GitHub repository, and may link the folder to its Vercel project. Linking adds a small `.vercel` folder that Git ignores.
+Claude works out which Vercel project belongs to this folder from your GitHub repository, and may link the folder to its Vercel project. Linking adds a small `.vercel` folder that Git ignores.
 
 **About global instructions.** Each assistant reads one instructions file in every project, as well as any in the project itself. Claude Code's is `CLAUDE.md` in the `.claude` folder in your home folder; Codex's is `AGENTS.md` in the `.codex` folder. Rules about how you work, like this one, belong there. Instructions about one project go in that project's `AGENTS.md` (TLDR step 10).
 

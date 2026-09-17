@@ -142,7 +142,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
     Then ask yourself: Did the plan match what you meant? What did the agent get wrong, and how did you notice? What would you tell it next time? Ask the agent to add that last answer to `AGENTS.md`, so your next chat starts better. [More questions](/put-it-to-work#step-13-look-back-at-how-it-went)
 
-**You've finished the setup.** Keep exploring your prototype the same way: one small change at a time, with a save point before each. Part 2 is optional, so there's no need to continue unless your idea calls for it.
+**You've finished the setup.** Keep exploring your prototype the same way: one small change at a time, with a save point before each.
 
 ## Part 2: Add a Backend (Advanced, Optional)
 
