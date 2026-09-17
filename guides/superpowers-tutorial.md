@@ -24,7 +24,7 @@ It was designed for software engineering, so it favors careful, finished work ov
 - **Use more of your plan's allowance.**
 - **Follow its rules strictly.** Its test-first rule is firm: during a build, it may remove code that was written before its tests.
 
-Try it when you want to take a prototype further, not for quick experiments.
+Try it when you want to take a prototype further, not for quick experiments, and see **Making It Prototyping-Friendly** below to tone it down.
 
 ---
 
@@ -102,6 +102,32 @@ As the workflow unfolds:
 - **Decide whether to continue.** After the design, it moves on to planning and building. You can stop after brainstorming if the design is all you wanted.
 
 Superpowers saves its designs and plans as files in your project, so you can read them later.
+
+---
+
+## Making It Prototyping-Friendly
+
+Superpowers is built for finished software: full designs, long plans, and tests before every piece of code. Your project is a prototype, where speed and trying several directions matter more. Superpowers' own rules say your instructions files come first, so a few lines in your project's `AGENTS.md` tone it down.
+
+Copy this prompt and send it:
+
+```
+Add this section to this project's AGENTS.md, and keep everything already in the file.
+
+## Using Superpowers on this prototype
+
+- Use brainstorming to explore ideas, and offer 2–3 directions.
+- Keep designs to about a page, and plans to five tasks or fewer.
+- Skip test-driven development and automated tests unless I ask.
+- Never delete code because it has no tests.
+- After the design, stop and ask me before planning or building.
+```
+
+Then start a new session, so Claude reads the new section.
+
+Brainstorming is the most useful part for prototyping. When that's all you want, say so: *"Just brainstorm with me. Don't plan or build."*
+
+If Superpowers still pushes for tests or long plans, remind it: *"This is a prototype. Follow the Superpowers section in AGENTS.md."*
 
 ---
 
