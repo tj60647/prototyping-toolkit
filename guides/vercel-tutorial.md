@@ -27,8 +27,7 @@ Publishing works the way it does now: your project on GitHub is already connecte
 - **Commit:** save a snapshot of your project's files, with a short message about what changed.
 - **Push:** send your commits to GitHub. For your project, pushing is how you publish.
 - **Environment variable:** a setting kept outside your code, such as an API key.
-- **`AGENTS.md`:** a file of standing instructions that coding assistants read at the start of every session.
-- **`CLAUDE.md`:** Claude Code's instructions file. Yours contains one line, `@AGENTS.md`, so Claude reads `AGENTS.md` too.
+- **Global instructions:** a file of standing instructions your assistant reads at the start of every session, in every project.
 
 ---
 
@@ -57,7 +56,7 @@ If Claude lists your projects, you're already set up. Skip to "Tell Claude How Y
 
 If Claude couldn't list your projects, send:
 
-> Install what you need to connect to Vercel. Then sign me in: show me the web address, and wait while I approve it.
+> Install what you need to connect to Vercel, for all my projects. Then sign me in: show me the web address, and wait while I approve it.
 
 Claude installs Vercel CLI if it's missing, along with Node.js if that's missing too, then starts the sign-in.
 
@@ -79,13 +78,13 @@ When Claude has finished, ask again:
 
 Your site updates whenever you push to GitHub. That keeps one simple rule: what's on GitHub is what's live. Deploying from VS Code would skip GitHub and break that rule.
 
-Find your site's project in the list, and note its name. Replace `[Vercel project name]` with that name, then send:
+Find your site's project in the list, and note its name for step 8. Then tell Claude how you publish. You do this once, and it applies to all your projects. Send:
 
-> Add this rule to this project's AGENTS.md, creating the file if it doesn't exist: "Never deploy with Vercel CLI. To publish, commit and push to GitHub. This folder's Vercel project is [Vercel project name]. Don't link this folder with vercel link; name the project in each Vercel CLI command instead." Then make sure CLAUDE.md exists and contains the line @AGENTS.md.
+> Add this rule to your global instructions, the file you read in every project: ~/.claude/CLAUDE.md for Claude Code, or ~/.codex/AGENTS.md for Codex. Create the file if it doesn't exist, and keep anything already in it: "Never deploy with Vercel CLI. To publish, commit and push to GitHub. Don't link folders with vercel link. When a Vercel CLI command needs a project, use the Vercel project named after the folder's GitHub repository, or ask me which one."
 
-Claude writes the rule down once, so it remembers it in every session. Naming the project in the rule means Claude always knows which Vercel project this folder belongs to.
+Claude writes the rule down once, in the instructions file it reads in every project, so it remembers the rule in every session. A Vercel project connected to GitHub is usually named after its repository, so Claude can find the right one without linking each folder.
 
-**About `AGENTS.md` and `CLAUDE.md`.** `AGENTS.md` is a shared instructions file that many coding assistants read, including Codex. Claude Code reads a file called `CLAUDE.md` instead. Your `CLAUDE.md` only needs one line, `@AGENTS.md`, which tells Claude to read `AGENTS.md` as well. That way your instructions live in one place and work with either assistant.
+**About global instructions.** Each assistant reads one instructions file in every project, as well as any in the project itself. Claude Code's is `CLAUDE.md` in the `.claude` folder in your home folder; Codex's is `AGENTS.md` in the `.codex` folder. Rules about how you work, like this one, belong there. Instructions about one project go in that project's `AGENTS.md` (TLDR step 10).
 
 ---
 
@@ -142,10 +141,10 @@ Ask: *"List my Vercel projects, including the ones in my teams."* Pick the one y
 Ask Claude: *"Start the Vercel sign-in again."* Then open the new address straight away.
 
 **Claude doesn't know which Vercel project to use.**
-Check that the publishing rule from Step 7 is in `AGENTS.md` with your project's name, and that `CLAUDE.md` contains `@AGENTS.md`. Then start a new session.
+Tell Claude the name of your Vercel project. If this keeps happening, your Vercel project probably isn't named after your GitHub repository; ask Claude to add the name to this project's `AGENTS.md`.
 
 **Claude wants to deploy with Vercel CLI.**
-Deny the request and say: *"Don't deploy. Save my changes to GitHub instead."* Then check that the publishing rule from Step 7 is in `AGENTS.md`.
+Deny the request and say: *"Don't deploy. Save my changes to GitHub instead."* Then ask: *"What does your global instructions file say about publishing?"* If the rule from Step 7 is missing, send the Step 7 prompt again.
 
 **Something else went wrong.**
 Copy the error message, paste it to Claude, and ask: *"Explain this error in plain language and tell me how to fix it."*

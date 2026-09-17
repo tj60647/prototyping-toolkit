@@ -28,7 +28,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    If it can't:
 
-   > Install what you need to connect to GitHub. Then sign me in with GitHub CLI: show me the one-time code and web address, and wait while I approve it. Then set up Git to use this sign-in, and set my Git name and GitHub no-reply email if they aren't set.
+   > Install what you need to connect to GitHub, for all my projects. Then sign me in with GitHub CLI: show me the one-time code and web address, and wait while I approve it. Then set up Git to use this sign-in, and set my Git name and GitHub no-reply email if they aren't set.
 
    Open the address, enter the code, and approve. **Do it straight away:** the code expires after about 15 minutes. Then ask to see your projects again. [GitHub help](/git-and-github)
 
@@ -44,13 +44,13 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    If it can't:
 
-   > Install what you need to connect to Vercel. Then sign me in: show me the web address, and wait while I approve it.
+   > Install what you need to connect to Vercel, for all my projects. Then sign me in: show me the web address, and wait while I approve it.
 
-   Open the address and approve. **Do it straight away:** it only works for a few minutes. Then ask to see your projects again, and note the name of the one your site uses.
+   Open the address and approve. **Do it straight away:** it only works for a few minutes. Then ask to see your projects again.
 
-   Then tell your agent how you publish. Replace `[Vercel project name]` with that name:
+   Note the name of the project your site uses. You'll need it in step 8. Then tell your agent how you publish. You do this once, and it applies to all your projects:
 
-   > Add this rule to this project's AGENTS.md, creating the file if it doesn't exist: "Never deploy with Vercel CLI. To publish, commit and push to GitHub. This folder's Vercel project is [Vercel project name]. Don't link this folder with vercel link; name the project in each Vercel CLI command instead." Then make sure CLAUDE.md exists and contains the line @AGENTS.md.
+   > Add this rule to your global instructions, the file you read in every project: ~/.claude/CLAUDE.md for Claude Code, or ~/.codex/AGENTS.md for Codex. Create the file if it doesn't exist, and keep anything already in it: "Never deploy with Vercel CLI. To publish, commit and push to GitHub. Don't link folders with vercel link. When a Vercel CLI command needs a project, use the Vercel project named after the folder's GitHub repository, or ask me which one."
 
    [Vercel help](/vercel)
 
@@ -70,7 +70,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    > Use Playwright to audit my app on computer and phone screens. Show me what's confusing, hard to read, or difficult to use, with screenshots. Suggest the three most useful improvements. Don't change anything yet.
 
-   If Playwright isn't available, ask the agent to help you install it, then ask for the audit again. [Playwright help](/playwright)
+   If Playwright isn't available, ask the agent to help you install it for all your projects, then ask for the audit again. [Playwright help](/playwright)
 
 10. **Set up your agent for prototyping.** `AGENTS.md` holds instructions for future chats. `CLAUDE.md` tells Claude Code to read them too.
 
@@ -94,7 +94,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
 11. **Optional: try Superpowers.** Skip this unless you want extra help structuring your work in Claude Code.
 
-    > Help me install Superpowers and show me how to use it.
+    > Help me install Superpowers for all my projects and show me how to use it.
 
     [Superpowers help](/superpowers)
 

@@ -104,7 +104,8 @@ Each guide ends with a **Checkpoint** section. Don't move on until it works. Sta
 - **API key:** a secret code that lets your app use a service, such as Gemini.
 - **Branch:** a separate line of work in Git, so changes don't affect your main version until you merge them.
 - **Build:** the step where Vercel turns your project's files into a working website.
-- **`CLAUDE.md`:** Claude Code's instructions file. Yours contains one line, `@AGENTS.md`, so Claude reads `AGENTS.md` too.
+- **`CLAUDE.md`:** Claude Code's instructions file. Your project's contains one line, `@AGENTS.md`, so Claude reads `AGENTS.md` too.
+- **Global instructions:** an instructions file your assistant reads in every project. Claude Code's is `CLAUDE.md` in the `.claude` folder in your home folder; Codex's is `AGENTS.md` in the `.codex` folder. Your publishing rule goes there.
 - **Chat:** Codex's name for a session.
 - **Clone:** make a copy of a GitHub repository on your computer.
 - **Command:** an instruction for your computer, usually typed in a terminal. Your assistant can run commands for you.
