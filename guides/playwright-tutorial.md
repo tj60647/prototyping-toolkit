@@ -2,6 +2,8 @@
 
 *A setup guide for non-experts. Accurate as of September 2026. If something looks different, check the official page: https://github.com/microsoft/playwright-mcp*
 
+*This guide covers step 9 of the [TLDR](/tldr), with more explanation.*
+
 *Using Codex instead of Claude Code? The prompts work the same way. Read "Claude" as "Codex," and follow the **Using Codex** notes where the steps differ. Where this guide says to start a new session, start a new chat instead: click the new chat button at the top of the Codex panel.*
 
 ---
@@ -33,14 +35,14 @@ This guide assumes:
 
 - VS Code is open with your project folder open.
 - The Claude Code extension is installed and you are signed in.
-- Your project runs on your computer. If it doesn't yet, see **Using Your API Key on Your Computer**.
+- Your project runs on your computer. If it doesn't yet, see **Running Your Project on Your Computer**.
 - Google Chrome is installed. Playwright uses it by default.
 
 ---
 
-## Step 1: Ask for a UI Audit
+## Step 9: Ask for a UI Audit
 
-Start with what you want: a check of how your app looks and how easy it is to use. Send:
+This checks how your app looks and how easy it is to use. Send:
 
 > Use Playwright to audit my app on computer and phone screens. Show me what's confusing, hard to read, or difficult to use, with screenshots. Suggest the three most useful improvements. Don't change anything yet.
 
@@ -48,24 +50,22 @@ Claude uses the copy of your app running on your computer, and starts it if it i
 
 A separate browser window opens. A bar at the top says it's being controlled by automated software. That's Claude. You can watch, but avoid clicking in the window while Claude works.
 
-If Claude says it doesn't have Playwright, go to Step 2. Otherwise, read the audit and skip to Step 3.
+If Claude says it doesn't have Playwright, follow "If Playwright Isn't Available" below, then ask for the audit again.
 
----
-
-## Step 2: Install Playwright If It's Missing
+### If Playwright Isn't Available
 
 1. In the Claude Code prompt box, type `/plugins` and press Enter. The **Manage plugins** window opens.
 2. On the **Plugins** tab, search for **playwright**.
 3. Choose the plugin from Microsoft and click **Install**.
 4. When asked where to install it, choose **Install for you**, so it works in all your projects.
 5. A banner asks you to restart Claude Code. Click it.
-6. Start a new session (click the spark icon in the left-hand bar, then **New session**) and send the Step 1 prompt again.
+6. Start a new session (click the spark icon in the left-hand bar, then **New session**) and ask for the audit again.
 
-**Using Codex?** Skip the numbered steps above. Instead, send: *"Add the Playwright MCP server to my Codex settings, using the command npx @playwright/mcp@latest. Tell me which file you changed."* Codex asks before changing a settings file outside your project; allow it. Then quit VS Code completely, open it again, start a new chat, and send the Step 1 prompt again.
+**Using Codex?** Skip the numbered steps above. Instead, send: *"Add the Playwright MCP server to my Codex settings, using the command npx @playwright/mcp@latest. Tell me which file you changed."* Codex asks before changing a settings file outside your project; allow it. Then quit VS Code completely, open it again, start a new chat, and ask for the audit again.
 
 ---
 
-## Step 3: Build It into How You Work
+## Building It into How You Work
 
 The audit's suggestions are a starting point. Pick one, ask Claude to plan it, and check the result the same way. Here are some other checks to try:
 
@@ -131,4 +131,4 @@ Copy the error message, paste it to Claude, and ask: *"Explain this error in pla
 
 ## Next
 
-When this guide's checkpoint works, continue with **Setting Up Your Coding Assistant for Prototyping**, so Claude explores ideas with you before changing anything.
+When this guide's checkpoint works, continue with **Setting Up Your Coding Assistant for Prototyping** (TLDR step 10).

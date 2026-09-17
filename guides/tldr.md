@@ -64,7 +64,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    > Copy my API key into .env.local from my Vercel project, [Vercel project name]. Name the project in the command instead of linking this folder. If the key isn't in the Development settings, use Production. Don't show me any values, and keep .env.local out of GitHub.
 
-   Then try your app again. If the key comes back empty, Vercel is hiding it: copy it from Google AI Studio instead. [API key help](/api-key)
+   Then try your app again. If the key comes back empty, Vercel is hiding it: copy it from Google AI Studio instead. [API key help](/run-your-project)
 
 9. **Ask for a UI audit.** This checks how your app looks and how easy it is to use.
 
@@ -112,6 +112,6 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
     > Look back over this chat. Summarize what I asked for, what you did, where you guessed, and where I corrected you.
 
-    Then think about what you'd do differently next time, and add anything useful to `AGENTS.md`. [Questions to reflect on](/put-it-to-work#reflect-on-your-workflow)
+    Then think about what you'd do differently next time, and add anything useful to `AGENTS.md`. [Questions to reflect on](/put-it-to-work#step-13-look-back-at-how-it-went)
 
 **Stuck?** If your agent can't find something it just installed, quit VS Code completely (`Cmd + Q` on a Mac, **File → Exit** on Windows) and open it again. Otherwise, tell your agent what happened and ask: “Help me fix this. Give me one step at a time.”

@@ -1,6 +1,8 @@
-# Using Your API Key on Your Computer
+# Running Your Project on Your Computer
 
 *A setup guide for non-experts. Accurate as of September 2026.*
+
+*This guide covers step 8 of the [TLDR](/tldr), with more explanation.*
 
 *Using Codex instead of Claude Code? The prompts work the same way. Read "Claude" as "Codex," and follow the **Using Codex** notes where the steps differ. Where this guide says to start a new session, start a new chat instead: click the new chat button at the top of the Codex panel.*
 
@@ -8,9 +10,9 @@
 
 ## What You Are Setting Up
 
-Your prototype uses Google's Gemini AI, and Gemini needs a secret **API key** to work. Your live site on Vercel already has this key, so it works online.
+Your prototype already runs online on Vercel. Running it on your own computer lets you try changes before you publish them, and lets Claude test them in a browser.
 
-To run your prototype on your own computer, your computer needs a copy of the key too. It goes in a file in your project called `.env.local`.
+Your prototype uses Google's Gemini AI, and Gemini needs a secret **API key** to work. Your live site on Vercel already has this key. To run your prototype on your own computer, your computer may need a copy of the key too. It goes in a file in your project called `.env.local`.
 
 Settings stored like this, outside your code, are called **environment variables**. Your Gemini key is one of them, usually named `GEMINI_API_KEY`.
 
@@ -43,7 +45,7 @@ This guide assumes:
 
 ---
 
-## Step 1: Run Your Project
+## Step 8: Run Your Project on This Computer
 
 Start with what you want. Send:
 
@@ -53,11 +55,9 @@ Claude may install what the project needs first. Allow the commands when it asks
 
 Open the link and try a feature that uses AI. If it responds, your key is already in place. Skip to the Checkpoint.
 
-If the app won't run at all, ask Claude to explain and fix the problem.
+If the app won't run at all, ask Claude to explain and fix the problem. If it's missing Node.js, see **Installing Node.js**.
 
----
-
-## Step 2: Copy the Key from Vercel
+### If an API Key Is Missing
 
 If Claude says an API key is missing, or the AI features don't respond, Claude can copy the key from Vercel into your project without showing it. Replace `[Vercel project name]` with your project's name, then send:
 
@@ -73,14 +73,14 @@ When you're done, you can ask Claude: *"Stop the app."*
 
 ## Checkpoint
 
-Before moving on, check that the key is in place and protected.
+Before moving on, check that your project runs and any key is protected.
 
 1. Start a new session: click the spark icon in the left-hand bar, then **New session**.
 2. Send:
 
-> Check that .env.local exists and list the variable names in it, without showing any values. Then confirm that Git ignores it.
+> Run my project on this computer and give me a link to open it. If .env.local exists, confirm that Git ignores it, without showing any values.
 
-**You should see:** a name such as `GEMINI_API_KEY`, and confirmation that Git ignores `.env.local`.
+**You should see:** a link that opens your app, with its AI features working. If your project uses `.env.local`, confirmation that Git ignores it.
 
 **If not:** see Troubleshooting below.
 
@@ -100,7 +100,7 @@ Vercel sometimes hides key values so they can't be downloaded. Copy the key from
 Ask Claude to stop the app and start it again. The app only reads `.env.local` when it starts.
 
 **Claude can't find your Vercel project.**
-Ask: *"List my Vercel projects, including the ones in my teams."* Then send the Step 2 prompt again with the right name.
+Ask: *"List my Vercel projects, including the ones in my teams."* Then send the API key prompt in Step 8 again with the right name.
 
 **I think my key was shared by accident.**
 If the key ended up on GitHub or in a message, tell your instructor. You'll need a new key, and the old one should be deleted in Google AI Studio.
@@ -110,10 +110,10 @@ If the key ended up on GitHub or in a message, tell your instructor. You'll need
 ## Tips
 
 - **You only do this once per project**, unless your key changes.
-- **If your key changes,** update it in Vercel first, then repeat Step 2.
+- **If your key changes,** update it in Vercel first, then send the API key prompt in Step 8 again.
 
 ---
 
 ## Next
 
-When this guide's checkpoint works, continue with **Testing Your Prototype in a Browser with Playwright**, so Claude can try out your prototype in a browser.
+When this guide's checkpoint works, continue with **Testing Your Prototype in a Browser with Playwright** (TLDR step 9).

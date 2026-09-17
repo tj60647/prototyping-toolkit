@@ -2,6 +2,8 @@
 
 *A setup guide for advanced students. Accurate as of September 2026. If something looks different, check the official page: https://github.com/obra/superpowers*
 
+*This guide covers step 11 of the [TLDR](/tldr), with more explanation. It's optional; skip it unless you want extra help structuring your work in Claude Code.*
+
 *Using Codex? Superpowers also works with Codex, but it installs differently and this guide doesn't cover it. See the Codex instructions at https://github.com/obra/superpowers.*
 
 ---
@@ -49,7 +51,15 @@ Not sure about Git? Ask Claude:
 
 ---
 
-## Step 1: Find Superpowers
+## Step 11: Optional: Try Superpowers
+
+Send:
+
+> Help me install Superpowers and show me how to use it.
+
+Installing a plugin happens in a Claude Code window that Claude can't click for you, so Claude walks you through the steps below.
+
+### Find Superpowers
 
 1. In the Claude Code prompt box, type `/plugins` and press Enter. The **Manage plugins** window opens.
 2. On the **Plugins** tab, search for **superpowers**.
@@ -57,9 +67,7 @@ Not sure about Git? Ask Claude:
 
 **Superpowers doesn't appear in the search?** Switch to the **Marketplaces** tab, add `obra/superpowers-marketplace`, then search again on the **Plugins** tab.
 
----
-
-## Step 2: Choose Where It Applies
+### Choose where it applies
 
 Claude Code asks where to install the plugin. Choose **Install locally**.
 
@@ -71,9 +79,7 @@ Claude Code asks where to install the plugin. Choose **Install locally**.
 
 Installing locally keeps your other projects working the way they do now, and doesn't change anything for classmates who share this project.
 
----
-
-## Step 3: Restart and Check
+### Restart and check
 
 1. A banner asks you to restart Claude Code. Click it.
 2. Start a new session: click the spark icon in the left-hand bar, then **New session**.
@@ -83,9 +89,7 @@ Installing locally keeps your other projects working the way they do now, and do
 
 Claude should list skills such as brainstorming, writing plans, and test-driven development.
 
----
-
-## Step 4: Try Brainstorming
+### See how to use it
 
 Pick a small feature for your project and describe it loosely:
 
@@ -101,7 +105,7 @@ Superpowers saves its designs and plans as files in your project, so you can rea
 
 ---
 
-## Step 5: Stay in Control
+## Staying in Control
 
 - **Check before you allow.** Superpowers runs many commands. If you're unsure about one, ask Claude to explain it first.
 - **Check your usage.** Click the spark icon in the left-hand bar and look at the **Usage** section.
@@ -157,4 +161,4 @@ Stop it and ask for a summary. Then describe a smaller goal, or turn Superpowers
 
 ## Next
 
-When this guide's checkpoint works, continue with **Put Your Setup to Work**.
+When this guide's checkpoint works, continue with **Put Your Setup to Work** (TLDR steps 12–13).

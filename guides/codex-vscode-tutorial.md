@@ -2,7 +2,7 @@
 
 *A setup guide for non-experts. Accurate as of September 2026. If a screen looks different, check the official guide: https://developers.openai.com/codex/ide*
 
-*Using Claude Code instead? Follow "Installing Claude Code in VS Code" and skip this guide.*
+*This guide covers steps 1–4 of the [TLDR](/tldr), with more explanation. Using Claude Code instead? Follow "Installing Claude Code in VS Code" and skip this guide.*
 
 ---
 
@@ -30,47 +30,52 @@ You don't need to know how to program to follow this guide.
 
 ## Before You Start
 
-This guide assumes:
+You need:
 
-- VS Code is installed, up to date, and open. To update it, go to **Code → Check for Updates** on a Mac or **Help → Check for Updates** on Windows.
-- You have a **ChatGPT account**. Codex is included with ChatGPT plans, including the free plan, which has lower limits.
-
-It starts by making a folder for your projects, then installs Codex.
+- **VS Code, installed and up to date.** On a Mac, go to **Code → Check for Updates**. On Windows, go to **Help → Check for Updates**.
+- **A ChatGPT account.** Codex is included with ChatGPT plans, including the free plan, which has lower limits. Check your student access in Step 3 before buying a plan.
 
 ---
 
-## Step 1: Make a Folder for Your Projects
+## Step 1: Set Up a Folder for Your Projects
 
-Codex works on the files in whichever folder VS Code has open, so start by making one place to keep your projects. Your project goes inside it in the next guide.
+Codex works on the files in whichever folder VS Code has open, and it won't answer until a folder is open. So start by making one place to keep your projects. Your project goes inside it later.
 
 Put it in your home folder rather than Documents or Desktop, which are often synced by iCloud Drive or OneDrive. Syncing can interfere with your projects.
 
-1. In VS Code, choose **File → Open Folder…**
-2. Go to your home folder.
-    - **Mac:** press `Cmd + Shift + H`. It's the folder with a house icon and your name.
-    - **Windows:** it's `C:\Users\` followed by your name.
-3. Click **New Folder**, name it `Projects`, and confirm.
-4. Select the `Projects` folder and click **Open** (on Windows, **Select Folder**).
-5. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**. Codex doesn't work in Restricted Mode.
+- **Mac:** open **Finder** and press `Cmd + Shift + H` to go to your home folder, the one with a house icon and your name. Choose **File → New Folder**, and name it `Projects`.
+- **Windows:** open **File Explorer**, type `%USERPROFILE%` in the address bar, and press Enter to go to your home folder. Choose **New → Folder**, and name it `Projects`.
 
-Already have a folder for your projects? Open that one instead. Whichever folder you opened, the rest of these guides call it your **Projects folder**, whatever its name really is.
+Already have a folder for your projects? Use that one instead. Whichever folder you use, the rest of these guides call it your **Projects folder**, whatever its name really is.
+
+---
+
+## Step 2: Open Your Projects Folder in VS Code
+
+1. Open VS Code and choose **File → Open Folder…**
+2. Select your Projects folder and click **Open** (on Windows, **Select Folder**).
+3. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**. Codex doesn't work otherwise.
 
 Codex can make folders and copy projects into them, but choosing which folder VS Code has open is the part it can't do for you, so it's always **File → Open Folder…**
 
 ---
 
-## Step 2: Install the Extension
+## Step 3: Choose and Install Your Agent
 
-1. Open the Extensions view. Press `Cmd + Shift + X` on a Mac or `Ctrl + Shift + X` on Windows. You can also click the four-squares icon in the left-hand bar.
+### Check your student access
+
+**Check student access using your edu email before buying a plan.** Follow [Codex for Students](https://learn.chatgpt.com/community/students) to create or sign in to your ChatGPT account and verify your student status. OpenAI has offered verified university students in the United States and Canada Codex credits, which let you keep using Codex after you reach your plan's usage limits.
+
+### Install the extension
+
+1. Click **Extensions**, the four-squares icon in the left-hand bar. You can also press `Cmd + Shift + X` on a Mac or `Ctrl + Shift + X` on Windows.
 2. Search for **Codex**.
 3. Choose **Codex – OpenAI's coding agent**, published by **OpenAI**.
 4. Click **Install**.
 
 You only do this once. The extension is then available in every VS Code window and project, and each chat works on the folder that's open.
 
----
-
-## Step 3: Open Codex and Sign In
+### Open its chat panel and sign in
 
 1. Look for the Codex icon in the sidebar on the **right** side of the window, and click it. If you don't see it, open the Command Palette, type **Open Codex Sidebar**, and press Enter.
 2. Choose to sign in with your **ChatGPT account**.
@@ -81,52 +86,32 @@ You only do this once. The extension is then available in every VS Code window a
 
 ---
 
-## Step 4: Claim Your Student Credits (If Eligible)
+## Step 4: Ask Your Agent Where It Is
 
-OpenAI offers verified university students in the United States and Canada $100 in Codex credits. The credits let you keep using Codex after you reach your plan's usage limits.
+Send:
 
-1. In your browser, go to **https://chatgpt.com/codex/students**
-2. Sign in with your ChatGPT account.
-3. Verify that you're a student, using your university email address.
+> Which folder are you working in?
 
-The credits are added to your ChatGPT account automatically. Skip this step if it doesn't apply to you.
+Check that it names the folder you opened in Step 2. If the send button is greyed out with **"Please open a folder or workspace to continue"**, go back to Step 2.
 
 ---
 
-## Step 5: Try It
+## About Permissions and Save Points
 
-Start with a prompt that doesn't change anything:
-
-> In plain language, what can you help me with while I build a prototype in VS Code? Keep it short.
-
----
-
-## Step 6: Understand Permissions
-
-Below the prompt box is a **permission mode** control. It has three choices:
-
-| Mode | What happens |
-|---|---|
-| **Ask for approval** | Codex edits files and runs routine commands in your project folder on its own. It asks before using the internet or going outside your project folder. *Keep this one.* |
-| **Approve for me** | Codex decides on its own whether to allow those requests. |
-| **Full access** | Codex can change any file on your computer and use the internet without asking. *Avoid this.* |
+Below the prompt box is a **permission mode** control. Keep it on **Ask for approval**: Codex edits files and runs routine commands in your project folder on its own, and asks before using the internet or going outside your project folder. Avoid **Full access**, which lets Codex change any file on your computer and use the internet without asking. *Setting Up Your Coding Assistant for Prototyping* (TLDR step 10) explains the other settings.
 
 After each task, Codex lists the files it changed. Read the summary, and look at any file you're unsure about.
 
-### Deciding whether to allow something
-
-When Codex does ask, check before you allow:
+When Codex does ask before acting:
 
 - **Read Codex's explanation.** If there isn't one, ask: *"Explain that in plain language first."*
 - **Allow it** if it matches what you asked for.
 - **Deny it and ask why** if it doesn't match what you asked for.
 - **When in doubt, deny.** Codex will explain or suggest another way.
 
-### Save points
+Because Codex doesn't ask before changing your files, save a starting point before each task. Once your project is on your computer (TLDR step 6), send this before any change:
 
-Because Codex doesn't ask before changing your files, save a starting point before each task. Once Git is set up on your computer (that's the next guide), send this before any change:
-
-> Commit my current work with a clear message.
+> Save the current version so we can go back to it.
 
 If a change goes wrong, you can ask Codex to go back to that save point.
 
@@ -139,9 +124,9 @@ Before moving on, check that Codex is working.
 1. Start a new chat: click the new chat button at the top of the Codex panel.
 2. Send:
 
-> Say hello, tell me in one sentence what you can help me with, and tell me which folder you're working in.
+> Which folder are you working in?
 
-**You should see:** a short reply in the Codex panel that names your Projects folder. That is all this guide sets out to do: a Projects folder, and Codex installed, signed in, and answering in it.
+**You should see:** a short reply in the Codex panel that names your Projects folder.
 
 **If not:** see Troubleshooting below.
 
@@ -151,6 +136,9 @@ Before moving on, check that Codex is working.
 
 **The Codex icon is missing.**
 Open the Command Palette, type **Open Codex Sidebar**, and press Enter. If nothing happens, open the Command Palette again and run **Developer: Reload Window**. Also check that the folder isn't in Restricted Mode: if VS Code asks whether you trust the authors of the folder, click **Yes, I trust the authors**.
+
+**I can't send a message: "Please open a folder or workspace to continue."**
+Codex needs a folder open. Choose **File → Open Folder…** and open your Projects folder (Step 2).
 
 **The browser didn't open when I tried to sign in.**
 Run **Developer: Reload Window** from the Command Palette, then try signing in again.
@@ -176,4 +164,4 @@ This is normal. The extension doesn't install the terminal version, and you don'
 
 ## Next
 
-When this guide's checkpoint works, continue with **Setting Up Git and GitHub CLI**, where Codex connects your computer to GitHub and brings your project into your Projects folder.
+When this guide's checkpoint works, continue with **Setting Up Git and GitHub CLI** (TLDR steps 5–6).

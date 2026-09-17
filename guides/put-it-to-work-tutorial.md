@@ -2,6 +2,8 @@
 
 *A first project for non-experts. Accurate as of September 2026.*
 
+*This guide covers steps 12–13 of the [TLDR](/tldr), with more explanation.*
+
 *Using Codex instead of Claude Code? The prompts work the same way. Read "Claude" as "Codex," and follow the **Using Codex** notes where the steps differ. Where this guide says to start a new session, start a new chat instead: click the new chat button at the top of the Codex panel.*
 
 ---
@@ -20,12 +22,11 @@ You've set up VS Code, Claude Code, GitHub, and Vercel. Now use them together on
 
 All three follow the same pattern:
 
-1. Save a starting point.
-2. Send Claude a prompt.
-3. Review Claude's plan, then approve it.
-4. Check the result yourself.
-5. Publish it by pushing to GitHub.
-6. Look back at how it went.
+1. Save a starting point and plan the task with Claude.
+2. Agree on the plan, and let Claude work.
+3. Check the result yourself.
+4. Save your work to GitHub, which publishes it.
+5. Look back at how it went.
 
 ---
 
@@ -41,7 +42,7 @@ This guide assumes:
 
 Claude may start in **Plan mode**, where it describes what it will do and waits for your approval. That's what you want for this guide. Check the mode indicator at the bottom of the prompt box.
 
-**Using Codex?** Keep the permission mode on **Ask for approval**. Because Codex changes files without asking, Step 1's save point matters even more.
+**Using Codex?** Keep the permission mode on **Ask for approval**. Because Codex changes files without asking, the save point in Step 12 matters even more.
 
 ---
 
@@ -56,28 +57,25 @@ Claude may start in **Plan mode**, where it describes what it will do and waits 
 
 ---
 
-## Step 1: Save a Starting Point
+## Step 12: Put Your Setup to Work
 
-Before changing anything, save where you are, so you can always get back to it.
+Choose one task from the table above: describe your project (Option A), draw how it works (Option B), or change how it looks (Option C).
 
-1. Start a new session: click the spark icon in the left-hand bar, then **New session**.
-2. Send:
+### Save a Starting Point and Plan
 
-> Save the current version so we can go back to it.
+Before changing anything, save where you are, so you can always get back to it. Start a new session (click the spark icon in the left-hand bar, then **New session**), then send:
 
-Allow the commands when Claude asks.
+> Save the current version so we can go back to it. Then help me plan this task.
 
-### Deciding whether to allow a command
+Allow the commands when Claude asks. Then send the prompt for your option below. Agree on the plan, let Claude work, and check the result yourself.
+
+#### Deciding whether to allow a command
 
 Claude asks before running commands. Before you click allow:
 
 - **Read Claude's explanation.** If there isn't one, ask: *"Explain that command in plain language first."*
 - **Allow it** if it matches what you asked for.
 - **Deny it and ask why** if it doesn't match what you asked for, or if it deploys with Vercel CLI.
-
----
-
-## Step 2: Do Your Option
 
 ### Option A: Write a README
 
@@ -204,13 +202,13 @@ Before you call it done, check that your work is published.
 
 ---
 
-## Reflect on Your Workflow
+## Step 13: Look Back at How It Went
 
 The setup is done once. The workflow is what you'll repeat on every idea, so take a few minutes to look at how it went.
 
 Start by asking Claude for a record of the session:
 
-> Look back over this session. Summarize what I asked for, what you did, where you guessed, and where I corrected you.
+> Look back over this chat. Summarize what I asked for, what you did, where you guessed, and where I corrected you.
 
 Then think about these questions. Writing a sentence or two for each makes the answers easier to use next time.
 

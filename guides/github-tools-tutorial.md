@@ -2,6 +2,8 @@
 
 *A setup guide for non-experts. Accurate as of September 2026. If something looks different, check the official page: https://cli.github.com*
 
+*This guide covers steps 5–6 of the [TLDR](/tldr), with more explanation.*
+
 *Using Codex instead of Claude Code? The prompts work the same way. Read "Claude" as "Codex," and follow the **Using Codex** notes where the steps differ. Where this guide says to start a new session, start a new chat instead: click the new chat button at the top of the Codex panel.*
 
 ---
@@ -43,7 +45,7 @@ This guide assumes:
 
 ## Using the Terminal
 
-You only need this if your Mac needs Homebrew (see Step 2). A few things to know before you type in the terminal:
+You only need this if your Mac needs Homebrew (see Step 5). A few things to know before you type in the terminal:
 
 - **Paste a command** with `Cmd + V` on a Mac or `Ctrl + V` on Windows, then press Enter to run it.
 - **You can't click to move the cursor.** Use the arrow keys instead.
@@ -53,7 +55,7 @@ You only need this if your Mac needs Homebrew (see Step 2). A few things to know
 
 ---
 
-## Step 1: Ask for Your GitHub Projects
+## Step 5: Ask It to List Your GitHub Projects
 
 Start with what you want, and let Claude find out what's missing. Send:
 
@@ -61,11 +63,9 @@ Start with what you want, and let Claude find out what's missing. Send:
 
 Claude will ask permission to run a few short commands. Read each one, then allow it. **Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
-If Claude lists your projects, everything is already set up. Skip to Step 3.
+If Claude lists your projects, everything is already set up. Skip to Step 6.
 
----
-
-## Step 2: Set Up What's Missing
+### If It Can't
 
 If Claude couldn't list your projects, send:
 
@@ -75,7 +75,7 @@ Claude installs **Git** and **GitHub CLI** if they're missing, then starts the s
 
 **Using Codex?** Codex runs routine commands without asking, but it asks before using the internet or changing things outside your project folder. Installing programs does both, so expect Codex to ask here.
 
-### While Claude installs
+#### While Claude installs
 
 You may need to help:
 
@@ -89,7 +89,7 @@ You may need to help:
 2. Open VS Code again. If it doesn't reopen your folder, choose **File → Open Recent** and pick it.
 3. Start a new session (click the spark icon in the left-hand bar, then **New session**; in Codex, click the new chat button) and send the prompt above again.
 
-### Mac only: installing Homebrew yourself
+#### Mac only: installing Homebrew yourself
 
 If Claude says Homebrew is missing, send:
 
@@ -106,7 +106,7 @@ Then:
 
 > Homebrew has finished installing. Complete its setup steps, then carry on connecting me to GitHub.
 
-### Signing in
+#### Signing in
 
 When Claude shows you a **one-time code** and a web address, usually **https://github.com/login/device**:
 
@@ -122,7 +122,7 @@ When Claude has finished, ask again:
 
 ---
 
-## Step 3: Open One Project on Your Computer
+## Step 6: Open One Project on Your Computer
 
 Making a copy of a GitHub project on your computer is called **cloning**. Replace `[project name]` with a name from your GitHub list, then send:
 
@@ -137,7 +137,7 @@ Then open your project in VS Code:
 3. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**. It's your own project.
 4. VS Code reloads. Your project's files appear in the Explorer panel, the list of files on the left. If you don't see it, press `Cmd + Shift + E` on a Mac or `Ctrl + Shift + E` on Windows.
 
-From now on, open this folder whenever you work on your project. Then do the checkpoint below.
+Then start a new session (click the spark icon in the left-hand bar, then **New session**). From here on, you work inside this project folder. Open it whenever you work on your project.
 
 **Using Codex?** Codex changes files without asking first, so make save points a habit starting now. Before each task, send: *"Save the current version so we can go back to it."*
 
@@ -162,7 +162,7 @@ Before moving on, check that your project, Git, and GitHub are all connected.
 ## Troubleshooting
 
 **Claude says a program isn't found right after installing it.**
-Quit VS Code completely, open it again, and start a new session (see Step 2). If that doesn't work, restart your computer.
+Quit VS Code completely, open it again, and start a new session (see Step 5). If that doesn't work, restart your computer.
 
 **Windows: Claude says winget isn't available.**
 Ask Claude: *"winget isn't available. Tell me where to download the regular installers for Git and GitHub CLI."* Download and open each one, and accept the defaults.
@@ -194,4 +194,4 @@ Copy the error message, paste it to Claude, and ask: *"Explain this error in pla
 
 ## Next
 
-When this guide's checkpoint works, continue with **Installing Node.js**, which many web tools need.
+When this guide's checkpoint works, continue with **Managing Vercel Projects with Your Coding Assistant** (TLDR step 7).

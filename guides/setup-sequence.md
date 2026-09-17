@@ -54,19 +54,18 @@ The guides are written for Claude Code. If you choose Codex, the prompts work th
 
 ## The Sequence
 
-Follow the guides in this order, from top to bottom. Each one assumes you've finished the ones above it. **Superpowers** is optional; if you skip it, go straight to **Put It to Work**.
+Follow the guides in this order, from top to bottom. Each one covers the same steps as the TLDR, with the same numbers and prompts, and adds explanation, a checkpoint and troubleshooting. **Superpowers** is optional; if you skip it, go straight to **Put It to Work**.
 
-| Guide | Full title | What it sets up |
-|---|---|---|
-| **Claude Code** or **Codex** | *Installing Claude Code in VS Code* or *Installing Codex in VS Code* | A folder for your projects, and your coding assistant installed, signed in and ready to help. Do only one. |
-| **Git and GitHub** | *Setting Up Git and GitHub CLI* | Git and GitHub CLI, so your assistant can save your work to GitHub, and a copy of your GitHub project on your computer. |
-| **Node.js** | *Installing Node.js* | Node.js, which many web tools need. |
-| **Vercel** | *Managing Vercel Projects with Your Coding Assistant* | Vercel CLI, so your assistant can check your builds, plus a rule that it publishes only through GitHub. |
-| **API Key** | *Using Your API Key on Your Computer* | A copy of your Gemini API key on your computer, so your prototype runs there. |
-| **Playwright** | *Testing Your Prototype in a Browser with Playwright* | A browser your assistant can use to try out your prototype, starting with an audit of how it looks and works. |
-| **Prototyping Assistant** | *Setting Up Your Coding Assistant for Prototyping* | A plan-first setup and an `AGENTS.md` instructions file, so your assistant explores ideas with you. |
-| **Superpowers** | *Installing Superpowers for Claude Code* | *Optional, for advanced users of Claude Code.* A stricter, step-by-step way of working. |
-| **Put It to Work** | *Put Your Setup to Work* | Everything together: your assistant writes a README, draws a system diagram, or restyles your app, you publish it, and you reflect on how the workflow went. |
+| TLDR steps | Guide | Full title | What it sets up |
+|---|---|---|---|
+| 1–4 | **Claude Code** or **Codex** | *Installing Claude Code in VS Code* or *Installing Codex in VS Code* | A folder for your projects, and your coding assistant installed, signed in and ready to help. Do only one. |
+| 5–6 | **Git and GitHub** | *Setting Up Git and GitHub CLI* | Git and GitHub CLI, so your assistant can save your work to GitHub, and a copy of your GitHub project on your computer. |
+| 7 | **Vercel** | *Managing Vercel Projects with Your Coding Assistant* | Vercel CLI, so your assistant can check your builds, plus a rule that it publishes only through GitHub. |
+| 8 | **Run Your Project** | *Running Your Project on Your Computer* | Your prototype running on your computer, with a copy of your API key if it needs one. |
+| 9 | **Playwright** | *Testing Your Prototype in a Browser with Playwright* | A browser your assistant can use to try out your prototype, starting with an audit of how it looks and works. |
+| 10 | **Prototyping Assistant** | *Setting Up Your Coding Assistant for Prototyping* | A plan-first setup and an `AGENTS.md` instructions file, so your assistant explores ideas with you. |
+| 11 | **Superpowers** | *Installing Superpowers for Claude Code* | *Optional, for advanced users of Claude Code.* A stricter, step-by-step way of working. |
+| 12–13 | **Put It to Work** | *Put Your Setup to Work* | Everything together: your assistant writes a README, draws a system diagram, or restyles your app, you publish it, and you reflect on how the workflow went. |
 
 ---
 
@@ -78,6 +77,7 @@ Follow the guides in this order, from top to bottom. Each one assumes you've fin
 - **Start a new session when a guide asks you to.** In Claude Code, click the spark icon in the left-hand bar, then **New session**. In Codex, click the new chat button at the top of the Codex panel.
 - **Check before you allow.** If your assistant asks to run a command you're unsure about, ask for a plain-language explanation first.
 - **Each guide ends with "Next,"** naming the guide that comes after it.
+- **Node.js is a help page, not a step.** Your assistant installs Node.js when a step needs it. If that fails, see **Installing Node.js**.
 
 ---
 
@@ -87,11 +87,10 @@ Each guide ends with a **Checkpoint** section. Don't move on until it works. Sta
 
 | After this guide | How to check | You should see |
 |---|---|---|
-| **Claude Code** or **Codex** | Send: *"Say hello, tell me in one sentence what you can help me with, and tell me which folder you're working in."* | A short reply that names your Projects folder. |
+| **Claude Code** or **Codex** | Send: *"Which folder are you working in?"* | A short reply that names your Projects folder. |
 | **Git and GitHub** | Open your project folder. Send: *"What is this project? Explain it in plain language in a few sentences. Then confirm which GitHub account I'm signed in with, and which GitHub repository this folder is connected to."* | A description of your project, your GitHub username, and your repository's name. |
-| **Node.js** | Send: *"Check that Node.js, npm, and npx all work. Report their version numbers."* | Three version numbers. |
 | **Vercel** | Send: *"Show the status of this Vercel project: its name, the latest deployment, whether it worked, and when it happened. Don't show any environment variable values. Then tell me how you'll publish my changes."* | Your latest deployment and whether it worked, and that your assistant will publish by pushing to GitHub. |
-| **API Key** | Send: *"Check that .env.local exists and list the variable names in it, without showing any values. Then confirm that Git ignores it."* | A name such as `GEMINI_API_KEY`, and confirmation that Git ignores the file. |
+| **Run Your Project** | Send: *"Run my project on this computer and give me a link to open it. If .env.local exists, confirm that Git ignores it, without showing any values."* | A link that opens your app, with its AI features working. |
 | **Playwright** | Send: *"Use Playwright to open [your Vercel link]. Take a screenshot and describe the page in two or three sentences."* | A browser window on your site, and a description that matches it. |
 | **Prototyping Assistant** | Check that the mode indicator under the prompt box says **Plan** (Codex: **Ask for approval**). Send: *"What instructions are you following in this project?"* | The right mode, and a reply describing your `AGENTS.md` instructions. |
 | **Superpowers** | Send: *"Which Superpowers skills do you have? Just list their names."* | Skills such as brainstorming, writing plans, and test-driven development. |

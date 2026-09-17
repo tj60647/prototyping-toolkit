@@ -2,6 +2,8 @@
 
 *A setup guide for non-experts. Accurate as of September 2026. If a screen looks different, check the official guide: https://code.claude.com/docs/en/vscode-extension*
 
+*This guide covers step 10 of the [TLDR](/tldr), with more explanation.*
+
 *Using Codex instead of Claude Code? The prompts work the same way. Read "Claude" as "Codex," and follow the **Using Codex** notes where the steps differ. Where this guide says to start a new session, start a new chat instead: click the new chat button at the top of the Codex panel.*
 
 ---
@@ -38,29 +40,19 @@ This guide assumes:
 
 ---
 
-## Step 1: Make Plan Mode the Default
+## Step 10: Set Up Your Agent for Prototyping
 
-1. Open VS Code settings. Press `Cmd + ,` on a Mac or `Ctrl + ,` on Windows.
-2. In the search box at the top, type **Claude Code permission**.
-3. Find **Initial Permission Mode** and change it to **plan**.
+### Add your prototyping instructions
 
-Every new Claude Code session will now start in Plan mode. Settings save automatically.
-
-**Using Codex?** Codex doesn't have this setting, so skip this step. The instructions in Step 2 ask Codex to describe its plan and wait for your approval before changing anything. Keep Codex's permission mode on **Ask for approval**.
-
----
-
-## Step 2: Have Claude Write Your Instructions File
-
-Your instructions go in `AGENTS.md`, a plain text file in your project that your assistant reads at the start of every session. Think of it as a briefing you only have to write once. You can ask Claude to write it for you. If your project already has an `AGENTS.md`, Claude adds to it and keeps what's there.
+Your instructions go in `AGENTS.md`, a plain text file in your project that your assistant reads at the start of every session. Think of it as a briefing you only have to write once. If your project already has an `AGENTS.md`, for example with the publishing rule from step 7, Claude adds to it and keeps what's there.
 
 **About `AGENTS.md` and `CLAUDE.md`.** `AGENTS.md` is a shared instructions file that many coding assistants read, including Codex. Claude Code reads a file called `CLAUDE.md` instead. Your `CLAUDE.md` only needs one line, `@AGENTS.md`, which tells Claude to read `AGENTS.md` as well. That way your instructions live in one place and work with either assistant.
 
-1. Start a new session so the Plan mode setting applies: click the **spark icon** (✱) in the left-hand bar, then **New session**.
+Send:
 
-2. Check the mode indicator at the bottom of the prompt box. It should say **Plan**. (Codex: skip this.)
+> Read this guide: https://prototyping-toolkit.vercel.app/prototyping-assistant. Add its full prototyping instructions to this project's AGENTS.md and make sure CLAUDE.md reads them too. Keep any instructions already there.
 
-3. Copy this prompt into the prompt box and send it:
+Claude reads this page and adds the instructions below. If Claude can't open web pages, copy this prompt and send it instead:
 
 ```
 Add this section to the AGENTS.md file in the top level of this project. Create the file if it doesn't exist. Keep everything already in the file.
@@ -81,29 +73,45 @@ I'm exploring ideas, not building a finished product.
 Then make sure a CLAUDE.md file exists in the top level of this project and contains the line @AGENTS.md. Add that line if it's missing, and keep anything else in the file.
 ```
 
-4. In Plan mode, Claude describes what it plans to do and waits. This is your first plan to review. Read it, then approve it. (Codex makes this first change without a plan, because the new instructions only apply from the next chat.)
-5. If Claude asks permission to create the file, accept.
-6. Check the Explorer panel, the list of your project's files on the left. To open it, press `Cmd + Shift + E` on a Mac or `Ctrl + Shift + E` on Windows. You should see `AGENTS.md` and `CLAUDE.md` near the bottom of the list. Click `AGENTS.md` to read it.
+If Claude asks permission to create or change the files, accept. Then check the Explorer panel, the list of your project's files on the left (`Cmd + Shift + E` on a Mac or `Ctrl + Shift + E` on Windows). You should see `AGENTS.md` and `CLAUDE.md`. Click `AGENTS.md` to read it.
 
-This text is a starting point. You can edit the file yourself at any time, or ask Claude to change it. Because it's a file in your project, it's saved and shared along with everything else.
+This text is a starting point. You can edit the file yourself at any time, or ask Claude to change it.
 
 **Want something more personal?** Instead of pasting the text above, try: *"Interview me about how I like to explore ideas, then propose a section for this prototype's AGENTS.md."*
 
----
+### Know your settings
 
-## Step 3: Start a New Session
+Three settings at the bottom of the prompt box change how your agent works:
 
-Claude only reads your instructions when a session starts, so start a new session the same way you did in Step 2.
+| Setting | What it changes | Claude Code | Codex |
+|---|---|---|---|
+| **Permission mode** | How much it asks before acting | Click the mode. Use **Plan**: it describes a plan and waits for your OK. **Manual** asks before each edit. Avoid **Edit automatically** and **Auto** for now. | Click the permissions menu. Use **Ask for approval**. Avoid **Full access**. |
+| **Model** | Which AI model answers | Click the model name, or type `/model`. | Click the model menu. |
+| **Effort** | How long it thinks first. Higher is slower and uses more of your plan. | In the mode menu, or type `/effort`. | In the model menu. |
 
-To confirm Claude read your file, ask:
+Leave the model and effort as they are unless a task is hard.
+
+To make every new Claude Code session start in Plan mode:
+
+1. Open VS Code settings. Press `Cmd + ,` on a Mac or `Ctrl + ,` on Windows.
+2. In the search box at the top, type **Claude Code permission**.
+3. Find **Initial Permission Mode** and change it to **plan**. Settings save automatically.
+
+**When to switch modes.** Plan mode is best for anything new or uncertain. For tiny, obvious fixes, such as changing a word or a color, planning can feel slow, so switch to **Manual** for that change. New sessions always start back in Plan mode.
+
+**Using Codex?** Codex has no Plan mode or startup setting. Your `AGENTS.md` instructions take its place: they ask Codex to describe its plan and wait for your approval.
+
+### Start a new session and check
+
+Claude only reads your instructions when a session starts. Start a new session (click the spark icon in the left-hand bar, then **New session**), then ask:
 
 > What instructions are you following in this project?
 
-It should describe the points from your `AGENTS.md`.
+It should mention both the prototyping instructions and the publishing rule from step 7.
 
 ---
 
-## Step 4: Try a Planning Conversation
+## What a Planning Conversation Looks Like
 
 Ask for something open-ended:
 
@@ -121,24 +129,6 @@ If Claude skips the questions or offers only one idea, say so. That feedback is 
 
 ---
 
-## Step 5: Know Your Settings
-
-Three settings at the bottom of the prompt box change how your assistant works:
-
-| Setting | What it changes | Claude Code | Codex |
-|---|---|---|---|
-| **Permission mode** | How much it asks before acting | Click the mode. Use **Plan**: it describes a plan and waits for your OK. **Manual** asks before each edit. Avoid **Edit automatically** and **Auto** for now. | Click the permissions menu. Use **Ask for approval**. Avoid **Full access**. |
-| **Model** | Which AI model answers | Click the model name, or type `/model`. | Click the model menu. |
-| **Effort** | How long it thinks first. Higher is slower and uses more of your plan. | In the mode menu, or type `/effort`. | In the model menu. |
-
-Leave the model and effort as they are unless a task is hard.
-
-**When to switch modes.** Plan mode is best for anything new or uncertain. For tiny, obvious fixes, such as changing a word or a color, planning can feel slow, so switch to **Manual** for that change. New sessions always start back in Plan mode.
-
-**Using Codex?** Codex has no Plan mode. Your `AGENTS.md` instructions take its place.
-
----
-
 ## Checkpoint
 
 Before moving on, check that both changes are working.
@@ -149,9 +139,9 @@ Before moving on, check that both changes are working.
 
 > What instructions are you following in this project?
 
-**You should see:** the prompt box set to **Plan** (or **Ask for approval** in Codex), and a reply that describes the points in your `AGENTS.md` file, such as offering 2–3 directions and explaining changes in plain language. If the file already had other instructions, such as how to publish your site, the reply should mention those too.
+**You should see:** the prompt box set to **Plan** (or **Ask for approval** in Codex), and a reply that describes the points in your `AGENTS.md` file, such as offering 2–3 directions and explaining changes in plain language. If the file already had other instructions, such as the publishing rule from step 7, the reply should mention those too.
 
-**If not:** make sure Step 1's setting says **plan**, that `AGENTS.md` and `CLAUDE.md` are in the top level of your project, not inside another folder, and that `CLAUDE.md` contains `@AGENTS.md`. If instructions that were there before are missing, ask Claude to add them back.
+**If not:** make sure the **Initial Permission Mode** setting says **plan**, that `AGENTS.md` and `CLAUDE.md` are in the top level of your project, not inside another folder, and that `CLAUDE.md` contains `@AGENTS.md`. If instructions that were there before are missing, ask Claude to add them back.
 
 ---
 
@@ -166,4 +156,4 @@ Before moving on, check that both changes are working.
 
 ## Next
 
-When this guide's checkpoint works, continue with **Put Your Setup to Work**. Advanced users can first try **Installing Superpowers for Claude Code**, which is optional.
+When this guide's checkpoint works, continue with **Installing Superpowers for Claude Code** (TLDR step 11, optional), or go straight to **Put Your Setup to Work** (TLDR steps 12–13).
