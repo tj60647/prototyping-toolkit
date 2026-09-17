@@ -55,7 +55,11 @@ Claude may install what the project needs first. Allow the commands when it asks
 
 Open the link and try a feature that uses AI. If it responds, your key is already in place. Skip to the Checkpoint.
 
-If the app won't run at all, ask Claude to explain and fix the problem. If it's missing Node.js, see **Installing Node.js**.
+If the app won't run at all, send:
+
+> My project won't run. Explain the problem in plain language, then fix it. If something needs installing, install it for all my projects. Don't show me any secret values.
+
+If Claude installs something and then can't find it, quit VS Code completely, open it again, and start a new session. If installing Node.js fails, see **Installing Node.js**.
 
 ### If an API Key Is Missing
 
