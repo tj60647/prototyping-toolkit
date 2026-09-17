@@ -13,7 +13,7 @@ Two tools let Claude save your work and connect it to your GitHub account:
 - **Git** keeps a history of every version of your project.
 - **GitHub CLI**, also called **`gh`**, connects your computer to your GitHub account.
 
-With both installed, you can ask Claude to save your changes, create a GitHub repository, or publish updates, all in plain language. At the end of this guide, Claude brings a copy of your GitHub project onto your computer.
+With both installed, you can ask Claude to save your changes, create a GitHub repository, or publish updates, all in plain language. At the end of this guide, Claude brings a copy of your GitHub project into your Projects folder.
 
 Claude does the setup for you. To sign in, you approve a one-time code in your browser. The only time you might type in the terminal is to install Homebrew on a Mac.
 
@@ -34,7 +34,7 @@ Claude does the setup for you. To sign in, you approve a one-time code in your b
 
 This guide assumes:
 
-- VS Code is open, and the Claude Code extension is installed and you are signed in.
+- VS Code is open with your Projects folder open, and the Claude Code extension is installed and you are signed in.
 - You have a GitHub account, and your prototype's project is already on GitHub.
 - You can install software on your computer. Some school or work computers don't allow this. If yours doesn't, ask your IT help desk.
 - On a Mac, you know your computer's login password. You may need it to install Homebrew.
@@ -43,7 +43,7 @@ This guide assumes:
 
 ## Using the Terminal
 
-You only need this if your Mac needs Homebrew (see Step 3). A few things to know before you type in the terminal:
+You only need this if your Mac needs Homebrew (see Step 2). A few things to know before you type in the terminal:
 
 - **Paste a command** with `Cmd + V` on a Mac or `Ctrl + V` on Windows, then press Enter to run it.
 - **You can't click to move the cursor.** Use the arrow keys instead.
@@ -53,27 +53,7 @@ You only need this if your Mac needs Homebrew (see Step 3). A few things to know
 
 ---
 
-## Step 1: Make a Folder for Your Projects
-
-Claude works on the files in whichever folder VS Code has open, and at the end of this guide it copies your project into that folder. So start by making one place to keep your projects.
-
-Put it in your home folder rather than Documents or Desktop, which are often synced by iCloud Drive or OneDrive. Syncing can interfere with your projects.
-
-1. In VS Code, choose **File → Open Folder…**
-2. Go to your home folder.
-    - **Mac:** press `Cmd + Shift + H`. It's the folder with a house icon and your name.
-    - **Windows:** it's `C:\Users\` followed by your name.
-3. Click **New Folder**, name it `Projects`, and confirm.
-4. Select the `Projects` folder and click **Open** (on Windows, **Select Folder**).
-5. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**. Claude doesn't work in Restricted Mode.
-
-Already have a folder for your projects? Open that one instead. Whichever folder you opened, the rest of these guides call it your **Projects folder**, whatever its name really is.
-
-VS Code reloads when it opens a folder. You stay signed in. Claude can make folders and copy projects into them, but choosing which folder VS Code has open is the part it can't do for you, so it's always **File → Open Folder…**
-
----
-
-## Step 2: Ask for Your GitHub Projects
+## Step 1: Ask for Your GitHub Projects
 
 Start with what you want, and let Claude find out what's missing. Send:
 
@@ -81,11 +61,11 @@ Start with what you want, and let Claude find out what's missing. Send:
 
 Claude will ask permission to run a few short commands. Read each one, then allow it. **Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
-If Claude lists your projects, everything is already set up. Skip to Step 4.
+If Claude lists your projects, everything is already set up. Skip to Step 3.
 
 ---
 
-## Step 3: Set Up What's Missing
+## Step 2: Set Up What's Missing
 
 If Claude couldn't list your projects, send:
 
@@ -142,7 +122,7 @@ When Claude has finished, ask again:
 
 ---
 
-## Step 4: Open One Project on Your Computer
+## Step 3: Open One Project on Your Computer
 
 Making a copy of a GitHub project on your computer is called **cloning**. Replace `[project name]` with a name from your GitHub list, then send:
 
@@ -182,7 +162,7 @@ Before moving on, check that your project, Git, and GitHub are all connected.
 ## Troubleshooting
 
 **Claude says a program isn't found right after installing it.**
-Quit VS Code completely, open it again, and start a new session (see Step 3). If that doesn't work, restart your computer.
+Quit VS Code completely, open it again, and start a new session (see Step 2). If that doesn't work, restart your computer.
 
 **Windows: Claude says winget isn't available.**
 Ask Claude: *"winget isn't available. Tell me where to download the regular installers for Git and GitHub CLI."* Download and open each one, and accept the defaults.

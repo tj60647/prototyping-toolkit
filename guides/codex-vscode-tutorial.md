@@ -35,11 +35,31 @@ This guide assumes:
 - VS Code is installed, up to date, and open. To update it, go to **Code → Check for Updates** on a Mac or **Help → Check for Updates** on Windows.
 - You have a **ChatGPT account**. Codex is included with ChatGPT plans, including the free plan, which has lower limits.
 
-You don't need a project or a folder open to install Codex. The next guide sets up a folder for your projects.
+It starts by making a folder for your projects, then installs Codex.
 
 ---
 
-## Step 1: Install the Extension
+## Step 1: Make a Folder for Your Projects
+
+Codex works on the files in whichever folder VS Code has open, so start by making one place to keep your projects. Your project goes inside it in the next guide.
+
+Put it in your home folder rather than Documents or Desktop, which are often synced by iCloud Drive or OneDrive. Syncing can interfere with your projects.
+
+1. In VS Code, choose **File → Open Folder…**
+2. Go to your home folder.
+    - **Mac:** press `Cmd + Shift + H`. It's the folder with a house icon and your name.
+    - **Windows:** it's `C:\Users\` followed by your name.
+3. Click **New Folder**, name it `Projects`, and confirm.
+4. Select the `Projects` folder and click **Open** (on Windows, **Select Folder**).
+5. If VS Code asks **"Do you trust the authors of the files in this folder?"**, click **Yes, I trust the authors**. Codex doesn't work in Restricted Mode.
+
+Already have a folder for your projects? Open that one instead. Whichever folder you opened, the rest of these guides call it your **Projects folder**, whatever its name really is.
+
+Codex can make folders and copy projects into them, but choosing which folder VS Code has open is the part it can't do for you, so it's always **File → Open Folder…**
+
+---
+
+## Step 2: Install the Extension
 
 1. Open the Extensions view. Press `Cmd + Shift + X` on a Mac or `Ctrl + Shift + X` on Windows. You can also click the four-squares icon in the left-hand bar.
 2. Search for **Codex**.
@@ -50,7 +70,7 @@ You only do this once. The extension is then available in every VS Code window a
 
 ---
 
-## Step 2: Open Codex and Sign In
+## Step 3: Open Codex and Sign In
 
 1. Look for the Codex icon in the sidebar on the **right** side of the window, and click it. If you don't see it, open the Command Palette, type **Open Codex Sidebar**, and press Enter.
 2. Choose to sign in with your **ChatGPT account**.
@@ -61,7 +81,7 @@ You only do this once. The extension is then available in every VS Code window a
 
 ---
 
-## Step 3: Claim Your Student Credits (If Eligible)
+## Step 4: Claim Your Student Credits (If Eligible)
 
 OpenAI offers verified university students in the United States and Canada $100 in Codex credits. The credits let you keep using Codex after you reach your plan's usage limits.
 
@@ -73,7 +93,7 @@ The credits are added to your ChatGPT account automatically. Skip this step if i
 
 ---
 
-## Step 4: Try It
+## Step 5: Try It
 
 Start with a prompt that doesn't change anything:
 
@@ -81,7 +101,7 @@ Start with a prompt that doesn't change anything:
 
 ---
 
-## Step 5: Understand Permissions
+## Step 6: Understand Permissions
 
 Below the prompt box is a **permission mode** control. It has three choices:
 
@@ -119,9 +139,9 @@ Before moving on, check that Codex is working.
 1. Start a new chat: click the new chat button at the top of the Codex panel.
 2. Send:
 
-> Say hello, and tell me in one sentence what you can help me with.
+> Say hello, tell me in one sentence what you can help me with, and tell me which folder you're working in.
 
-**You should see:** a short reply in the Codex panel. That is all this guide sets out to do: Codex installed, signed in, and answering.
+**You should see:** a short reply in the Codex panel that names your Projects folder. That is all this guide sets out to do: a Projects folder, and Codex installed, signed in, and answering in it.
 
 **If not:** see Troubleshooting below.
 
@@ -156,4 +176,4 @@ This is normal. The extension doesn't install the terminal version, and you don'
 
 ## Next
 
-When this guide's checkpoint works, continue with **Setting Up Git and GitHub CLI**, where you make a folder for your projects, and Codex connects your computer to GitHub and brings your project into it.
+When this guide's checkpoint works, continue with **Setting Up Git and GitHub CLI**, where Codex connects your computer to GitHub and brings your project into your Projects folder.
