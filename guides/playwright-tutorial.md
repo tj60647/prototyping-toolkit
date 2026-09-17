@@ -61,7 +61,7 @@ If Claude says it doesn't have Playwright, follow "If Playwright Isn't Available
 5. A banner asks you to restart Claude Code. Click it.
 6. Start a new session (click the spark icon in the left-hand bar, then **New session**) and ask for the audit again.
 
-**Using Codex?** Skip the numbered steps above. Instead, send: *"Add the Playwright MCP server to my Codex settings, using the command npx @playwright/mcp@latest. Tell me which file you changed."* Codex asks before changing a settings file outside your project; allow it. Then quit VS Code completely, open it again, start a new chat, and ask for the audit again.
+**Using Codex?** Skip the numbered steps above. Instead, send: *"Add the Playwright MCP server to my global Codex settings, for all my projects, using the command npx @playwright/mcp@latest. Tell me which file you changed."* Codex asks before changing a settings file outside your project; allow it. Then quit VS Code completely, open it again, start a new chat, and ask for the audit again.
 
 ---
 

@@ -56,7 +56,7 @@ If Claude lists your projects, everything is already set up. Skip to Step 6.
 
 If Claude couldn't list your projects, send:
 
-> Install what you need to connect to GitHub. Then sign me in with GitHub CLI: show me the one-time code and web address, and wait while I approve it. Then set up Git to use this sign-in, and set my Git name and GitHub no-reply email if they aren't set.
+> Install what you need to connect to GitHub, for all my projects. Then sign me in with GitHub CLI: show me the one-time code and web address, and wait while I approve it. Then set up Git to use this sign-in, and set my Git name and GitHub no-reply email if they aren't set.
 
 Claude installs **Git** and **GitHub CLI** if they're missing, then starts the sign-in. Git labels every saved version with a name and email; the no-reply address keeps your personal email private.
 

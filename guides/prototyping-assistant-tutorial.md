@@ -44,7 +44,7 @@ This guide assumes:
 
 ### Add your prototyping instructions
 
-Your instructions go in `AGENTS.md`, a plain text file in your project that your assistant reads at the start of every session. Think of it as a briefing you only have to write once. If your project already has an `AGENTS.md`, for example with the publishing rule from step 7, Claude adds to it and keeps what's there.
+Your instructions go in `AGENTS.md`, a plain text file in your project that your assistant reads at the start of every session. Think of it as a briefing you only have to write once. If your project already has an `AGENTS.md`, Claude adds to it and keeps what's there. These instructions are for this project; the publishing rule from step 7 lives in your global instructions and applies everywhere.
 
 **About `AGENTS.md` and `CLAUDE.md`.** `AGENTS.md` is a shared instructions file that many coding assistants read, including Codex. Claude Code reads a file called `CLAUDE.md` instead. Your `CLAUDE.md` only needs one line, `@AGENTS.md`, which tells Claude to read `AGENTS.md` as well. That way your instructions live in one place and work with either assistant.
 

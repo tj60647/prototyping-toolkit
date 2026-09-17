@@ -24,7 +24,7 @@ It was designed for software engineering, so it favors careful, finished work ov
 - **Use more of your plan's allowance.**
 - **Follow its rules strictly.** Its test-first rule is firm: during a build, it may remove code that was written before its tests.
 
-Try it when you want to take a prototype further, not for quick experiments.
+Try it when you want to take a prototype further, not for quick experiments, and see **Making It Prototyping-Friendly** below to tone it down.
 
 ---
 
@@ -55,7 +55,7 @@ Not sure about Git? Ask Claude:
 
 Send:
 
-> Help me install Superpowers and show me how to use it.
+> Help me install Superpowers for this project only, and show me how to use it.
 
 Installing a plugin happens in a Claude Code window that Claude can't click for you, so Claude walks you through the steps below.
 
@@ -69,15 +69,15 @@ Installing a plugin happens in a Claude Code window that Claude can't click for 
 
 ### Choose where it applies
 
-Claude Code asks where to install the plugin. Choose **Install locally**.
+Claude Code asks where to install the plugin. Choose **Install locally**, so you can try Superpowers on one project first.
 
 | Choice | What it means |
 |---|---|
-| **Install for you** | Superpowers runs in every project you open. |
+| **Install for you** | Superpowers runs in every project you open. *Choose this later, once you've decided you like it.* |
 | **Install for this project** | Superpowers runs for anyone who works on this project. |
-| **Install locally** | Superpowers runs only for you, only in this project. *Recommended.* |
+| **Install locally** | Superpowers runs only for you, only in this project. *Recommended to start.* |
 
-Installing locally keeps your other projects working the way they do now, and doesn't change anything for classmates who share this project.
+Superpowers changes how Claude works, so try it on one project before using it everywhere. Installing locally keeps your other projects working the way they do now, and doesn't change anything for classmates who share this project. If you like it, install it again and choose **Install for you**. To pause it, see **Turning It Off** below.
 
 ### Restart and check
 
@@ -102,6 +102,32 @@ As the workflow unfolds:
 - **Decide whether to continue.** After the design, it moves on to planning and building. You can stop after brainstorming if the design is all you wanted.
 
 Superpowers saves its designs and plans as files in your project, so you can read them later.
+
+---
+
+## Making It Prototyping-Friendly
+
+Superpowers is built for finished software: full designs, long plans, and tests before every piece of code. Your project is a prototype, where speed and trying several directions matter more. Superpowers' own rules say your instructions files come first, so a few lines in your project's `AGENTS.md` tone it down.
+
+Copy this prompt and send it:
+
+```
+Add this section to this project's AGENTS.md, and keep everything already in the file.
+
+## Using Superpowers on this prototype
+
+- Use brainstorming to explore ideas, and offer 2–3 directions.
+- Keep designs to about a page, and plans to five tasks or fewer.
+- Skip test-driven development and automated tests unless I ask.
+- Never delete code because it has no tests.
+- After the design, stop and ask me before planning or building.
+```
+
+Then start a new session, so Claude reads the new section.
+
+Brainstorming is the most useful part for prototyping. When that's all you want, say so: *"Just brainstorm with me. Don't plan or build."*
+
+If Superpowers still pushes for tests or long plans, remind it: *"This is a prototype. Follow the Superpowers section in AGENTS.md."*
 
 ---
 

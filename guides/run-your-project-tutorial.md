@@ -40,7 +40,7 @@ This guide assumes:
 
 - VS Code is open with your project folder open.
 - The Claude Code extension is installed and you are signed in.
-- Vercel CLI is installed, you're signed in to Vercel, and you know the name of your Vercel project.
+- Vercel CLI is installed, and you're signed in to Vercel.
 - Your Vercel project already has your Gemini API key. It does if the AI features on your live site work.
 
 ---
@@ -59,9 +59,9 @@ If the app won't run at all, ask Claude to explain and fix the problem. If it's 
 
 ### If an API Key Is Missing
 
-If Claude says an API key is missing, or the AI features don't respond, Claude can copy the key from Vercel into your project without showing it. Replace `[Vercel project name]` with your project's name, then send:
+If Claude says an API key is missing, or the AI features don't respond, Claude can copy the key from Vercel into your project without showing it. Send:
 
-> Copy my API key into .env.local from my Vercel project, [Vercel project name]. Name the project in the command instead of linking this folder. If the key isn't in the Development settings, use Production. Don't show me any values, and keep .env.local out of GitHub.
+> Copy my API key into .env.local from this project's Vercel project. If the key isn't in the Development settings, use Production. Don't show me any values, and keep .env.local out of GitHub.
 
 Then ask Claude to restart the app, and try the AI feature again. The app only reads `.env.local` when it starts.
 
@@ -100,7 +100,7 @@ Vercel sometimes hides key values so they can't be downloaded. Copy the key from
 Ask Claude to stop the app and start it again. The app only reads `.env.local` when it starts.
 
 **Claude can't find your Vercel project.**
-Ask: *"List my Vercel projects, including the ones in my teams."* Then send the API key prompt in Step 8 again with the right name.
+Ask: *"List my Vercel projects, including the ones in my teams."* Tell Claude which one your site uses, then send the API key prompt in Step 8 again.
 
 **I think my key was shared by accident.**
 If the key ended up on GitHub or in a message, tell your instructor. You'll need a new key, and the old one should be deleted in Google AI Studio.
