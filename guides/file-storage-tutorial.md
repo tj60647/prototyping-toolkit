@@ -33,7 +33,7 @@ The prompt below keeps your files private, so only your app can read them. If yo
 ## Step 17: Store Files
 
 1. Open your project in the Vercel dashboard, then **Storage**.
-2. Click **Create**, choose **Blob**, and connect it to this project.
+2. Click **Create Database**, choose **Blob**, set its access to **Private**, and connect it to this project.
 3. Send, replacing `[what the files are]`, for example with "photos people upload":
 
 > Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload, and keep the files private unless I say otherwise.

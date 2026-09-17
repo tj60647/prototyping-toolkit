@@ -92,7 +92,8 @@ function checkGuides() {
   // so the two routes can't drift apart.
   const read = (file: string) => readFileSync(new URL(file, dir), 'utf8')
   const tldr = read('tldr.md')
-  const others = files.filter((f) => f !== 'tldr.md').map(read)
+  // The start page repeats some prompts but isn't a detailed guide.
+  const others = files.filter((f) => f !== 'tldr.md' && f !== 'setup-sequence.md').map(read)
   for (const [, prompt] of tldr.matchAll(/^\s*> (.+)$/gm)) {
     if (!others.some((text) => text.includes(prompt))) {
       throw new Error(`The TLDR prompt "${prompt.slice(0, 60)}…" isn't in any detailed guide.`)

@@ -54,7 +54,9 @@ The guides are written for Claude Code. If you choose Codex, the prompts work th
 
 ## The Sequence
 
-Follow the guides in this order, from top to bottom. Each one covers the same steps as the TLDR, with the same numbers and prompts, and adds explanation, a checkpoint and troubleshooting. **Superpowers** is optional; if you skip it, go straight to **Put It to Work**.
+### Part 1: Set Up and Start Prototyping
+
+Follow these guides in order, from top to bottom. Each one covers the same steps as the TLDR, with the same numbers and prompts, and adds explanation, a checkpoint and troubleshooting. **Superpowers** is optional; if you skip it, go straight to **Put It to Work**.
 
 | TLDR steps | Guide | Full title | What it sets up |
 |---|---|---|---|
@@ -107,7 +109,7 @@ Each guide ends with a **Checkpoint** section. Don't move on until it works. Sta
 | **Prototyping Assistant** | Check that the mode indicator under the prompt box says **Plan** (Codex: **Ask for approval**). Send: *"What instructions are you following in this project?"* | The right mode, and a reply describing your `AGENTS.md` instructions. |
 | **Superpowers** | Send: *"Which Superpowers skills do you have? Just list their names."* | Skills such as brainstorming, writing plans, and test-driven development. |
 | **Put It to Work** | Send: *"Did Vercel's update work? Give me a link to the result."* | Your finished work on GitHub or on your site. |
-| **Protect Your Keys** | Send: *"Build this app the way Vercel does, then search the built files for anything that looks like a secret key. Tell me only whether you found one, not what it is."* | No key found in the built files. |
+| **Protect Your Keys** | Send: *"Open my live Vercel site and search the JavaScript files it sends to the browser for anything that looks like a secret key. Tell me only whether you found one, not what it is."* | No key found in the files your live site sends. |
 | **Database** | Send: *"Which Neon project is this app connected to? Check that the app can reach its database, both from my computer and on Vercel, without showing any connection settings."* | A Neon project for this app only, and both connections working. |
 | **Sign-In** | Open your main Vercel address in a private window and try a paid feature signed out, then signed in. | Refused when signed out; working when signed in with an allowed email. |
 | **File Storage** | Sign in, upload a file, then look for it in your Vercel Blob store. | The file is listed; uploading while signed out is refused. |

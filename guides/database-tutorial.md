@@ -44,9 +44,9 @@ Send:
 
 Then:
 
-1. **Allow the installs.** Claude installs Neon's tools for all your projects.
-2. **Sign in.** When Claude shows a web address, open it and sign in to Neon. New to Neon? Create an account there, with GitHub or Google. Do this straight away: the address only works for a short time.
-3. **Review the plan.** Claude creates a Neon project named after your app, connects your app to it, and saves the connection settings on Vercel and in `.env.local`.
+1. **Review the plan.** Claude plans to install Neon's tools, create a Neon project named after your app, connect your app to it, and save the connection settings on Vercel and in `.env.local`. Approve it if it matches.
+2. **Allow the installs.** Claude installs Neon's tools for all your projects.
+3. **Sign in.** When Claude shows a web address, open it and sign in to Neon. New to Neon? Create an account there, with GitHub or Google. Do this straight away: the address only works for a short time.
 
 **If Claude can't find Neon's tools after installing them,** quit VS Code completely and open it again, start a new session, and send the prompt again.
 

@@ -49,7 +49,7 @@ Review Claude's plan, then approve it.
 
 1. Open your project in the Vercel dashboard, then **Settings → Environment Variables**.
 2. Add a variable named `ALLOWED_EMAILS`. For its value, type the allowed email addresses, separated by commas.
-3. Ask your agent: *"Save my changes to GitHub."* This publishes the sign-in code, and Vercel's rebuild picks up the new setting.
+3. Ask your agent: *"Check that any new sign-in settings are also on Vercel, then save my changes to GitHub."* This publishes the sign-in code, and Vercel's rebuild picks up the new settings.
 
 **Changing the list later?** Vercel only reads settings when it builds. After you edit ALLOWED_EMAILS, open your project's **Deployments** tab in Vercel, open the menu (**…**) on the latest deployment, and choose **Redeploy**.
 
@@ -84,6 +84,12 @@ Check that `ALLOWED_EMAILS` has your exact email, and that Vercel has rebuilt si
 
 **Sign-in doesn't work on my computer.**
 Ask: *"Allow localhost in Neon Auth for testing on my computer."*
+
+**The app refuses me on my computer, but works on Vercel.**
+`ALLOWED_EMAILS` is only on Vercel. Ask: *"Copy ALLOWED_EMAILS from Vercel into .env.local so the app works the same on my computer."*
+
+**Sign-in works on my computer but not on Vercel.**
+Ask: *"Check that this project on Vercel has all the Neon Auth settings my app uses, then save my changes to GitHub so Vercel rebuilds."*
 
 ---
 

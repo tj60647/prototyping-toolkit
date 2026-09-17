@@ -60,9 +60,9 @@ If Claude changed anything, ask it to run the app and check the AI features stil
 1. Start a new session.
 2. Send:
 
-> Build this app the way Vercel does, then search the built files for anything that looks like a secret key. Tell me only whether you found one, not what it is.
+> Open my live Vercel site and search the JavaScript files it sends to the browser for anything that looks like a secret key. Tell me only whether you found one, not what it is.
 
-**You should see:** Claude reports that no key was found in the built files.
+**You should see:** Claude reports that no key was found in the files your site sends to the browser. If Claude changed anything in step 14, save your changes to GitHub and wait for Vercel to rebuild before you check.
 
 ---
 
