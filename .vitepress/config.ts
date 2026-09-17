@@ -1,5 +1,6 @@
 import { readdirSync, readFileSync } from 'node:fs'
 import { defineConfig, type DefaultTheme } from 'vitepress'
+import { markDark, markLight } from './brand'
 import { guideBySlug, guides } from './guides'
 import { promptCopyButtons, titleLinks } from './markdown'
 
@@ -28,8 +29,6 @@ const sidebar: DefaultTheme.SidebarItem[] = [
 
 checkGuides()
 
-const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🧰</text></svg>`
-
 export default defineConfig({
   title: 'Prototyping Toolkit',
   description: 'Setup guides for prototyping with a coding assistant, GitHub, and Vercel.',
@@ -38,7 +37,7 @@ export default defineConfig({
   cleanUrls: true,
   // Short addresses for slides and links; the files keep their authored names.
   rewrites: Object.fromEntries(guides.map((g) => [g.file, `${g.slug || 'index'}.md`])),
-  head: [['link', { rel: 'icon', href: `data:image/svg+xml,${encodeURIComponent(favicon)}` }]],
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: markLight }]],
   markdown: {
     config(md) {
       md.use(titleLinks).use(promptCopyButtons)
@@ -53,6 +52,7 @@ export default defineConfig({
     page.frontmatter.next = nav(guide.next)
   },
   themeConfig: {
+    logo: { light: markLight, dark: markDark, alt: 'A Rough Idea' },
     sidebar,
     outline: { level: [2, 3], label: 'On this page' },
     search: { provider: 'local' },
