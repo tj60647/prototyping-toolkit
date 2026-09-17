@@ -49,7 +49,9 @@ Review Claude's plan, then approve it.
 
 1. Open your project in the Vercel dashboard, then **Settings → Environment Variables**.
 2. Add a variable named `ALLOWED_EMAILS`. For its value, type the allowed email addresses, separated by commas.
-3. Save your changes to GitHub, so Vercel rebuilds with the new setting.
+3. Ask your agent: *"Save my changes to GitHub."* This publishes the sign-in code, and Vercel's rebuild picks up the new setting.
+
+**Changing the list later?** Vercel only reads settings when it builds. After you edit ALLOWED_EMAILS, open your project's **Deployments** tab in Vercel, open the menu (**…**) on the latest deployment, and choose **Redeploy**.
 
 **Want anyone with a Google account to use it?** Tell Claude: *"Allow anyone who signs in, instead of checking ALLOWED_EMAILS."* Only do this if you're comfortable with strangers spending your budget.
 
@@ -59,7 +61,7 @@ Google sign-in works straight away because it uses Neon's **shared credentials**
 
 ### About web addresses
 
-Neon Auth only works on addresses in its trusted list. Your main Vercel address is on it. Vercel's preview addresses change with every update, so test sign-in on your main address.
+Neon Auth only works on addresses on its list of trusted domains. Your main Vercel address is on it. Vercel's preview addresses change with every update, so test sign-in on your main address.
 
 ---
 
@@ -78,7 +80,7 @@ Neon Auth only works on addresses in its trusted list. Your main Vercel address 
 The address you're on isn't trusted. Ask: *"Add this web address to Neon Auth's trusted domains: [the address]."* If you're on a preview address, use your main address instead.
 
 **Sign-in works, but the app still refuses me.**
-Check that `ALLOWED_EMAILS` has your exact email, and that you saved your changes to GitHub after adding it. Then ask Claude: *"I'm signed in as [email] but the app refuses me. Find out why."*
+Check that `ALLOWED_EMAILS` has your exact email, and that Vercel has rebuilt since you changed it (see **Changing the list later?** above). Then ask Claude: *"I'm signed in as [email] but the app refuses me. Find out why."*
 
 **Sign-in doesn't work on my computer.**
 Ask: *"Allow localhost in Neon Auth for testing on my computer."*

@@ -140,6 +140,6 @@ Your prototype will eventually need somewhere to keep data and files, and a way 
 
     > Add Google sign-in with Neon Auth, following Neon's instructions for this app's framework. Add this app's Vercel web address to Neon Auth's trusted domains. Then make the server code that uses my paid API keys refuse any request unless the person is signed in and their email is in an ALLOWED_EMAILS setting on Vercel.
 
-    Then add `ALLOWED_EMAILS` in your Vercel project's settings: the email addresses allowed to use the app, separated by commas. To let anyone with a Google account in, tell your agent instead. Test sign-in on your main Vercel address. [Sign-in help](/sign-in)
+    Then add `ALLOWED_EMAILS` in your Vercel project's settings: the email addresses allowed to use the app, separated by commas. To let anyone with a Google account in, tell your agent instead. Then ask your agent to save your changes to GitHub. Test sign-in on your main Vercel address. [Sign-in help](/sign-in)
 
 **Stuck?** If your agent can't find something it just installed, quit VS Code completely (`Cmd + Q` on a Mac, **File → Exit** on Windows) and open it again. Otherwise, tell your agent what happened and ask: “Help me fix this. Give me one step at a time.”
