@@ -16,7 +16,6 @@ This guide uses **Neon**, which runs a kind of database called Postgres. Its fre
 
 Neon also has **agent tools** that let Claude create and manage your database for you. You install them once, and they work in all your projects.
 
-Neon can also **search by meaning**, with an add-on called pgvector: for example, finding notes similar to one you're reading. You only need it if your app does that.
 
 ---
 
@@ -25,7 +24,6 @@ Neon can also **search by meaning**, with an add-on called pgvector: for example
 - **Database:** where your app keeps information between visits.
 - **Neon project:** one app's database and its settings. Use a separate one for each app.
 - **Connection settings:** the address and password your app uses to reach its database. They're secret.
-- **pgvector:** an add-on that lets a database find items with similar meaning.
 
 ---
 
@@ -51,12 +49,6 @@ Then:
 **If Claude can't find Neon's tools after installing them,** quit VS Code completely and open it again, start a new session, and send the prompt again.
 
 **About the settings on Vercel.** Claude adds them with Vercel's command-line tool. Vercel may hide their values afterwards, so they can't be read back. That's fine: your app on Vercel still uses them, and your computer has its own copy in `.env.local`.
-
-### If you want search by meaning
-
-Send:
-
-> Turn on pgvector so this app can search by meaning.
 
 ---
 

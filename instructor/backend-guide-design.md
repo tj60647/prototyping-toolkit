@@ -55,9 +55,6 @@ The guide explains why a key the browser can see is usable by anyone, and gives 
 - **Restart:** after the tools install, the agent may need a new session, or VS Code a restart, to see them. The guide says so.
 - **Vercel settings:** if the agent uses `vercel env add`, the guide notes that Vercel then hides Production and Preview values for good unless `--no-sensitive` is passed. That's acceptable for a database address only the deployed app reads.
 
-- **Optional follow-up:**
-
-> Turn on pgvector so this app can search by meaning.
 
 ### 16. Add sign-in, and choose who can use the app
 

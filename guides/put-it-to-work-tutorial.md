@@ -61,13 +61,13 @@ Claude may start in **Plan mode**, where it describes what it will do and waits 
 
 Choose one task from the table above: describe your project (Option A), draw how it works (Option B), or change how it looks (Option C).
 
-### Save a Starting Point and Plan
+### Save a Starting Point
 
 Before changing anything, save where you are, so you can always get back to it. Start a new session (click the spark icon in the left-hand bar, then **New session**), then send:
 
-> Save the current version so we can go back to it. Then help me plan this task.
+> Save the current version so we can go back to it.
 
-Allow the commands when Claude asks. Then send the prompt for your option below. Agree on the plan, let Claude work, and check the result yourself.
+Allow the commands when Claude asks. Then send the prompt for your option below. Each option has a short prompt, and a fuller one for a more thorough result. Review Claude's plan, approve it, and check the result yourself.
 
 #### Deciding whether to allow a command
 
@@ -80,6 +80,10 @@ Claude asks before running commands. Before you click allow:
 ### Option A: Write a README
 
 A **README** is the page people see first when they open your project on GitHub. Send:
+
+> Write a README.md for this project for people who aren't technical: what it is, who it's for, a link to the live site, how to use it, and what the AI part does. Don't invent features. If you're unsure about something, ask me.
+
+**For a more thorough README,** send this instead:
 
 > Write a README.md for this project's GitHub repository. The readers aren't technical: classmates, instructors, and future employers. Read the project first. Include what the prototype is and who it's for, a link to the live site, how to use it step by step, how it works in plain language (including what the AI part does and where it falls short), the tools used to make it, and anything that's unfinished. If a README.md already exists, keep anything important from it. Don't include API keys or other secrets. Don't invent features. If you're unsure about something, ask me.
 
@@ -96,6 +100,10 @@ Then:
 ### Option B: Make a System Diagram
 
 A **system diagram** shows how something works, not what it looks like. Send:
+
+> Make a simple diagram of how my app and its AI work, for people who aren't technical. Save it as docs/system-diagram.md with a short plain-language explanation. If something isn't clear from the code, ask me.
+
+**For a more detailed diagram,** send this instead:
 
 > Make a system diagram that explains how my prototype and its AI agent work, for people who aren't technical. Read the project first. Save it as docs/system-diagram.md, with a Mermaid diagram and a short plain-language walkthrough underneath. Show where information comes in (such as what the user types), which parts always behave the same way and which parts use AI and can vary, what information the AI model is given and what it isn't, and what the user gets back. Use everyday words instead of technical terms, and keep the diagram to about 8 to 12 boxes. If something about how it works isn't clear from the code, ask me instead of guessing.
 
@@ -114,6 +122,14 @@ Then:
 ### Option C: Apply a Design System
 
 This option restyles your app to follow the design language of another website. It's the biggest option: Claude analyzes the website, writes up its design rules, restyles your app, and then checks the result in a browser.
+
+#### Short version
+
+Send this. It also creates the branch described in C1:
+
+> Create a branch called design-system-update. Then restyle my app to follow the design of https://design.berkeley.edu/: study the site's colors, fonts and spacing with a design-system extraction tool, save those rules in the project, and apply them. Keep my app's content and features, and don't copy Berkeley's logos, photos or text.
+
+Then go to C3. **For a more thorough restyle,** skip this and follow C1 and C2 instead.
 
 #### C1. Work on a branch (recommended)
 
