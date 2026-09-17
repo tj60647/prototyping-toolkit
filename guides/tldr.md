@@ -1,10 +1,12 @@
-# TLDR: Set Up and Start Prototyping
+# TLDR: Quick Start
 
 Do one step at a time. Send the messages in the boxes to your **agent**: the AI helper you'll install in VS Code. The help links are there if you get stuck.
 
 This assumes your project is already on GitHub and Vercel already updates its website automatically when you save changes to GitHub.
 
-## Part 1: Set Up and Start Prototyping
+## Part 1: Set Up and Start Prototyping (Start Here)
+
+Everyone does this part. Steps 1 to 13 set up your agent, GitHub and Vercel, then put them to work on your prototype.
 
 1. **Set up a folder for your projects.** In Finder (Mac) or File Explorer (Windows), create a folder called `Projects` in your home folder. Avoid Documents and Desktop, which iCloud Drive or OneDrive may sync. If you already have a folder for your projects, use that one.
 

@@ -33,7 +33,7 @@ export const guides: Guide[] = [
     file: 'tldr.md',
     slug: 'tldr',
     name: 'TLDR',
-    title: 'TLDR: Set Up and Start Prototyping',
+    title: 'TLDR: Quick Start',
     prev: '',
     next: null,
   },
