@@ -96,7 +96,7 @@ When Claude has finished, ask again:
 
 Making a copy of a GitHub project on your computer is called **cloning**. Replace `[project name]` with a name from your GitHub list, then send:
 
-> Copy my GitHub project called [project name] into this folder. If it's already here, use that copy. Tell me which folder to open in VS Code.
+> Clone my GitHub project called [project name] into this folder (make a copy connected to GitHub). If it's already here, use that copy. Tell me which folder to open in VS Code.
 
 Allow the commands when Claude asks. Claude puts the project in its own folder inside your Projects folder.
 

@@ -36,7 +36,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
 6. **Open one project on your computer.** Replace `[project name]` with a name from your GitHub list:
 
-   > Copy my GitHub project called [project name] into this folder. If it's already here, use that copy. Tell me which folder to open in VS Code.
+   > Clone my GitHub project called [project name] into this folder (make a copy connected to GitHub). If it's already here, use that copy. Tell me which folder to open in VS Code.
 
    Open that folder using **File → Open Folder…**, and trust it if asked. Then start a new chat with your agent. From here on, you work inside this project folder.
 
