@@ -70,9 +70,13 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
 9. **Ask for a UI audit.** This checks how your app looks and how easy it is to use.
 
-   > Use Playwright to audit my app on computer and phone screens. Show me what's confusing, hard to read, or difficult to use, with screenshots. Suggest the three most useful improvements. Don't change anything yet.
+   > Use Playwright to audit my app on computer and phone screens, using the Laws of UX (https://lawsofux.com/) as your reference. Show me what's confusing, hard to read, or difficult to use, with screenshots, and name the law each problem relates to. Suggest the three most useful improvements. Don't change anything yet.
 
-   If Playwright isn't available, ask the agent to help you install it for all your projects, then ask for the audit again. [Playwright help](/playwright)
+   If the agent says it doesn't have Playwright, ask:
+
+   > If you don't have Playwright browser tools, help me set them up for all my projects. In Claude Code, walk me through installing Microsoft's Playwright plugin from /plugins, choosing Install for you. In Codex, add the Playwright MCP server (npx @playwright/mcp@latest) to my global Codex settings yourself. Then tell me exactly what to restart before I ask for the audit again.
+
+   Follow its steps, restart, then ask for the audit again. [Playwright help](/playwright)
 
 10. **Set up your agent for prototyping.** `AGENTS.md` holds instructions for future chats. `CLAUDE.md` tells Claude Code to read them too.
 
