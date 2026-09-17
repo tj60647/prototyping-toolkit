@@ -2,6 +2,8 @@
 
 *A setup guide for non-experts. Accurate as of September 2026. If something looks different, check the official page: https://vercel.com/docs/cli*
 
+*This guide covers step 7 of the [TLDR](/tldr), with more explanation.*
+
 *Using Codex instead of Claude Code? The prompts work the same way. Read "Claude" as "Codex," and follow the **Using Codex** notes where the steps differ. Where this guide says to start a new session, start a new chat instead: click the new chat button at the top of the Codex panel.*
 
 ---
@@ -41,7 +43,7 @@ This guide assumes:
 
 ---
 
-## Step 1: Ask for Your Vercel Projects
+## Step 7: Ask It to List Your Vercel Projects
 
 Start with what you want, and let Claude find out what's missing. Send:
 
@@ -49,11 +51,9 @@ Start with what you want, and let Claude find out what's missing. Send:
 
 Claude asks permission before each command. Read what it wants to run, then allow it. **Not sure whether to allow something?** Ask Claude to explain it in plain language first.
 
-If Claude lists your projects, you're already set up. Skip to Step 3.
+If Claude lists your projects, you're already set up. Skip to "Tell Claude How You Publish" below.
 
----
-
-## Step 2: Set Up What's Missing
+### If It Can't
 
 If Claude couldn't list your projects, send:
 
@@ -75,13 +75,11 @@ When Claude has finished, ask again:
 
 > Show me my projects on Vercel.
 
----
-
-## Step 3: Tell Claude How You Publish
+### Tell Claude How You Publish
 
 Your site updates whenever you push to GitHub. That keeps one simple rule: what's on GitHub is what's live. Deploying from VS Code would skip GitHub and break that rule.
 
-Find your site's project in the list from Step 1 or 2, and note its name. Replace `[Vercel project name]` with that name, then send:
+Find your site's project in the list, and note its name. Replace `[Vercel project name]` with that name, then send:
 
 > Add this rule to this project's AGENTS.md, creating the file if it doesn't exist: "Never deploy with Vercel CLI. To publish, commit and push to GitHub. This folder's Vercel project is [Vercel project name]. Don't link this folder with vercel link; name the project in each Vercel CLI command instead." Then make sure CLAUDE.md exists and contains the line @AGENTS.md.
 
@@ -91,7 +89,7 @@ Claude writes the rule down once, so it remembers it in every session. Naming th
 
 ---
 
-## Step 4: Use It Day to Day
+## Using It Day to Day
 
 Here are some prompts to try:
 
@@ -144,10 +142,10 @@ Ask: *"List my Vercel projects, including the ones in my teams."* Pick the one y
 Ask Claude: *"Start the Vercel sign-in again."* Then open the new address straight away.
 
 **Claude doesn't know which Vercel project to use.**
-Check that the rule from Step 3 is in `AGENTS.md` with your project's name, and that `CLAUDE.md` contains `@AGENTS.md`. Then start a new session.
+Check that the publishing rule from Step 7 is in `AGENTS.md` with your project's name, and that `CLAUDE.md` contains `@AGENTS.md`. Then start a new session.
 
 **Claude wants to deploy with Vercel CLI.**
-Deny the request and say: *"Don't deploy. Save my changes to GitHub instead."* Then check that the rule from Step 3 is in `AGENTS.md`.
+Deny the request and say: *"Don't deploy. Save my changes to GitHub instead."* Then check that the publishing rule from Step 7 is in `AGENTS.md`.
 
 **Something else went wrong.**
 Copy the error message, paste it to Claude, and ask: *"Explain this error in plain language and tell me how to fix it."*
@@ -164,4 +162,4 @@ Copy the error message, paste it to Claude, and ask: *"Explain this error in pla
 
 ## Next
 
-When this guide's checkpoint works, continue with **Using Your API Key on Your Computer**, so your prototype can run on your computer as well as online.
+When this guide's checkpoint works, continue with **Running Your Project on Your Computer** (TLDR step 8).

@@ -9,6 +9,11 @@
       "source": "/homework",
       "destination": "/put-it-to-work",
       "permanent": true
+    },
+    {
+      "source": "/api-key",
+      "destination": "/run-your-project",
+      "permanent": true
     }
   ]
 }

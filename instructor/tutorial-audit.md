@@ -4,17 +4,18 @@
 
 **Audience:** people new to VS Code, coding, coding assistants, and prototyping with code.
 **Conditions:** taught in sequence in class; each guide must stand alone; students follow the documents offline.
-**Scope:** the sequence guide and these guides, in order:
+**Scope:** the sequence guide, the TLDR, and these guides, in order. Each detailed guide covers the TLDR steps shown, with the same step numbers, headings and prompts:
 
-1. Claude Code **or** Codex
-2. Git and GitHub
-3. Node.js
-4. Vercel
-5. API Key
-6. Playwright
-7. Prototyping Assistant
-8. Superpowers (optional, Claude Code only)
-9. Put It to Work (was Homework)
+1. Claude Code **or** Codex (TLDR steps 1–4)
+2. Git and GitHub (5–6)
+3. Vercel (7)
+4. Run Your Project, was API Key (8)
+5. Playwright (9)
+6. Prototyping Assistant (10)
+7. Superpowers (11, optional, Claude Code only)
+8. Put It to Work, was Homework (12–13)
+
+Node.js is a help page outside the sequence: the assistant installs it when a step needs it.
 
 Students already have VS Code, so there's no VS Code guide.
 
@@ -47,9 +48,11 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 | Incomplete "Before You Start" lists | Review and add | Git and GitHub, Vercel, and API Key now list everything their steps and checkpoints need. |
 | Usage limits in class | Accept | No change to the guides. See "Suggestions for Teaching It." |
 | VS Code's built-in AI (Copilot) | Hide it, but not as a step | Nothing in the setup depends on it, and as a step it asked students to hide a button they hadn't seen yet, next to an assistant they hadn't installed yet. Both install guides now carry it as a tip after the checkpoint, phrased as "if you find yourself clicking the wrong one." |
-| Projects folder in the install guides | Move it to Git and GitHub | Installing an extension needs no folder open and signing in is account-level, so the folder was a false prerequisite in front of the whole guide. Keeping it at the end of the install guide still left students opening Projects, then replacing it with the project folder one guide later, with a trust prompt each time. It is now Step 1 of Git and GitHub, next to the clone that needs it. The install guides end when the assistant answers. |
+| Projects folder in the install guides | Move it back to Step 1 of the install guides (2026-09-16) | Reversed so the detailed guides match the TLDR, which opens the folder first and checks that the assistant sees it. The earlier reasoning, kept for the record: Installing an extension needs no folder open and signing in is account-level, so the folder was a false prerequisite in front of the whole guide. Keeping it at the end of the install guide still left students opening Projects, then replacing it with the project folder one guide later, with a trust prompt each time. It is now Step 1 of Git and GitHub, next to the clone that needs it. The install guides end when the assistant answers. |
 | Cloning: agent or VS Code's **Clone Repository** | Keep the agent | VS Code's clone would clone and open the folder in one flow, but it uses VS Code's own GitHub credentials, so a student could clone successfully with `gh` half-configured and not find out until the Vercel guide. The agent clone is the end-to-end test of what Steps 3-6 set up, and picking a repo from VS Code's list would mean a third GitHub sign-in. No change to the guides. |
 | Terminal sign-in and `vercel link` | Drop both | Tested 2026-09-16: `gh auth login --web` and `vercel login` both print a code or address and wait when run without a terminal, so the assistant runs them and students approve in the browser. `gh` then skips Git credential setup, so the prompt adds `gh auth setup-git`. Vercel CLI commands take a project name, so the folder is never linked; the name is saved in `AGENTS.md`. |
+| TLDR and detailed guides | The TLDR is the outline (2026-09-16) | Differences between the two routes confused students. Each detailed guide now uses the TLDR's step numbers, headings and prompts, and only adds explanation, checkpoints and troubleshooting. The folder is created in Finder or File Explorer as in the TLDR; API Key became Run Your Project (`/api-key` redirects); Node.js left the sequence. Codex also refuses to send a message until a folder is open (the extension's `missing-workspace` block), so the folder must come first. |
+| Homebrew section | Drop it (2026-09-16) | Installing Homebrew needs the admin password in a terminal, which the agent can't provide. The agent can install everything without it: Git through Apple's developer tools pop-up, GitHub CLI and Node.js through their Mac installers (password in their own window), Vercel CLI through npm. Removing it leaves no terminal steps and matches the TLDR. Untested on a Mac. |
 | Vercel plugin | Drop it | Everything the guides ask for works with Vercel CLI alone, and the plugin's main addition was a **deploy** command the guides had to forbid. |
 | Prompt style in the detailed guides | Match the TLDR | Each guide now starts by asking for the outcome ("Show me my projects on GitHub", "Run my project", a Playwright UI audit) and only sets up what's missing when that fails. |
 | Codex | Add a Codex path | New "Installing Codex in VS Code" guide, plus "Using Codex" notes in the shared guides. |
@@ -60,7 +63,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 ## What Changed Since the First Review
 
 **Structure**
-- **No VS Code guide.** Both install guides cover only the assistant: install, open, sign in, try it, permissions. The Projects folder is Step 1 of Git and GitHub.
+- **No VS Code guide.** Both install guides cover only the assistant: install, open, sign in, try it, permissions. The Projects folder is Step 1 of both install guides, as in the TLDR.
 - **Two install guides.** Students choose "Installing Claude Code in VS Code" or "Installing Codex in VS Code." The sequence guide explains the choice, including the Codex student credits.
 - **Neutral titles.** Three shared guides were renamed so they don't mention Claude:
   - "Managing Vercel Projects with Your Coding Assistant"
@@ -79,7 +82,7 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 **Additions for novices**
 - **Vocabulary:** a "Words You'll See" box in every guide, and a full glossary in the sequence guide.
 - **Permission guidance:** "Deciding whether to allow something" in both install guides, with one-line reminders elsewhere.
-- **VS Code basics in place:** the Explorer panel, Command Palette, terminal, and quitting VS Code are explained where they come up. "Using the Terminal" sections were added to the Git and GitHub and Vercel guides.
+- **VS Code basics in place:** the Explorer panel, Command Palette, terminal, and quitting VS Code are explained where they come up. The "Using the Terminal" sections were later removed, since no step uses the terminal.
 - **Save points:** the Vercel guide explains committing before big changes. For Codex students, the install guide and the Git and GitHub guide make it a habit.
 - **"Next" sections:** each guide ends by naming the guide that follows.
 
@@ -123,7 +126,6 @@ The sequence is ready for a dry run. Every open decision has been made. What rem
 
 ## Remaining Minor Items
 
-- **Checking the Homebrew command:** the Git and GitHub guide asks Mac students to check the command against brew.sh, which is hard for this audience. Consider putting the exact command in your class materials.
 - **The `.vercel` folder:** the Vercel guide says to leave it in place. Add a check that it's listed in `.gitignore`.
 - **Superpowers and branches:** Superpowers can remove code written before its tests. Recommend a branch there, as the homework does.
 - **Dates:** re-check every guide each term. The Node.js LTS version changes in late October 2026.
@@ -143,7 +145,7 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Git and GitHub | That the assistant relays the `gh auth login` code and address, and that `gh auth setup-git` lets the first push work |
 | Install guides | That the checkpoint prompt reads sensibly with no folder open, and that the assistant answers it |
 | Vercel | That the assistant relays the `vercel login` address, and uses the project name instead of linking |
-| API Key | Whether `vercel env pull` downloads the Gemini key, or Vercel hides its value |
+| Run Your Project | Whether `vercel env pull` downloads the Gemini key, or Vercel hides its value |
 | Playwright | The name of the folder Playwright saves screenshots in |
 | Put It to Work | That SkillUI runs through `npx` on both systems, where it writes files, and that its own `CLAUDE.md` stays inside its folder |
 | Put It to Work | How long Option C takes, and how much usage it consumes |
@@ -182,12 +184,12 @@ Check these on a fresh Mac account and a fresh Windows account before class.
 | Guide | Status | What's left |
 |---|---|---|
 | Sequence | Ready | — |
-| Claude Code | Ready, needs testing | Permission wording. Now covers only the assistant: the Projects folder moved to Git and GitHub, hiding Copilot moved to Tips, the terminal dropped from the vocabulary box, the onboarding-checklist detour cut. |
-| Codex | New, needs testing | Most interface details are from documentation. Matches the Claude Code guide: install first, Copilot in Tips, student credits after sign-in, no Projects folder step. |
-| Git and GitHub | Ready, needs testing | Homebrew is the hardest moment for Mac users. Now opens by making the Projects folder, so its steps renumbered to 1-7. |
-| Node.js | Ready, needs testing | Confirm installs on both systems and both assistants |
+| Claude Code | Ready, needs testing | Permission wording. Now covers only the assistant: the Projects folder is Step 1 again, hiding Copilot moved to Tips, the terminal dropped from the vocabulary box, the onboarding-checklist detour cut. |
+| Codex | New, needs testing | Most interface details are from documentation. Matches the Claude Code guide: install first, Copilot in Tips, student credits after sign-in, Projects folder as Step 1. |
+| Git and GitHub | Ready, needs testing | Mac installs without Homebrew are untested. Covers TLDR steps 5-6, starting from an open Projects folder; no terminal steps remain. |
+| Node.js (help page) | Ready, needs testing | Confirm installs on both systems and both assistants |
 | Vercel | Ready, needs testing | Sign-in relayed by Codex |
-| API Key | Ready, needs testing | Confirm the key can be downloaded from Vercel |
+| Run Your Project | Ready, needs testing | Confirm the key can be downloaded from Vercel |
 | Playwright | Ready, needs testing | Codex settings path |
 | Prototyping Assistant | Ready, needs testing | Codex plan-first behavior; no Troubleshooting section |
 | Superpowers | Ready (optional, Claude Code) | Recommend a branch |
@@ -220,7 +222,7 @@ Students who arrive without accounts will stall at the first or second guide.
 - **Check usage before Put It to Work Option C.** Claude students use the **Usage** section in the sidebar; Codex students type `/status`.
 - **Codex student credits** extend usage past the plan's limits.
 
-**Pacing.** The install guide and the Git and GitHub guide vary the most between Mac and Windows, and include the Homebrew password step. Give them their own session, with a TA ready for Homebrew. The rest go faster once the assistant is doing the work. Sign-in codes expire (GitHub's after about 15 minutes), so students should approve them straight away.
+**Pacing.** The install guide and the Git and GitHub guide vary the most between Mac and Windows,, mainly in what the installers ask for. Give them their own session, with a TA ready for Homebrew. The rest go faster once the assistant is doing the work. Sign-in codes expire (GitHub's after about 15 minutes), so students should approve them straight away.
 
 **Grouping by system.** Within each assistant group, seat Mac and Windows users separately for the first two guides.
 

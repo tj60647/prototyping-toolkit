@@ -15,15 +15,15 @@ const sidebar: DefaultTheme.SidebarItem[] = [
       item('tldr'),
       { text: 'Claude Code or Codex', items: [item('claude-code'), item('codex')] },
       item('git-and-github'),
-      item('nodejs'),
       item('vercel'),
-      item('api-key'),
+      item('run-your-project'),
       item('playwright'),
       item('prototyping-assistant'),
       item('superpowers', 'Superpowers (optional)'),
       item('put-it-to-work'),
     ],
   },
+  { text: 'Help', items: [item('nodejs')] },
 ]
 
 checkGuides()

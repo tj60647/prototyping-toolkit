@@ -2,6 +2,8 @@
 
 *A setup guide for non-experts. Accurate as of September 2026. If something looks different, check the official download page: https://nodejs.org/en/download*
 
+*A help page, not a TLDR step. Your agent usually installs Node.js for you when a step needs it, such as step 7 or 8 of the [TLDR](/tldr). Use this page if that doesn't work.*
+
 *Using Codex instead of Claude Code? The prompts work the same way. Read "Claude" as "Codex," and follow the **Using Codex** notes where the steps differ. Where this guide says to start a new session, start a new chat instead: click the new chat button at the top of the Codex panel.*
 
 ---
@@ -120,4 +122,4 @@ Copy the error message, paste it to Claude, and ask: *"Explain this error in pla
 
 ## Next
 
-When this guide's checkpoint works, continue with **Managing Vercel Projects with Your Coding Assistant**, so Claude can publish through GitHub and check your builds.
+When this guide's checkpoint works, go back to the step you were on.
