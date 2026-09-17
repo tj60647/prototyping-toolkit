@@ -50,7 +50,7 @@ Your instructions go in `AGENTS.md`, a plain text file in your project that your
 
 Send:
 
-> Open https://prototyping-toolkit.vercel.app/prototyping-assistant#the-prototyping-instructions and find the code block under the heading "The prototyping instructions". Add the "This is a prototype" section from that code block to this project's AGENTS.md and make sure CLAUDE.md reads them too. Keep any instructions already there.
+> Open https://prototypingtoolkit.aroughidea.com/prototyping-assistant#the-prototyping-instructions and find the code block under the heading "The prototyping instructions". Add the "This is a prototype" section from that code block to this project's AGENTS.md and make sure CLAUDE.md reads them too. Keep any instructions already there.
 
 Claude reads this page and adds the instructions below.
 
