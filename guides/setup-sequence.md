@@ -86,7 +86,7 @@ Come back to these when your idea needs a backend. Do step 14 first, then the ot
 ## How the Guides Work
 
 - **Your assistant does most of the work.** From the moment it's installed, it runs most commands for you. Claude asks before each one. Codex runs routine commands in your project without asking, so Codex users save a starting point before each task.
-- **You won't need the terminal.** Your assistant installs the tools and starts the GitHub and Vercel sign-ins, and you approve them in your browser. If an installer asks for your computer's password, it opens its own window for it.
+- **Your assistant sets things up.** It installs the tools and starts the GitHub and Vercel sign-ins, and you approve them in your browser. If an installer asks for your computer's password, it opens its own window for it.
 - **Restarting VS Code fixes a lot.** VS Code only notices newly installed programs after you quit it completely and open it again. Closing a window isn't always enough. On a Mac, press `Cmd + Q`. On Windows, close every VS Code window or choose **File → Exit**.
 - **Start a new session when a guide asks you to.** In Claude Code, click the spark icon in the left-hand bar, then **New session**. In Codex, click the new chat button at the top of the Codex panel.
 - **Check before you allow.** If your assistant asks to run a command you're unsure about, ask for a plain-language explanation first.
