@@ -60,13 +60,13 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    > Run my project on this computer and give me a link to open it.
 
-   Open the link and try your app. If it won't run, ask:
+   Open the link and try your app. If it won't run, ask your agent:
 
    > My project won't run. Explain the problem in plain language, then fix it. If something needs installing, install it for all my projects. Don't show me any secret values.
 
    If the agent can't find something it just installed, restart VS Code (see **Stuck?** below). [Setup help](/nodejs)
 
-   If the agent says an API key is missing, or the AI features don't respond, ask:
+   If the agent says an API key is missing, or the AI features don't respond, ask your agent:
 
    > Copy my API key into .env.local from this project's Vercel project. If the key isn't in the Development settings, use Production. Don't show me any values, and keep .env.local out of GitHub.
 
@@ -76,7 +76,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
    > Use Playwright to audit my app on computer and phone screens, using the Laws of UX (https://lawsofux.com/) as your reference. Show me what's confusing, hard to read, or difficult to use, with screenshots, and name the law each problem relates to. Suggest the three most useful improvements. Don't change anything yet.
 
-   If the agent says it doesn't have Playwright, ask:
+   If the agent says it doesn't have Playwright, ask your agent:
 
    > If you don't have Playwright browser tools, install them yourself for all my projects. In Claude Code, run Claude Code's own command-line tool: claude plugin install playwright@claude-plugins-official --scope user (if claude isn't found, use the program named in the CLAUDE_CODE_EXECPATH environment variable). In Codex, add the Playwright MCP server (npx @playwright/mcp@latest) to my global Codex settings. Then tell me exactly what to restart before I ask for the audit again.
 
@@ -96,7 +96,7 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
     Leave the model and effort as they are unless a task is hard. To make every new Claude Code chat start in Plan mode, open VS Code settings (`Cmd + ,` on a Mac, `Ctrl + ,` on Windows), search for **Claude Code permission**, and set **Initial Permission Mode** to **plan**.
 
-    Then start a new chat and ask:
+    Then start a new chat and ask your agent:
 
     > What instructions are you following in this project?
 
@@ -106,17 +106,17 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
     > Install Superpowers yourself for this project only. In Claude Code, run Claude Code's own command-line tool: claude plugin install superpowers@claude-plugins-official --scope local (if claude isn't found, use the program named in the CLAUDE_CODE_EXECPATH environment variable). Then tell me exactly what to restart, and don't start any other work.
 
-    After restarting, start a new chat and ask:
+    After restarting, start a new chat and ask your agent:
 
     > Which Superpowers skills do you have? In plain language, tell me when I'd use each one. Then help me try the brainstorming skill on one small idea for this project: ask me one question at a time, keep the design to about a page, and stop after the design so I can decide what to do next.
 
     [Superpowers help](/superpowers)
 
-12. **Put your setup to work.** Pick one small task. First, save a starting point:
+12. **Put your setup to work.** Pick one small task. First, ask your agent to make a save point, a snapshot of your project you can return to if the task goes wrong:
 
-    > Save the current version so we can go back to it.
+    > Save a checkpoint of my project with Git, so we can go back to this version if the next change goes wrong. Tell me in one sentence what you saved.
 
-    Then send one of these:
+    Then send your agent one of these:
 
     - **Describe your project** in a README, the page people see first on GitHub:
 
@@ -128,19 +128,15 @@ This assumes your project is already on GitHub and Vercel already updates its we
 
     - **Change how it looks** to match another website's design:
 
-      > Create a branch called design-system-update. Then restyle my app to follow the design of https://design.berkeley.edu/: study the site's colors, fonts and spacing with a design-system extraction tool, save those rules in the project, and apply them. Keep my app's content and features, and don't copy Berkeley's logos, photos or text.
+      > Restyle my app to follow the design of https://design.berkeley.edu/: study the site's colors, fonts and spacing with a design-system extraction tool, save those rules in the project, and apply them. Keep my app's content and features, and don't copy Berkeley's logos, photos or text.
 
-    Review the agent's plan, approve it, and check the result yourself. When you're happy:
+    When you're happy with the result, ask your agent:
 
     > Save my changes to GitHub. Check that Vercel's update worked and give me a link to the result.
 
-    Open the link. A README or diagram shows up on your project's GitHub page. A restyle shows up on a preview link first; when you like it, ask:
-
-    > Merge the design-system-update branch into main and push it to GitHub.
-
     [More detail](/put-it-to-work)
 
-13. **Look back at how it went.** Ask:
+13. **Look back at how it went.** Ask your agent:
 
     > Look back over this chat. Summarize what I asked for, what you did, where you guessed, and where I corrected you.
 
