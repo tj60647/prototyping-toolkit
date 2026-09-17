@@ -1,6 +1,6 @@
 # TLDR: Quick Start
 
-This toolkit sets you up so your coding assistant, Claude Code or Codex, does the technical work of building, testing, fixing and publishing your prototypes, while you decide what to make. Start by getting your assistant running; then it helps you through the rest of the setup, one step at a time.
+This toolkit sets you up to prototype with a coding assistant, Claude Code or Codex, as a collaborator. You explore ideas together: it proposes plans and handles the technical side of building, testing, fixing and publishing, and you decide what to make and what to try next. Start by getting your assistant running, then work through the rest of the setup together, one step at a time.
 
 Do one step at a time. Send the messages in the boxes to your **agent**: the AI helper you'll install in VS Code. The help links are there if you get stuck.
 
