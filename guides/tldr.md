@@ -4,6 +4,8 @@ Do one step at a time. Send the messages in the boxes to your **agent**: the AI 
 
 This assumes your project is already on GitHub and Vercel already updates its website automatically when you save changes to GitHub.
 
+## Part 1: Set Up and Start Prototyping
+
 1. **Set up a folder for your projects.** In Finder (Mac) or File Explorer (Windows), create a folder called `Projects` in your home folder. Avoid Documents and Desktop, which iCloud Drive or OneDrive may sync. If you already have a folder for your projects, use that one.
 
 2. **Open your projects folder in VS Code.** Open VS Code, then use **File → Open Folder…** to open the folder from step 1. If VS Code asks whether you trust the authors, click **Yes, I trust the authors**. Your agent won't work otherwise.
@@ -113,5 +115,43 @@ This assumes your project is already on GitHub and Vercel already updates its we
     > Look back over this chat. Summarize what I asked for, what you did, where you guessed, and where I corrected you.
 
     Then think about what you'd do differently next time, and add anything useful to `AGENTS.md`. [Questions to reflect on](/put-it-to-work#step-13-look-back-at-how-it-went)
+
+## Part 2: Add a Backend
+
+Your prototype will eventually need somewhere to keep data and files, and a way to stop strangers spending the budget behind its paid services. Do step 14 first. Do steps 15 to 17 when your prototype needs them, and step 18 after any of them. Everything here is free within each service's limits.
+
+14. **Keep your keys on the server.** A secret key the browser can see can be used by anyone.
+
+    > Check whether any secret key this app uses — for an AI service or any other paid API — could ever reach the browser. Look at how this app is built and deployed, including any build settings that copy environment variables into browser code. If a key could reach the browser, move the calls that use it to server code and remove whatever copies it. Don't show me any key values.
+
+    If the agent changed anything, ask it to run the app and check the AI features still work. [Key help](/protect-your-keys)
+
+15. **Add a database.** Do this when your prototype needs to remember things.
+
+    > Install Neon's agent tools for all my projects, and sign me in to Neon: show me the web address and wait while I approve it. Then create a Neon project just for this app, and connect the app to it following Neon's instructions for this app's framework. Add the connection settings to this project on Vercel, copy them into .env.local without showing them, and keep them out of GitHub.
+
+    New to Neon? Create an account on the sign-in page, with GitHub or Google. If you want search by meaning, also ask:
+
+    > Turn on pgvector so this app can search by meaning.
+
+    [Database help](/database)
+
+16. **Add sign-in, and choose who can use the app.** Do this before you share an app that spends your budget.
+
+    > Add Google sign-in with Neon Auth, following Neon's instructions for this app's framework. Add this app's Vercel web address to Neon Auth's trusted domains. Then make the server code that uses my paid API keys refuse any request unless the person is signed in and their email is in an ALLOWED_EMAILS setting on Vercel.
+
+    Then add `ALLOWED_EMAILS` in your Vercel project's settings: the email addresses allowed to use the app, separated by commas. To let anyone with a Google account in, tell your agent instead. Then ask your agent to save your changes to GitHub. Test sign-in on your main Vercel address. [Sign-in help](/sign-in)
+
+17. **Store files.** Do this when your app handles uploads or images. In your Vercel project, open **Storage** and create a **Blob** store for this project, with its access set to **Private**. Then ask:
+
+    > Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload, and keep the files private unless I say otherwise.
+
+    [File storage help](/file-storage)
+
+18. **Check your limits.** Do this after any of steps 15 to 17.
+
+    > Show me how much of each free plan this app uses: Neon, Vercel (including Blob), and any paid API it calls. Tell me what happens when each limit is reached, and whether any of them could charge me.
+
+    [Limits help](/limits)
 
 **Stuck?** If your agent can't find something it just installed, quit VS Code completely (`Cmd + Q` on a Mac, **File → Exit** on Windows) and open it again. Otherwise, tell your agent what happened and ask: “Help me fix this. Give me one step at a time.”

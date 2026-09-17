@@ -54,7 +54,9 @@ The guides are written for Claude Code. If you choose Codex, the prompts work th
 
 ## The Sequence
 
-Follow the guides in this order, from top to bottom. Each one covers the same steps as the TLDR, with the same numbers and prompts, and adds explanation, a checkpoint and troubleshooting. **Superpowers** is optional; if you skip it, go straight to **Put It to Work**.
+### Part 1: Set Up and Start Prototyping
+
+Follow these guides in order, from top to bottom. Each one covers the same steps as the TLDR, with the same numbers and prompts, and adds explanation, a checkpoint and troubleshooting. **Superpowers** is optional; if you skip it, go straight to **Put It to Work**.
 
 | TLDR steps | Guide | Full title | What it sets up |
 |---|---|---|---|
@@ -66,6 +68,18 @@ Follow the guides in this order, from top to bottom. Each one covers the same st
 | 10 | **Prototyping Assistant** | *Setting Up Your Coding Assistant for Prototyping* | A plan-first setup and an `AGENTS.md` instructions file, so your assistant explores ideas with you. |
 | 11 | **Superpowers** | *Installing Superpowers for Claude Code* | *Optional, for advanced users of Claude Code.* A stricter, step-by-step way of working. |
 | 12–13 | **Put It to Work** | *Put Your Setup to Work* | Everything together: your assistant writes a README, draws a system diagram, or restyles your app, you publish it, and you reflect on how the workflow went. |
+
+### Part 2: Add a Backend
+
+Do step 14 first, then the others when your prototype needs them.
+
+| TLDR steps | Guide | Full title | What it sets up |
+|---|---|---|---|
+| 14 | **Protect Your Keys** | *Protecting Your API Keys* | Secret keys kept in server code, away from the browser. |
+| 15 | **Database** | *Adding a Database* | A Neon database for this app, and Neon's agent tools. |
+| 16 | **Sign-In** | *Adding Sign-In* | Google sign-in, and an allow list of who can use the app. |
+| 17 | **File Storage** | *Storing Files* | A private Vercel Blob store for uploads and images. |
+| 18 | **Limits** | *Checking Your Limits* | How close each free plan is to its limit, and spending caps. |
 
 ---
 
@@ -95,13 +109,18 @@ Each guide ends with a **Checkpoint** section. Don't move on until it works. Sta
 | **Prototyping Assistant** | Check that the mode indicator under the prompt box says **Plan** (Codex: **Ask for approval**). Send: *"What instructions are you following in this project?"* | The right mode, and a reply describing your `AGENTS.md` instructions. |
 | **Superpowers** | Send: *"Which Superpowers skills do you have? Just list their names."* | Skills such as brainstorming, writing plans, and test-driven development. |
 | **Put It to Work** | Send: *"Did Vercel's update work? Give me a link to the result."* | Your finished work on GitHub or on your site. |
+| **Protect Your Keys** | Send: *"Open my live Vercel site and search the JavaScript files it sends to the browser for anything that looks like a secret key. Tell me only whether you found one, not what it is."* | No key found in the files your live site sends. |
+| **Database** | Send: *"Which Neon project is this app connected to? Check that the app can reach its database, both from my computer and on Vercel, without showing any connection settings."* | A Neon project for this app only, and both connections working. |
+| **Sign-In** | Open your main Vercel address in a private window and try a paid feature signed out, then signed in. | Refused when signed out; working when signed in with an allowed email. |
+| **File Storage** | Sign in, upload a file, then look for it in your Vercel Blob store. | The file is listed; uploading while signed out is refused. |
+| **Limits** | Send the step 18 prompt. | Which services could charge you, and each one's usage. |
 
 ---
 
 ## Words You'll See
 
 - **`AGENTS.md`:** a file of standing instructions that coding assistants read at the start of every session.
-- **API key:** a secret code that lets your app use a service, such as Gemini.
+- **API key:** a secret code that lets your app use a paid service, such as an AI model.
 - **Branch:** a separate line of work in Git, so changes don't affect your main version until you merge them.
 - **Build:** the step where Vercel turns your project's files into a working website.
 - **`CLAUDE.md`:** Claude Code's instructions file. Your project's contains one line, `@AGENTS.md`, so Claude reads `AGENTS.md` too.

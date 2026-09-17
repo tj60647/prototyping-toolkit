@@ -261,4 +261,6 @@ Copy the error message, paste it to Claude, and ask: *"Explain this error in pla
 
 ## What's Next
 
-This is the last guide. You now have a complete setup for prototyping with Claude. Use the same pattern for your own ideas: save a starting point, ask, review the plan, check the result, publish, and look back at how it went. Each time, add what you learn to `AGENTS.md`.
+This is the last guide in Part 1. Use the same pattern for your own ideas: save a starting point, ask, review the plan, check the result, publish, and look back at how it went. Each time, add what you learn to `AGENTS.md`.
+
+When your prototype needs to keep data, store files, or limit who can use it, continue with **Protecting Your API Keys** (TLDR step 14).
