@@ -195,7 +195,7 @@ git commit -m "Make API-key wording general; add TLDR Part 1 and Part 2 headings
 
 **Interfaces:**
 - Consumes:
-  - `checkPrompts` from Task 2;
+  - the TLDR-prompt build check from Task 2;
   - the Part 2 heading from Task 3.
 - Produces:
   - address `/protect-your-keys`;
