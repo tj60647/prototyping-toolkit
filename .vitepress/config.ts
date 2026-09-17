@@ -25,7 +25,7 @@ const sidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: 'Part 2: Backend',
+    text: 'Part 2: Backend (Optional)',
     items: [item('protect-your-keys'), item('database'), item('sign-in'), item('file-storage'), item('limits')],
   },
   { text: 'Help', items: [item('nodejs')] },

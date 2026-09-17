@@ -69,9 +69,9 @@ Follow these guides in order, from top to bottom. Each one covers the same steps
 | 11 | **Superpowers** | *Installing Superpowers for Claude Code* | *Optional, for students with software development experience.* A disciplined, step-by-step way of working, suited to well-developed projects more than early prototypes. |
 | 12–13 | **Put It to Work** | *Put Your Setup to Work* | Everything together: your assistant writes a README, draws a system diagram, or restyles your app, you publish it, and you reflect on how the workflow went. |
 
-### Part 2: Add a Backend
+### Part 2: Add a Backend (Advanced, Optional)
 
-Do step 14 first, then the others when your prototype needs them.
+Come back to these when your idea needs a backend. Do step 14 first, then the others when your prototype needs them.
 
 | TLDR steps | Guide | Full title | What it sets up |
 |---|---|---|---|
