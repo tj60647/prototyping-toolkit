@@ -160,7 +160,16 @@ Your prototype will eventually need somewhere to keep data and files, and a way 
 
     Then add `ALLOWED_EMAILS` in your Vercel project's settings: the email addresses allowed to use the app, separated by commas. To let anyone with a Google account in, tell your agent instead. Then ask your agent to save your changes to GitHub. Test sign-in on your main Vercel address. [Sign-in help](/sign-in)
 
-17. **Store files.** Do this when your app handles uploads or images. In your Vercel project, open **Storage** and create a **Blob** store for this project, with its access set to **Private**. Then ask:
+17. **Store files.** Do this when your app handles uploads or images. First, create a Blob store on Vercel:
+
+    1. Go to [vercel.com](https://vercel.com), sign in, and open your project.
+    2. In the project's sidebar, open **Storage**.
+    3. Select **Create Database**, choose **Blob**, then select **Continue**.
+    4. Set the access to **Private**.
+    5. Give it a name, such as your app's name, and select **Create a new Blob store**.
+    6. When asked which environments to include, keep **Production** and **Preview**, and also tick **Development**, so the store works on your computer too.
+
+    Then ask your agent, replacing `[what the files are]`, for example with "photos people upload":
 
     > Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload, and keep the files private unless I say otherwise.
 

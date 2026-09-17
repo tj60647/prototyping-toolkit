@@ -32,9 +32,20 @@ The prompt below keeps your files private, so only your app can read them. If yo
 
 ## Step 17: Store Files
 
-1. Open your project in the Vercel dashboard, then **Storage**.
-2. Click **Create Database**, choose **Blob**, set its access to **Private**, and connect it to this project.
-3. Send, replacing `[what the files are]`, for example with "photos people upload":
+### Create a Blob store on Vercel
+
+1. Go to [vercel.com](https://vercel.com), sign in, and open your project.
+2. In the project's sidebar, open **Storage**.
+3. Select **Create Database**, choose **Blob**, then select **Continue**.
+4. Set the access to **Private**. Private files can only be read by your app. **Public** files can be opened by anyone who has their web address.
+5. Give it a name, such as your app's name, and select **Create a new Blob store**.
+6. When asked which environments to include, keep **Production** and **Preview**, and also tick **Development**, so the store works on your computer too.
+
+Vercel then opens the store's page and adds its settings to your project automatically.
+
+### Connect your app to it
+
+Send, replacing `[what the files are]`, for example with "photos people upload":
 
 > Use this project's Vercel Blob store for [what the files are], following Vercel's instructions for this app's framework. Only let signed-in users upload, and keep the files private unless I say otherwise.
 
@@ -45,7 +56,7 @@ Review Claude's plan, then approve it. Save your changes to GitHub when it works
 ## Checkpoint
 
 1. On your app's main Vercel address, sign in and upload a file.
-2. In the Vercel dashboard, open **Storage**, then your Blob store. The file should be listed.
+2. In your Vercel project, open **Storage** in the sidebar, then your Blob store. The file should be listed.
 3. Sign out and try to upload. It should refuse.
 4. Copy a file's web address from the Blob store and open it in a private browser window. A private file shouldn't open.
 
@@ -57,7 +68,10 @@ Review Claude's plan, then approve it. Save your changes to GitHub when it works
 Ask: *"Check that this project on Vercel is connected to the Blob store, then save my changes to GitHub so Vercel rebuilds."*
 
 **Claude says the Blob token is missing on my computer.**
-Ask: *"Copy this project's Blob settings from Vercel into .env.local without showing them."*
+Your store may not include the **Development** environment. In your Vercel project, open **Storage**, then your Blob store, then its **Projects** tab. Open the menu (**⋯**) next to your project, choose **Update Project Connection**, and tick **Development**. Then ask: *"Copy this project's Blob settings from Vercel into .env.local without showing them."*
+
+**I can't find Storage.**
+Make sure you've opened your **project**, not your account's overview page: the sidebar with **Storage** appears once a project is open.
 
 ---
 
