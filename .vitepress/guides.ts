@@ -155,8 +155,8 @@ export const guides: Guide[] = [
   {
     file: 'limits-tutorial.md',
     slug: 'limits',
-    name: 'Limits',
-    title: 'Checking Your Limits',
+    name: 'Costs and Limits',
+    title: 'Checking Your Costs and Limits',
     prev: 'file-storage',
     next: null,
   },

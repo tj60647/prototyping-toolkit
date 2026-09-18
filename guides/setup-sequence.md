@@ -81,7 +81,7 @@ Come back to these when your idea needs a backend. Do step 14 first, then the ot
 | 15 | **Database** | *Adding a Database* | A Neon database for this app, and Neon's agent tools. |
 | 16 | **Sign-In** | *Adding Sign-In* | Google sign-in, and an allow list of who can use the app. |
 | 17 | **File Storage** | *Storing Files* | A private Vercel Blob store for uploads and images. |
-| 18 | **Limits** | *Checking Your Limits* | How close each free plan is to its limit, and spending caps. |
+| 18 | **Costs and Limits** | *Checking Your Costs and Limits* | How close each free plan is to its limit, and spending caps. |
 
 ---
 
@@ -115,7 +115,7 @@ Each guide ends with a **Checkpoint** section. Don't move on until it works. Sta
 | **Database** | Send: *"Which Neon project is this app connected to? Check that the app can reach its database, both from my computer and on Vercel, without showing any connection settings."* | A Neon project for this app only, and both connections working. |
 | **Sign-In** | Open your main Vercel address in a private window and try a paid feature signed out, then signed in. | Refused when signed out; working when signed in with an allowed email. |
 | **File Storage** | Sign in, upload a file, then look for it in your Vercel Blob store. | The file is listed; uploading while signed out is refused. |
-| **Limits** | Send the step 18 prompt. | Which services could charge you, and each one's usage. |
+| **Costs and Limits** | Send the step 18 prompt. | Which services could charge you, and each one's usage. |
 
 ---
 
