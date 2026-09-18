@@ -65,9 +65,11 @@ Allow the install when Claude asks. Claude installs Superpowers for this project
 
 1. In the Claude Code prompt box, type `/plugins` and press Enter. The **Manage plugins** window opens.
 2. On the **Plugins** tab, search for **superpowers**.
-3. Click **Install**.
+3. Choose the plugin named exactly **superpowers**, described as a "core skills library", and click **Install**.
 
-**Superpowers doesn't appear in the search?** Switch to the **Marketplaces** tab, add `obra/superpowers-marketplace`, then search again on the **Plugins** tab.
+**Superpowers doesn't appear in the search?** Switch to the **Marketplaces** tab and add `obra/superpowers-marketplace`, or ask Claude: *"Add the obra/superpowers-marketplace marketplace and install superpowers@superpowers-marketplace for this project only."*
+
+**Several plugins with similar names?** That marketplace also lists `superpowers-dev`, `superpowers-lab`, `superpowers-chrome` and others. They're separate add-ons, and `superpowers-dev` conflicts with the main plugin. Install only the one named exactly **superpowers**.
 
 ### Choose where it applies
 
@@ -163,6 +165,9 @@ Before moving on, check that Superpowers is active.
 ---
 
 ## Troubleshooting
+
+**Two Superpowers plugins are installed.**
+Type `/plugins` and look at the installed list. Keep the one named exactly **superpowers** and uninstall the other, then restart Claude Code.
 
 **Claude doesn't seem to use Superpowers.**
 Make sure you restarted Claude Code and started a new session. Then type `/plugins` and check that its toggle is on.
