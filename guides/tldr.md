@@ -185,7 +185,7 @@ Come back to this part when your idea needs a backend: somewhere to keep data or
 
     [File storage help](/file-storage)
 
-18. **Check your limits.** Do this after any of steps 15 to 17.
+18. **Check your limits.** Every service has them: how much its free plan includes, how much a paid service can charge you, and how many requests it accepts per minute. Do this after any of steps 15 to 17.
 
     > Show me how much of each free plan this app uses: Neon, Vercel (including Blob), and any paid API it calls. Tell me what happens when each limit is reached, and whether any of them could charge me.
 
