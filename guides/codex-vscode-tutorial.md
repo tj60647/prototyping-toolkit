@@ -33,7 +33,7 @@ You don't need to know how to program to follow this guide.
 You need:
 
 - **VS Code, installed and up to date.** On a Mac, go to **Code → Check for Updates**. On Windows, go to **Help → Check for Updates**.
-- **A ChatGPT account.** Codex is included with ChatGPT plans, including the free plan, which has lower limits. Check your student access in Step 3 before buying a plan.
+- **A ChatGPT account.** Codex is included with ChatGPT plans, including the free plan, which has lower limits. Each plan's allowance resets every five hours, and weekly limits may apply. Check your student access in Step 3 before buying a plan. *Checking Your Costs and Limits* explains the allowance.
 
 ---
 

@@ -30,9 +30,11 @@ const sidebar: DefaultTheme.SidebarItem[] = [
   },
   {
     text: 'Part 2: Add a Backend (Optional)',
-    items: [item('protect-your-keys'), item('database'), item('sign-in'), item('file-storage'), item('limits')],
+    items: [item('protect-your-keys'), item('database'), item('sign-in'), item('file-storage')],
   },
-  { text: 'Help', items: [item('nodejs')] },
+  // Costs and Limits covers Part 1 and Part 2, so it sits with the help pages;
+  // Part 2's step 18 and the File Storage guide still lead to it.
+  { text: 'Help', items: [item('limits'), item('nodejs')] },
 ]
 
 checkGuides()

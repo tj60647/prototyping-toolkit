@@ -14,6 +14,8 @@ Your prototype already runs online on Vercel. Running it on your own computer le
 
 If your prototype uses an AI service or another paid API, it needs a secret **API key** to work. Your live site on Vercel already has it. To run your prototype on your own computer, your computer may need a copy of the key too. It goes in a file in your project called `.env.local`.
 
+Your computer uses the same key as your live site, so testing on your computer counts toward your AI service's free allowance, or costs money on a paid plan. *Checking Your Costs and Limits* shows how to set a spending cap.
+
 Settings stored like this, outside your code, are called **environment variables**. A Gemini key, for example, is usually named `GEMINI_API_KEY`.
 
 **Keep the key secret:**

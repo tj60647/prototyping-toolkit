@@ -63,7 +63,7 @@ Claude can make folders and copy projects into them, but choosing which folder V
 
 **Check student access using your edu email before buying a plan.** Check [your edu account's Claude access](https://support.claude.com/en/articles/11139144-use-claude-for-education-at-your-university), and ask your school's IT help desk whether it includes Claude Code.
 
-Otherwise, you need a paid plan: Claude Pro costs $20 a month and includes Claude Code. The free Claude plan does not.
+Otherwise, you need a paid plan: Claude Pro costs $20 a month and includes Claude Code. The free Claude plan does not. Every plan gives a usage allowance that resets every five hours, plus a weekly limit, shared with Claude chat. *Checking Your Costs and Limits* explains what uses it up.
 
 ### Install the extension
 
