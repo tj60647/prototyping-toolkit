@@ -21,7 +21,7 @@ Superpowers is a free plugin that gives Claude a strict, step-by-step way of wor
 It was designed for software engineering, so it favors careful, finished work over quick exploration. Expect it to:
 
 - **Take longer** than plain Claude Code, and sometimes work on its own for a long stretch.
-- **Use more of your plan's allowance.**
+- **Use more of your plan's allowance.** Its long plans and reviews can use up your plan's five-hour allowance quickly (see *Checking Your Costs and Limits*).
 - **Follow its rules strictly.** Its test-first rule is firm: during a build, it may remove code that was written before its tests.
 
 Try it when you want to take a prototype further, not for quick experiments, and see **Making It Prototyping-Friendly** below to tone it down.

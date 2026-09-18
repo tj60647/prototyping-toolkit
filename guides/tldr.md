@@ -20,7 +20,7 @@ Everyone does this part. Steps 1 to 13 set up your agent, GitHub and Vercel, the
 
    In VS Code, click **Extensions** (the four-squares icon on the left). Search for your chosen agent, click **Install**, open its chat panel, and sign in.
 
-   **For more information about accounts, installation, and signing in, see the [Codex tutorial](/codex) or the [Claude Code tutorial](/claude-code).**
+   **For more information about accounts, installation, and signing in, see the [Codex tutorial](/codex) or the [Claude Code tutorial](/claude-code).** Your plan gives your agent a usage allowance that resets every few hours; [Costs and Limits](/limits) explains it.
 
 4. **Ask your agent where it is.**
 
@@ -75,6 +75,8 @@ Everyone does this part. Steps 1 to 13 set up your agent, GitHub and Vercel, the
    > Copy my API key into .env.local from this project's Vercel project. If the key isn't in the Development settings, use Production. Don't show me any values, and keep .env.local out of GitHub.
 
    Then try your app again. If the key comes back empty, Vercel is hiding it: copy it from Google AI Studio instead. [API key help](/run-your-project)
+
+   Running your app on your computer uses the same key as your live site, so each test uses your AI service's free allowance, or costs money on a paid plan. [Costs and Limits](/limits)
 
 9. **Ask for a UI audit.** This checks how your app looks and how easy it is to use.
 
@@ -193,4 +195,4 @@ Come back to this part when your idea needs a backend: somewhere to keep data or
 
 **Before you rely on it.** Try your app's main flow yourself, then ask someone else to try it without your help. If you start relying on the app or sharing it more widely, give testing, who has access, costs, and how many people it can handle more attention.
 
-**Stuck?** If your agent can't find something it just installed, quit VS Code completely (`Cmd + Q` on a Mac, **File → Exit** on Windows) and open it again. Otherwise, tell your agent what happened and ask: “Help me fix this. Give me one step at a time.”
+**Stuck?** If your agent says you've reached a usage limit, that's your plan's allowance, not an error: wait until it resets, or use a lower effort setting ([Costs and Limits](/limits)). If your agent can't find something it just installed, quit VS Code completely (`Cmd + Q` on a Mac, **File → Exit** on Windows) and open it again. Otherwise, tell your agent what happened and ask: “Help me fix this. Give me one step at a time.”

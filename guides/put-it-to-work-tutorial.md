@@ -234,7 +234,7 @@ Then think about these questions. Writing a sentence or two for each makes the a
 - **Control.** When did you allow, deny, or redirect Claude? Would you give it more or less freedom next time?
 - **Checking.** How did you check the result: on your computer, with Playwright, or on GitHub or Vercel? What would you check sooner next time?
 - **Save points.** Did you need to go back to one? If you did, was it easy?
-- **Cost.** How much of your plan's allowance did the task use? Was it worth it?
+- **Cost.** How much of your plan's allowance did the task use? Was it worth it? *Checking Your Costs and Limits* explains the allowance and where to see it.
 
 For Option C, a before-and-after screenshot of one screen and Claude's final report make the comparison easier.
 
