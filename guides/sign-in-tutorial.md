@@ -102,4 +102,4 @@ Ask: *"Check that this project on Vercel has all the Neon Auth settings my app u
 
 ## Next
 
-Continue with **Storing Files** (TLDR step 17) if your app handles uploads or images, or with **Checking Your Limits** (TLDR step 18).
+Continue with **Storing Files** (TLDR step 17) if your app handles uploads or images, or with **Checking Your Costs and Limits** (TLDR step 18).

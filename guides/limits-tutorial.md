@@ -1,4 +1,4 @@
-# Checking Your Limits
+# Checking Your Costs and Limits
 
 *A setup guide for non-experts. Accurate as of September 2026.*
 
@@ -41,7 +41,7 @@ This step shows how close your app is to each limit, what happens when it gets t
 
 ---
 
-## Step 18: Check Your Limits
+## Step 18: Check Your Costs and Limits
 
 Send:
 

@@ -83,4 +83,4 @@ Make sure you've opened your **project**, not your account's overview page: the 
 
 ## Next
 
-Continue with **Checking Your Limits** (TLDR step 18).
+Continue with **Checking Your Costs and Limits** (TLDR step 18).
