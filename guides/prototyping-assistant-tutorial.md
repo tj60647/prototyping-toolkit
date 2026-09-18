@@ -50,32 +50,15 @@ Your instructions go in `AGENTS.md`, a plain text file in your project that your
 
 Send:
 
-> Open https://prototypingtoolkit.aroughidea.com/prototyping-assistant#the-prototyping-instructions and find the code block under the heading "The prototyping instructions". Add the "This is a prototype" section from that code block to this project's AGENTS.md and make sure CLAUDE.md reads them too. Keep any instructions already there.
+> Add the prototyping instructions from https://prototypingtoolkit.aroughidea.com/prototyping-instructions.md to this project's AGENTS.md, and make sure CLAUDE.md reads them too. Keep any instructions already there.
 
-Claude reads this page and adds the instructions below.
+Claude reads that file and adds the instructions shown below to your project.
 
 #### The prototyping instructions
 
 If Claude can't open web pages, copy this prompt and send it instead:
 
-```
-Add this section to the AGENTS.md file in the top level of this project. Create the file if it doesn't exist. Keep everything already in the file.
-
-# This is a prototype, not production software
-
-I'm exploring ideas, not building a finished product.
-
-- Before changing any files, describe your plan and wait for my approval.
-- Before planning, ask what I'm trying to learn or try out.
-- When there's a real design choice, offer 2–3 directions instead of one "best" solution.
-- Keep changes small enough that I can see what each one did.
-- Tell me what I should look at or click to see the change.
-- Don't write automated tests unless I ask.
-- Explain changes in plain language, without jargon.
-- Speed and variety matter more than polish.
-
-Then make sure a CLAUDE.md file exists in the top level of this project and contains the line @AGENTS.md. Add that line if it's missing, and keep anything else in the file.
-```
+<<< @/public/prototyping-instructions.md{md}
 
 If Claude asks permission to create or change the files, accept. Then check the Explorer panel, the list of your project's files on the left (`Cmd + Shift + E` on a Mac or `Ctrl + Shift + E` on Windows). You should see `AGENTS.md` and `CLAUDE.md`. Click `AGENTS.md` to read it.
 
