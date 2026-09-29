@@ -15,7 +15,7 @@ Out of the box, Claude Code behaves like an engineering assistant. It tends to j
 Prototyping is different. You are exploring: trying ideas, comparing directions, and learning what you actually want. This guide changes two things so Claude works that way with you:
 
 - **Plan mode** makes Claude describe what it intends to do and wait for your approval before it changes anything.
-- **An instructions file** gives Claude standing instructions for your project, so it treats the work as exploration rather than optimization.
+- **An instructions file** gives Claude standing instructions for your project, so it treats the work as exploration rather than optimization. It's the coding assistant's version of system instructions: standing text it reads before every session, the way an agent you design reads its own system instructions.
 
 Together, these turn each change into a short conversation: Claude proposes, you respond, and only then does anything happen.
 
